@@ -54,7 +54,6 @@ C {devices/ipin.sym} 100 -600 0 0 {name=p1 lab=VDD_1V8}
 C {devices/ipin.sym} 100 -100 0 0 {name=p2 lab=VSS}
 C {devices/ipin.sym} 100 -300 0 0 {name=p3 lab=PWRUP_1V8}
 C {LELO_GR04_SKY130A/LELO_GR04_BG_BJT.sym} 570 -170 0 0 {name=x1}
-C {JNW_ATR_SKY130A/JNWATR_PCH_2C5F0.sym} 520 -530 2 0 {name=x2 }
 C {JNW_ATR_SKY130A/JNWATR_PCH_2C5F0.sym} 620 -530 0 0 {name=x3 }
 C {JNW_TR_SKY130A/JNWTR_RPPO4.sym} 660 -340 1 0 {name=x4}
 C {JNW_TR_SKY130A/JNWTR_CAPX1.sym} 850 -560 0 0 {name=x6 }
@@ -66,3 +65,4 @@ C {devices/lab_wire.sym} 760 -420 0 0 {name=p7 sig_type=std_logic lab=VX}
 C {devices/lab_wire.sym} 760 -440 0 0 {name=p8 sig_type=std_logic lab=VY}
 C {LELO_GR04_SKY130A/LELO_GR04_BG_OTA_PMOS.sym} 910 -440 0 0 {name=x5}
 C {devices/lab_wire.sym} 660 -240 0 0 {name=p9 sig_type=std_logic lab=VD2}
+C {JNW_ATR_SKY130A/JNWATR_PCH_2C5F0.sym} 520 -530 0 1 {name=x2 }

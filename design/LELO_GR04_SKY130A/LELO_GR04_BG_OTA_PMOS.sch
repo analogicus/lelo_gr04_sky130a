@@ -1,0 +1,55 @@
+v {xschem version=3.4.7 file_version=1.2}
+G {}
+K {}
+V {}
+S {}
+E {}
+N 100 -100 600 -100 {lab=VSS}
+N 240 -380 300 -380 {lab=VIN_P}
+N 540 -380 600 -380 {lab=VX}
+N 340 -380 400 -380 {lab=VX}
+N 340 -440 340 -410 {lab=VX}
+N 340 -440 600 -440 {lab=VX}
+N 600 -440 600 -410 {lab=VX}
+N 400 -440 400 -380 {lab=VX}
+N 540 -440 540 -380 {lab=VX}
+N 640 -380 720 -380 {lab=VIN_N}
+N 470 -500 470 -440 {lab=VX}
+N 340 -350 340 -300 {lab=VA}
+N 600 -360 600 -300 {lab=VOUT_P}
+N 600 -300 600 -290 {lab=VOUT_P}
+N 340 -300 340 -290 {lab=VA}
+N 340 -230 340 -200 {lab=VSS}
+N 340 -200 600 -200 {lab=VSS}
+N 600 -230 600 -200 {lab=VSS}
+N 470 -200 470 -100 {lab=VSS}
+N 380 -260 560 -260 {lab=VA}
+N 340 -320 400 -320 {lab=VA}
+N 400 -320 400 -260 {lab=VA}
+N 600 -320 720 -320 {lab=VOUT_P}
+N 280 -260 340 -260 {lab=VSS}
+N 280 -260 280 -200 {lab=VSS}
+N 280 -200 340 -200 {lab=VSS}
+N 600 -260 660 -260 {lab=VSS}
+N 660 -260 660 -200 {lab=VSS}
+N 600 -200 660 -200 {lab=VSS}
+N 100 -660 470 -660 {lab=VDD_1V8}
+N 470 -660 470 -580 {lab=VDD_1V8}
+N 140 -540 450 -540 {lab=VSS}
+N 140 -540 140 -100 {lab=VSS}
+C {cborder/border_xs.sym} 0 0 0 0 {
+user="wulff"
+company="wulff"}
+C {devices/ipin.sym} 100 -100 0 0 {name=p2 lab=VSS}
+C {devices/ipin.sym} 100 -660 0 0 {name=p1 lab=VDD_1V8}
+C {devices/ipin.sym} -60 -400 0 0 {name=p3 lab=PWRUP_1V8}
+C {devices/ipin.sym} 240 -380 0 0 {name=p4 lab=VIN_P}
+C {devices/ipin.sym} 720 -380 0 1 {name=p5 lab=VIN_N}
+C {JNW_TR_SKY130A/JNWTR_RPPO8.sym} 470 -580 1 0 {name=x1 }
+C {JNW_ATR_SKY130A/JNWATR_PCH_8C5F0.sym} 300 -380 0 0 {name=x2[1:0]}
+C {JNW_ATR_SKY130A/JNWATR_PCH_8C5F0.sym} 640 -380 0 1 {name=x3[1:0]}
+C {JNW_ATR_SKY130A/JNWATR_NCH_8C5F0.sym} 380 -260 0 1 {name=x4 }
+C {JNW_ATR_SKY130A/JNWATR_NCH_8C5F0.sym} 560 -260 0 0 {name=x5 }
+C {devices/opin.sym} 720 -320 0 0 {name=p6 lab=VOUT_P}
+C {devices/lab_wire.sym} 340 -320 0 0 {name=p7 sig_type=std_logic lab=VA}
+C {devices/lab_wire.sym} 470 -440 0 0 {name=p8 sig_type=std_logic lab=VX}

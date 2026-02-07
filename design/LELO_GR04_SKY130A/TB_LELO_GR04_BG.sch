@@ -29,7 +29,7 @@ C {devices/lab_pin.sym} 380 -400 0 0 {name=p2 sig_type=std_logic lab=VDD_1V8
 C {devices/lab_pin.sym} 220 -400 0 0 {name=p3 sig_type=std_logic lab=PWRUP_1V8}
 C {devices/lab_pin.sym} 360 -360 0 0 {name=p4 sig_type=std_logic lab=PWRUP_1V8}
 C {devices/code_shown.sym} -530 -310 0 0 {name=s1 only_toplevel=false value="
-.lib "../../../tech/ngspice/temperature.spi" Tl
+.lib "../../../tech/ngspice/temperature.spi" Tt
 .lib "../../../tech/ngspice/corners.spi" Kss
 .lib "../../../tech/ngspice/supply.spi" Vl
 .include ../../../../cpdk/ngspice/ideal_circuits.spi
@@ -38,7 +38,7 @@ C {devices/code_shown.sym} -530 -310 0 0 {name=s1 only_toplevel=false value="
 .save all
 .control
 
-optran 0 0 0 10n 10u 0
+optran 0 0 0 10n 1u 0
 op
 write TB_LELO_GR04_BG_OP.raw
 

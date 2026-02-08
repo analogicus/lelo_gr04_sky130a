@@ -5,7 +5,6 @@ V {}
 S {}
 E {}
 N 100 -100 420 -100 {lab=VSS}
-N 420 -150 420 -100 {lab=VSS}
 N 660 -260 660 -230 {lab=VD2}
 N 480 -390 480 -230 {lab=VX}
 N 660 -390 660 -340 {lab=VY}
@@ -29,14 +28,19 @@ N 720 -600 720 -590 {lab=VDD_1V8}
 N 660 -600 660 -590 {lab=VDD_1V8}
 N 480 -600 480 -590 {lab=VDD_1V8}
 N 100 -600 420 -600 {lab=VDD_1V8}
-N 580 -300 640 -300 {lab=VSS}
-N 420 -300 580 -300 {lab=VSS}
-N 420 -300 420 -150 {lab=VSS}
+N 580 -300 640 -300 {lab=#net1}
+N 420 -300 580 -300 {lab=#net1}
+N 420 -300 420 -150 {lab=#net1}
 N 760 -590 760 -540 {lab=VDD_1V8}
 N 760 -540 760 -490 {lab=VDD_1V8}
 N 760 -390 760 -100 {lab=VSS}
 N 1060 -490 1080 -490 {lab=LPO}
 N 1200 -490 1260 -490 {lab=LPI}
+N 300 -130 300 -100 {lab=VSS}
+N 300 -160 360 -160 {lab=VSS}
+N 360 -160 360 -100 {lab=VSS}
+N 300 -220 300 -190 {lab=#net1}
+N 300 -220 420 -220 {lab=#net1}
 C {cborder/border_xs.sym} 0 0 0 0 {
 user="wulff"
 company="wulff"}
@@ -46,9 +50,8 @@ C {devices/ipin.sym} 100 -300 0 0 {name=p3 lab=PWRUP_1V8}
 C {LELO_GR04_SKY130A/LELO_GR04_BG_BJT.sym} 570 -170 0 0 {name=x1}
 C {JNW_ATR_SKY130A/JNWATR_PCH_2C5F0.sym} 620 -530 0 0 {name=x3 }
 C {JNW_TR_SKY130A/JNWTR_RPPO4.sym} 660 -340 1 0 {name=x4}
-C {JNW_TR_SKY130A/JNWTR_CAPX1.sym} 580 -540 0 0 {name=x6 }
-C {devices/lab_wire.sym} 480 -440 0 0 {name=p4 sig_type=std_logic lab=VX}
-C {devices/lab_wire.sym} 660 -440 0 0 {name=p5 sig_type=std_logic lab=VY}
+C {devices/lab_wire.sym} 480 -360 0 0 {name=p4 sig_type=std_logic lab=VX}
+C {devices/lab_wire.sym} 660 -360 0 0 {name=p5 sig_type=std_logic lab=VY}
 C {devices/lab_wire.sym} 560 -530 0 0 {name=p6 sig_type=std_logic lab=LPI
 }
 C {devices/lab_wire.sym} 760 -430 0 0 {name=p7 sig_type=std_logic lab=VX}
@@ -61,3 +64,6 @@ C {devices/lab_wire.sym} 760 -470 0 0 {name=p11 sig_type=std_logic lab=PWRUP_1V8
 C {devices/lab_wire.sym} 760 -410 0 0 {name=p12 sig_type=std_logic lab=PWRUP_N_1V8}
 C {devices/ipin.sym} 1200 -490 0 0 {name=p13 lab=LPI}
 C {devices/opin.sym} 1080 -490 0 0 {name=p14 lab=LPO}
+C {JNW_ATR_SKY130A/JNWATR_NCH_12C1F2.sym} 260 -160 0 0 {name=x8 }
+C {devices/lab_wire.sym} 260 -160 0 0 {name=p15 sig_type=std_logic lab=PWRUP_1V8}
+C {JNW_TR_SKY130A/JNWTR_CAPX1.sym} 570 -540 0 0 {name=x6}

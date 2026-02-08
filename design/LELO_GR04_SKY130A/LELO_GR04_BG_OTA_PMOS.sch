@@ -4,7 +4,6 @@ K {}
 V {}
 S {}
 E {}
-N 100 -100 600 -100 {lab=VSS}
 N 240 -380 300 -380 {lab=VIN_P}
 N 540 -380 600 -380 {lab=VX}
 N 340 -380 400 -380 {lab=VX}
@@ -35,9 +34,9 @@ N 660 -260 660 -200 {lab=VSS}
 N 600 -200 660 -200 {lab=VSS}
 N 100 -660 470 -660 {lab=VDD_1V8}
 N 470 -660 470 -580 {lab=VDD_1V8}
-N 140 -540 450 -540 {lab=VSS}
-N 140 -540 140 -100 {lab=VSS}
 N 470 -520 470 -500 {lab=VX}
+N 100 -100 140 -100 {lab=VSS}
+N 140 -100 470 -100 {lab=VSS}
 C {cborder/border_xs.sym} 0 0 0 0 {
 user="wulff"
 company="wulff"}
@@ -54,3 +53,5 @@ C {devices/opin.sym} 720 -320 0 0 {name=p6 lab=VOUT_P}
 C {devices/lab_wire.sym} 340 -320 0 0 {name=p7 sig_type=std_logic lab=VA}
 C {devices/lab_wire.sym} 470 -440 0 0 {name=p8 sig_type=std_logic lab=VX}
 C {JNW_TR_SKY130A/JNWTR_RPPO2.sym} 470 -580 1 0 {name=x1 }
+C {devices/ipin.sym} -60 -340 0 0 {name=p9 lab=PWRUP_N_1V8}
+C {devices/lab_pin.sym} 450 -540 0 0 {name=p10 sig_type=std_logic lab=VSS}

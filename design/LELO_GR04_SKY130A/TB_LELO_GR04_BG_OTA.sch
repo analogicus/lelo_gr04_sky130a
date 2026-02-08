@@ -24,10 +24,11 @@ N 220 -460 440 -460 {lab=PWRUP_1V8}
 N 340 -380 400 -380 {lab=VIN_N}
 N 340 -440 400 -440 {lab=VIN_P}
 N 800 -480 950 -480 {lab=VOUT_P}
-N 400 -300 860 -300 {lab=GND}
-N 500 -400 500 -300 {lab=GND}
-N 860 -480 860 -420 {lab=VOUT_P}
-N 860 -360 860 -300 {lab=GND}
+N 500 -380 500 -300 {lab=GND}
+N 480 -400 500 -400 {lab=GND}
+N 480 -400 480 -360 {lab=GND}
+N 480 -360 500 -360 {lab=GND}
+N 400 -300 500 -300 {lab=GND}
 C {cborder/border_xs.sym} 0 0 0 0 {
 user="wulff"
 company="wulff"}
@@ -66,6 +67,6 @@ write TB_LELO_GR04_BG_OTA_OP.raw
 C {devices/vsource.sym} 400 -330 0 0 {name=Vicm value=0.8 savecurrent=false}
 C {devices/lab_wire.sym} 480 -440 0 0 {name=p2 sig_type=std_logic lab=VIN_P}
 C {devices/lab_wire.sym} 950 -480 0 0 {name=p5 sig_type=std_logic lab=VOUT_P}
-C {LELO_GR04_SKY130A/LELO_GR04_BG_OTA_PMOS.sym} 650 -440 0 0 {name=x1}
+C {LELO_GR04_SKY130A/LELO_GR04_BG_OTA_PMOS.sym} 650 -430 0 0 {name=x1}
 C {devices/vsource.sym} 340 -410 0 0 {name=V3 value="0 AC 1" savecurrent=false}
 C {devices/lab_wire.sym} 440 -400 0 0 {name=p4 sig_type=std_logic lab=VIN_N}

@@ -34,7 +34,6 @@ N 660 -260 660 -200 {lab=VSS}
 N 600 -200 660 -200 {lab=VSS}
 N 100 -660 470 -660 {lab=VDD_1V8}
 N 470 -660 470 -580 {lab=VDD_1V8}
-N 470 -520 470 -500 {lab=VX}
 N 100 -100 140 -100 {lab=VSS}
 N 140 -100 470 -100 {lab=VSS}
 C {cborder/border_xs.sym} 0 0 0 0 {

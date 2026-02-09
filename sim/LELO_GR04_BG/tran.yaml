@@ -1,0 +1,33 @@
+#<name>:
+#  src:
+#    - <paramters>
+#  typ: <typical spec value>
+#  name: <long name>
+#  min: <minimum spec value>
+#  max: <maximum spec value>
+#  scale: <scale, multiply result by scale>
+#  digits: <significant digits>
+#  unit: Unit
+
+
+idd:
+  src:
+    - idd
+  name: Active current
+  typ: 15
+  min: 5
+  max: 50
+  scale: -1e6
+  digits: 3
+  unit: uA
+
+iddq:
+  src:
+    - iddq
+  name: Leakage current
+  typ: 0.5
+  min: 0
+  max: 1
+  scale: -1e9
+  digits: 3
+  unit: nA

@@ -1,0 +1,17 @@
+* Measure LELO_GR04_BG
+.control
+
+* Set T_END & T_IDDQ (leakage measurement?)
+set t_end={t_end_meas}
+set t_iddq={t_iddq}
+
+load {cicname}.raw
+
+echo "MEAS_START"
+
+* Measure relevant values at T_END & T_IDDQ
+meas tran idd find i(vdd) at=$t_end
+meas tran iddq find i(vdd) at=$t_iddq
+
+echo "MEAS_END"
+.endc

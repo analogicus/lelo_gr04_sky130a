@@ -15,7 +15,7 @@ include ../../tech/make/sim.make
 
 # Running all testbenches
 all:
-# make -j 3 typical etc mc TB=lstb
+	make -j 3 typical etc mc TB=lstb
 	make -j 3 typical etc mc TB=tran
 # make -j 3 typical etc mc TB=dc
 	make summary

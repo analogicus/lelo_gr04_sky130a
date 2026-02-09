@@ -14,3 +14,18 @@ simulations:
       - name: Sch_3std
         src: results/tran_Sch_mc
         method: 3std
+
+   lstb:
+    name: Loop stability analysis
+    description: |
+      Check loop stability of OTA-bandgap
+    data:
+      - name: Sch_typ
+        src: results/lstb_Sch_typical
+        method: typical
+      - name: Sch_etc
+        src: results/lstb_Sch_etc
+        method: minmax
+      - name: Sch_3std
+        src: results/lstb_Sch_mc
+        method: 3std

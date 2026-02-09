@@ -1,0 +1,55 @@
+#<name>:
+#  src:
+#    - <paramters>
+#  typ: <typical spec value>
+#  name: <long name>
+#  min: <minimum spec value>
+#  max: <maximum spec value>
+#  scale: <scale, multiply result by scale>
+#  digits: <significant digits>
+#  unit: Unit
+
+
+gm_db:
+  src:
+    - gm_db
+  name: Gain margin
+  typ: -50
+  min: -20
+  max: -10
+  scale: 1
+  digits: 3
+  unit: dB
+
+pm_deg:
+  src:
+    - pm_deg
+  name: Phase margin
+  typ: 60
+  min: 45
+  max: 90
+  scale: 1
+  digits: 3
+  unit: deg
+
+lf_gain:
+  src:
+    - lf_gain
+  name: Loop gain
+  typ: 35
+  min: 20
+  max: 50
+  scale: 1
+  digits: 3
+  unit: dB
+
+f_ug:
+  src:
+    - f_ug
+  name: Unity-gain frequency
+  typ: 15
+  min: 5
+  max: 50
+  scale: 1e-6
+  digits: 3
+  unit: MHz

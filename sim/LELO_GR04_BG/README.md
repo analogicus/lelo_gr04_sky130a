@@ -16,4 +16,8 @@ Check transient operation
 | | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 0.420 |  | |
 | | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|0.294 | 0.614 | 2.320 | |
 | | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|0.418 | 0.420 | 0.422 | |
+|**Bandgap resistor voltage**|**vrd** || **Spec**  | **30.000** | **52.000** | **80.000** | **mV** |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 54.650 |  | |
+| | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|41.910 | 57.520 | 74.895 | |
+| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|43.472 | 55.582 | 67.691 | |
 

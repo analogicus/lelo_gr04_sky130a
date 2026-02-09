@@ -31,3 +31,14 @@ iddq:
   scale: -1e9
   digits: 3
   unit: nA
+
+vrd:
+  src:
+    - vrd
+  name: Bandgap resistor voltage
+  typ: 52
+  min: 30
+  max: 80
+  scale: 1e3
+  digits: 3
+  unit: mV

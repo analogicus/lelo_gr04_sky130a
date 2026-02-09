@@ -9,9 +9,14 @@ load {cicname}.raw
 
 echo "MEAS_START"
 
+* let index = length(v(xdut.vy))-1
+* let vrd = (v(xdut.vy)[index] - v(xdut.vd2)[index])*1.0 
+let vrd_t = v(xdut.vy) - v(xdut.vd2)
+
 * Measure relevant values at T_END & T_IDDQ
 meas tran idd find i(vdd) at=$t_end
 meas tran iddq find i(vdd) at=$t_iddq
+meas tran vrd find vrd_t at=$t_end
 
 echo "MEAS_END"
 .endc

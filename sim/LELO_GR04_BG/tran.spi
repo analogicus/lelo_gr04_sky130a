@@ -46,6 +46,9 @@ VLP LPI LPO dc 0
 
 .save v(LPI)
 .save i(VDD)
+.save v(xdut.VX)
+.save v(xdut.VY)
+.save v(xdut.VD2)
 
 *----------------------------------------------------------------
 * NGSPICE control

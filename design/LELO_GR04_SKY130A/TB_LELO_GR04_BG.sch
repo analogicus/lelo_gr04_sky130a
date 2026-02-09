@@ -26,7 +26,7 @@ company="wulff"}
 C {LELO_GR04_SKY130A/LELO_GR04_BG.sym} 550 -480 0 0 {name=x1e}
 C {devices/gnd.sym} 340 -240 0 0 {name=l1 lab=GND}
 C {devices/vsource.sym} 80 -330 0 0 {name=V1 value="pwl 0 0 1u 1.8" savecurrent=false}
-C {devices/vsource.sym} 220 -330 0 0 {name=V2 value="pwl 0 0 1.9u 0 2u 1.8 2.9u 1.8 3u 0 3.9u 0 4u 1.8" savecurrent=false}
+C {devices/vsource.sym} 220 -330 0 0 {name=V2 value="pwl 0 0 1.9u 0 2u 1.8 2.9u 1.8 3u 0 3.9u 0 4u 1.8 4.9u 1.8 5u 0" savecurrent=false}
 C {devices/lab_pin.sym} 80 -400 0 0 {name=p1 sig_type=std_logic lab=VDD_1V8
 }
 C {devices/lab_pin.sym} 220 -400 0 0 {name=p3 sig_type=std_logic lab=PWRUP_1V8}
@@ -44,7 +44,7 @@ optran 0 0 0 10n 1u 0
 op
 write TB_LELO_GR04_BG_OP.raw
 
-tran 10n 10u 0
+tran 5n 20u 0
 write TB_LELO_GR04_BG_TRAN.raw
 
 *dc temp -40 120 5

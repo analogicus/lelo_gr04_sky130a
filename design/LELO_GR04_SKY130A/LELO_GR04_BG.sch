@@ -43,8 +43,8 @@ N 120 -460 120 -100 {lab=VSS}
 N 760 -600 760 -490 {lab=VDD_1V8}
 N 180 -600 180 -570 {lab=VDD_1V8}
 N 180 -540 240 -540 {lab=VDD_1V8}
-N 180 -510 180 -480 {lab=LPI}
-N 160 -480 180 -480 {lab=LPI}
+N 180 -510 180 -480 {lab=#net2}
+N 160 -480 180 -480 {lab=#net2}
 N 240 -600 240 -540 {lab=VDD_1V8}
 C {cborder/border_xs.sym} 0 0 0 0 {
 user="wulff"
@@ -70,7 +70,7 @@ C {devices/lab_wire.sym} 760 -410 0 0 {name=p12 sig_type=std_logic lab=PWRUP_N_1
 C {devices/ipin.sym} 1200 -490 0 0 {name=p13 lab=LPI}
 C {devices/opin.sym} 1080 -490 0 0 {name=p14 lab=LPO}
 C {JNW_ATR_SKY130A/JNWATR_NCH_12C1F2.sym} 260 -160 0 0 {name=x8 }
-C {JNW_TR_SKY130A/JNWTR_CAPX1.sym} 570 -540 0 0 {name=x6}
+C {JNW_TR_SKY130A/JNWTR_CAPX4.sym} 570 -540 0 0 {name=x6}
 C {devices/lab_wire.sym} 260 -160 0 0 {name=p15 sig_type=std_logic lab=PWRUP_1V8}
 C {JNW_TR_SKY130A/JNWTR_CAPX1.sym} 20 -480 1 0 {name=x10}
 C {devices/lab_wire.sym} -20 -480 0 0 {name=p17 sig_type=std_logic lab=PWRUP_N_1V8}

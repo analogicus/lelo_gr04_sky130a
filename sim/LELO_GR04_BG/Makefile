@@ -19,6 +19,7 @@ all:
 	make -j 3 typical etc mc TB=tran
 # make -j 3 typical etc mc TB=dc
 	make summary
+	make html
 
 test:
 	${MAKE} typical OPT="Debug"
@@ -53,6 +54,8 @@ summary:
 slide:
 	pandoc -s  -t slidy README.md -o README.html
 
+html:
+	pandoc -s README.md -o README.html
 
 clean:
 	-rm -rf output_*

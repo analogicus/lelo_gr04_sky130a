@@ -5,9 +5,9 @@ load {cicname}.raw
 
 echo "MEAS_START"
 
-* Get currents between -30 to 125
+* Get currents between -45 to 125
 let temp_sweep = v(vtemp)
-let temp_start = -30
+let temp_start = -45
 let temp_end = 125
 
 let sweep_start = temp_sweep[0]
@@ -19,11 +19,11 @@ let idx_end = floor((temp_end - sweep_start) / sweep_step + 0.5)
 print temp_sweep[idx_start]
 print temp_sweep[idx_end]
 
-* NMOS-generated current: negative signs
-let i0_filtered = -i(v0)[idx_start, idx_end]
-let i1_filtered = -i(v1)[idx_start, idx_end]
-let i2_filtered = -i(v2)[idx_start, idx_end]
-let i3_filtered = -i(v3)[idx_start, idx_end]
+* PMOS-generated current: positive
+let i0_filtered = i(v0)[idx_start, idx_end]
+let i1_filtered = i(v1)[idx_start, idx_end]
+let i2_filtered = i(v2)[idx_start, idx_end]
+let i3_filtered = i(v3)[idx_start, idx_end]
 let temp_filtered = temp_sweep[idx_start, idx_end]
 let len = length(temp_filtered)
 
@@ -58,7 +58,18 @@ let offsets_range_25 = maximum(offsets_25) - minimum(offsets_25)
 print a_avg
 print offsets_range_25
 
-* Get reference and errors for Vin = 1.1V & calibrated at 25C
+* Get reference and errors for Vin = 0.5V & calibrated at 25C
+let i1_ref = (temp_filtered - temp_filtered[index_25]) * a1 + offset1_25
+let i1_err = i1_filtered - i1_ref
+let i1_err_max = maximum(i1_err)
+let i1_err_min = minimum(i1_err)
+let i1_25 = i1_filtered[index_25]
+
+print i1_err_max
+print i1_err_min
+print i1_25
+
+* Get reference and errors for Vin = 0.8V & calibrated at 25C
 let i2_ref = (temp_filtered - temp_filtered[index_25]) * a2 + offset2_25
 let i2_err = i2_filtered - i2_ref
 let i2_err_max = maximum(i2_err)

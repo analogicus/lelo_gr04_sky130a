@@ -32,8 +32,6 @@ N 600 -200 660 -200 {lab=VSS}
 N 100 -660 470 -660 {lab=VDD_1V8}
 N 100 -100 140 -100 {lab=VSS}
 N 140 -100 470 -100 {lab=VSS}
-N 470 -470 470 -440 {lab=VX}
-N 470 -570 470 -550 {lab=#net1}
 N 470 -660 470 -630 {lab=VDD_1V8}
 N 470 -600 530 -600 {lab=VDD_1V8}
 N 530 -660 530 -600 {lab=VDD_1V8}
@@ -48,6 +46,8 @@ N 470 -140 530 -140 {lab=VSS}
 N 470 -170 470 -140 {lab=VSS}
 N 470 -170 470 -140 {lab=VSS}
 N 470 -140 470 -100 {lab=VSS}
+N 470 -460 470 -440 {lab=VX}
+N 470 -570 470 -540 {lab=VRTAIL}
 C {cborder/border_xs.sym} 0 0 0 0 {
 user="wulff"
 company="wulff"}
@@ -63,10 +63,11 @@ C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} 560 -260 0 0 {name=x5 }
 C {devices/opin.sym} 720 -320 0 0 {name=p6 lab=VOUT_P}
 C {devices/lab_wire.sym} 340 -320 0 0 {name=p7 sig_type=std_logic lab=VA}
 C {devices/lab_wire.sym} 470 -440 0 0 {name=p8 sig_type=std_logic lab=VX}
-C {JNW_TR_SKY130A/JNWTR_RPPO2.sym} 470 -550 1 0 {name=x1 }
+C {JNW_TR_SKY130A/JNWTR_RPPO2.sym} 470 -540 1 0 {name=x1 }
 C {devices/ipin.sym} -60 -340 0 0 {name=p9 lab=PWRUP_N_1V8}
-C {devices/lab_pin.sym} 450 -510 0 0 {name=p10 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 450 -500 0 0 {name=p10 sig_type=std_logic lab=VSS}
 C {JNW_ATR_SKY130A/JNWATR_PCH_12C1F2.sym} 430 -600 0 0 {name=x2 }
 C {devices/lab_wire.sym} 430 -600 0 0 {name=p11 sig_type=std_logic lab=PWRUP_N_1V8}
 C {JNW_ATR_SKY130A/JNWATR_NCH_2C1F2.sym} 430 -200 0 0 {name=x3 }
 C {devices/lab_wire.sym} 430 -200 0 0 {name=p12 sig_type=std_logic lab=PWRUP_N_1V8}
+C {devices/lab_wire.sym} 470 -550 0 0 {name=p13 sig_type=std_logic lab=VRTAIL}

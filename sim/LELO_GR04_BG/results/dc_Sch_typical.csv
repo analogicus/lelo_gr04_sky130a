@@ -1,2 +1,2 @@
-,i2_25,i2_err_max,i2_err_min,a_avg,offsets_range_25,name,type,time,OK
-0,1.713687,6.3758349999999995,-21.3904,4.842039,17.9737,dc_SchGtKttTtVt,Sch,Tue Feb 10 14:20:17 2026,True
+,i1_25,a_avg,i1_err_max,i1_err_min,i2_err_max,i2_err_min,name,type,time,OK
+0,1.683287,4.845457,5.126468,-24.064899999999998,5.201655,-24.2579,dc_SchGtKttTtVt,Sch,Tue Feb 10 19:04:35 2026,True

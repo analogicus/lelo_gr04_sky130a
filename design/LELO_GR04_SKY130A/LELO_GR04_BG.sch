@@ -58,6 +58,8 @@ N 180 -320 180 -100 {lab=VSS}
 N 180 -480 180 -450 {lab=LPI}
 N 120 -420 140 -420 {lab=#net2}
 N 120 -300 180 -300 {lab=VSS}
+N 1200 -290 1260 -290 {lab=IBN_U[3:0]}
+N 1200 -310 1260 -310 {lab=VCASCN}
 C {cborder/border_xs.sym} 0 0 0 0 {
 user="wulff"
 company="wulff"}
@@ -92,3 +94,11 @@ C {devices/lab_wire.sym} 140 -540 0 0 {name=p19 sig_type=std_logic lab=PWRUP_1V8
 C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} 140 -420 0 0 {name=x7 }
 C {devices/lab_wire.sym} 180 -480 0 0 {name=p16 sig_type=std_logic lab=LPI
 }
+C {LELO_GR04_SKY130A/LELO_GR04_BG_OUTPUT.sym} 1050 -270 0 0 {name=x12}
+C {devices/lab_wire.sym} 900 -310 0 0 {name=p18 sig_type=std_logic lab=VDD_1V8}
+C {devices/lab_wire.sym} 900 -290 0 0 {name=p20 sig_type=std_logic lab=LPI}
+C {devices/lab_wire.sym} 900 -270 0 0 {name=p21 sig_type=std_logic lab=PWRUP_1V8}
+C {devices/lab_wire.sym} 900 -250 0 0 {name=p22 sig_type=std_logic lab=PWRUP_N_1V8}
+C {devices/lab_wire.sym} 900 -230 0 0 {name=p23 sig_type=std_logic lab=VSS}
+C {devices/opin.sym} 1260 -290 0 0 {name=p24 lab=IBN_U[3:0]}
+C {devices/lab_wire.sym} 1260 -310 0 0 {name=p25 sig_type=std_logic lab=VCASCN}

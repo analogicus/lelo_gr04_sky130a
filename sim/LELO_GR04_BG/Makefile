@@ -17,7 +17,7 @@ include ../../tech/make/sim.make
 all:
 	make -j 3 typical etc mc TB=lstb
 	make -j 3 typical etc mc TB=tran
-# make -j 3 typical etc mc TB=dc
+	make -j 3 typical etc mc TB=dc
 	make summary
 	make html
 

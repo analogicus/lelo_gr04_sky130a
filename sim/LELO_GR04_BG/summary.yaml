@@ -29,3 +29,17 @@ simulations:
       - name: Sch_3std
         src: results/lstb_Sch_mc
         method: 3std
+   dc:
+    name: DC
+    description: |
+      Check temperature performance
+    data:
+      - name: Sch_typ
+        src: results/dc_Sch_typical
+        method: typical
+      - name: Sch_etc
+        src: results/dc_Sch_etc
+        method: minmax
+      - name: Sch_3std
+        src: results/dc_Sch_mc
+        method: 3std

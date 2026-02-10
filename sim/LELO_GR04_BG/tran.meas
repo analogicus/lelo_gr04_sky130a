@@ -18,5 +18,36 @@ meas tran idd find i(vdd) at=$t_end
 meas tran iddq find i(vdd) at=$t_iddq
 meas tran vrd find vrd_t at=$t_end
 
+* Get 2% error
+let len = length(i(v1))
+let i_end = (i(v1)[len - 2] + i(v1)[len - 3])/2
+let i_2err = abs(0.02*i_end)
+
+* Measure settling time: from the back, skipping last
+let value_found = 0
+let settle_index = len - 2
+let index = len - 1
+while index > 1
+    * Average to overcome oscillatory behavior
+    let i_avg = (i(v1)[index] + i(v1)[index - 1])/2
+    if value_found < 1 and abs(i_avg - i_end) > i_2err
+        let value_found = 2
+        let settle_index = index
+    end
+    let index = index - 1
+end
+
+* Scale index to time
+let t_settle_98 = settle_index /
++ (1.0*len*{t_end_meas}/{t_end}) * $t_end
++ - {t_start}
+print t_settle_98
+
+* Measure currents
+meas tran i0 find i(v0) at=$t_end
+meas tran i1 find i(v1) at=$t_end
+meas tran i2 find i(v2) at=$t_end
+meas tran i3 find i(v3) at=$t_end
+
 echo "MEAS_END"
 .endc

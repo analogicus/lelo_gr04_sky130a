@@ -9,17 +9,37 @@ Check transient operation
 |**Name**|**Parameter**|**Description**| |**Min**|**Typ**|**Max**| Unit|
 |:---|:---|:---|---:|:---:|:---:|:---:| ---:|
 |**Active current**|**idd** || **Spec**  | **5.000** | **15.000** | **50.000** | **uA** |
-| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 15.101 |  | |
-| | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|<span style='color:red'>**2.199**</span> | 18.522 | <span style='color:red'>**63.675**</span> | |
-| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|14.646 | 15.081 | 15.516 | |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 21.979 |  | |
+| | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|6.474 | 25.405 | <span style='color:red'>**73.853**</span> | |
+| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|20.200 | 22.105 | 24.010 | |
 |**Leakage current**|**iddq** || **Spec**  | **0.000** | **0.500** | **1.000** | **nA** |
-| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 0.161 |  | |
-| | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|-0.001 | 0.787 | 2.338 | |
-| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|0.156 | 0.161 | 0.166 | |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 0.188 |  | |
+| | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|<span style='color:red'>**-0.027**</span> | 0.776 | <span style='color:red'>**2.360**</span> | |
+| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|0.181 | 0.188 | 0.195 | |
+|**Output current @ 0.2-1.1V**|**i0** || **Spec**  | **1.000** | **1.700** | **2.600** | **uA** |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 1.720 |  | |
+| | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|1.055 | 1.725 | <span style='color:orange'>**2.600**</span> | |
+| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|1.186 | 1.741 | 2.296 | |
+|**Output current @ 0.2-1.1V**|**i1** || **Spec**  | **1.000** | **1.700** | **2.600** | **uA** |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 1.719 |  | |
+| | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|1.071 | 1.733 | <span style='color:orange'>**2.610**</span> | |
+| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|1.232 | 1.734 | 2.237 | |
+|**Output current @ 0.2-1.1V**|**i2** || **Spec**  | **1.000** | **1.700** | **2.600** | **uA** |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 1.718 |  | |
+| | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|1.064 | 1.718 | <span style='color:orange'>**2.689**</span> | |
+| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|1.229 | 1.783 | 2.336 | |
+|**Output current @ 0.2-1.1V**|**i3** || **Spec**  | **1.000** | **1.700** | **2.600** | **uA** |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 1.712 |  | |
+| | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|1.065 | 1.732 | 2.426 | |
+| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|1.199 | 1.761 | 2.324 | |
 |**Bandgap resistor voltage**|**vrd** || **Spec**  | **30.000** | **52.000** | **80.000** | **mV** |
 | | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 54.732 |  | |
-| | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|36.124 | 57.656 | 75.032 | |
+| | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|36.534 | 57.656 | 75.032 | |
 | | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|43.577 | 55.618 | 67.658 | |
+|**Settling time (2%) @ 0.5V**|**t\_settle\_98** || **Spec**  | **0.000** | **1.000** | **5.000** | **us** |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 0.329 |  | |
+| | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|0.153 | 0.357 | <span style='color:red'>**8.488**</span> | |
+| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|0.162 | 0.332 | 0.501 | |
 
 #### Loop stability analysis (lstb)
 

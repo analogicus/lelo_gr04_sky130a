@@ -31,6 +31,12 @@ VPWR  PWRUP_1V8  VSS  pwl 0 0 {t_start} 0 {{t_start}+1n} {AVDD}
 VPWRN  PWRUP_N_1V8  VSS  pwl 0 {AVDD} {t_start} {AVDD} {{t_start}+1n} {0}
 VLP LPI LPO dc 0
 
+* Output currents at different output voltages
+V0 IBP_1F7U<0> 0 dc 0.2
+V1 IBP_1F7U<1> 0 dc 0.5
+V2 IBP_1F7U<2> 0 dc 0.8
+V3 IBP_1F7U<3> 0 dc 1.1
+
 *-----------------------------------------------------------------
 * DUT
 *-----------------------------------------------------------------
@@ -49,6 +55,10 @@ VLP LPI LPO dc 0
 .save v(xdut.VX)
 .save v(xdut.VY)
 .save v(xdut.VD2)
+.save i(v0)
+.save i(v1)
+.save i(v2)
+.save i(v3)
 
 *----------------------------------------------------------------
 * NGSPICE control

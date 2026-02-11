@@ -1,0 +1,70 @@
+#<name>:
+#  src:
+#    - <paramters>
+#  typ: <typical spec value>
+#  name: <long name>
+#  min: <minimum spec value>
+#  max: <maximum spec value>
+#  scale: <scale, multiply result by scale>
+#  digits: <significant digits>
+#  unit: Unit
+
+
+idd:
+  src:
+    - idd
+  name: Active current
+  typ: 15
+  min: 5
+  max: 50
+  scale: -1e6
+  digits: 3
+  unit: uA
+
+iddq:
+  src:
+    - iddq
+  name: Leakage current
+  typ: 0.5
+  min: 0.0001
+  max: 1
+  scale: -1e9
+  digits: 3
+  unit: nA
+
+iout:
+  src:
+    - i0
+    - i1
+    - i2
+    - i3
+  name: Output current @ 0.2-1.1V
+  typ: 1.7
+  min: 1.0
+  max: 2.6
+  scale: 1e6
+  digits: 3
+  unit: uA
+
+vrd:
+  src:
+    - vrd
+  name: Bandgap resistor voltage
+  typ: 52
+  min: 30
+  max: 80
+  scale: 1e3
+  digits: 3
+  unit: mV
+
+
+t_settle_98:
+  src:
+    - t_settle_98
+  name: Settling time (2%) @ 0.5V
+  typ: 1
+  min: 0.0001
+  max: 5
+  scale: 1e6
+  digits: 3
+  unit: us

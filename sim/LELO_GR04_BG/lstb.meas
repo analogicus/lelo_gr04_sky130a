@@ -1,0 +1,24 @@
+* Measure LELO_GR04_BG
+.control
+
+echo "MEAS_START"
+
+* load {cicname}_OP.raw
+
+* * let index = length(v(xdut.vy))-1
+* * let vrd = (v(xdut.vy)[index] - v(xdut.vd2)[index])*1.0 
+* let vrd_t = v(xdut.vy) - v(xdut.vd2)
+
+* * Measure relevant values at T_END & T_IDDQ
+* meas tran idd find i(vdd) at=$t_end
+* meas tran iddq find i(vdd) at=$t_iddq
+* meas tran vrd find vrd_t at=$t_end
+
+load {cicname}_LSTB.raw
+meas ac gm_db find lg_mag when lg_phase=0
+meas ac pm_deg find lg_phase when lg_mag=0
+meas ac f_ug when lg_mag=0
+meas ac lf_gain find lg_mag at=1k
+
+echo "MEAS_END"
+.endc

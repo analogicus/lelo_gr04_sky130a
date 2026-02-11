@@ -1,0 +1,94 @@
+*TB_SUN_TR_SKY130NM/TB_NCM
+*----------------------------------------------------------------
+* Include
+*----------------------------------------------------------------
+#ifdef Lay
+.include ../../../work/lpe/LELO_GR04_BG_lpe.spi
+#else
+.include ../../../work/xsch/LELO_GR04_BG.spice
+#endif
+
+*-----------------------------------------------------------------
+* OPTIONS
+*-----------------------------------------------------------------
+.option TNOM=27 GMIN=1e-15 reltol=1e-3
+
+*-----------------------------------------------------------------
+* PARAMETERS
+*-----------------------------------------------------------------
+.param TRF = 10p
+
+.param AVDD = {vdda}
+
+*-----------------------------------------------------------------
+* FORCE
+*-----------------------------------------------------------------
+VSS  VSS  0     dc 0
+
+* From LELO_TEMP: on from the start
+VDD  VDD_1V8  0 dc {AVDD}
+VPWR PWRUP_1V8 0 dc {AVDD}
+VPWRN PWRUP_N_1V8 0 dc 0
+
+*-----------------------------------------------------------------
+* DUT
+*-----------------------------------------------------------------
+.include ../xdut.spi
+.include ../../../../cpdk/ngspice/tian_subckt.lib
+
+* Add loopgainprobe
+X999 LPO LPI loopgainprobe
+
+*----------------------------------------------------------------
+* PROBE
+*----------------------------------------------------------------
+#ifdef Debug
+.save all
+
+* WARNING: may not work with AC
+.option savecurrents=all
+#endif
+
+.save v(LPI)
+.save i(VDD)
+.save v(xdut.VX)
+.save v(xdut.VY)
+.save v(xdut.VD2)
+
+* Need this for tian_loop() to get sim values
+.save i(v.x999.vi)
+.save v(x999.x)
+
+*----------------------------------------------------------------
+* NGSPICE control
+*----------------------------------------------------------------
+.control
+set num_threads=8
+set color0=white
+set color1=black
+unset askquit
+
+* Save OP measurements
+optran 0 0 0 10n 10u 0
+op
+write {cicname}_OP.raw
+
+* Set voltage in probe to 1 first
+ac dec 50 1 1G
+
+* Set current in probe to 1
+alter i.X999.Ii acmag=1
+alter v.X999.Vi acmag=0
+ac dec 50 1 1G
+
+let lg_mag = db(tian_loop())
+let lg_phase = 180*cph(tian_loop())/pi
+
+remzerovec
+write {cicname}_LSTB.raw
+quit
+
+
+.endc
+
+.end

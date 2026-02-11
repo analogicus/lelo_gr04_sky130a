@@ -1,0 +1,67 @@
+#<name>:
+#  src:
+#    - <paramters>
+#  typ: <typical spec value>
+#  name: <long name>
+#  min: <minimum spec value>
+#  max: <maximum spec value>
+#  scale: <scale, multiply result by scale>
+#  digits: <significant digits>
+#  unit: Unit
+
+i:
+  src:
+    - i1_25
+  name: IPTAT @ 0.5V output & 25C
+  typ: 1.7
+  min: 1.1
+  max: 2.3
+  scale: 1e6
+  digits: 3
+  unit: uA
+  
+a_avg:
+  src:
+    - a_avg
+  name: IPTAT temperature coefficient (avg)
+  typ: 5
+  min: 2.5
+  max: 7.5
+  scale: 1e9
+  digits: 3
+  unit: nA / K
+  
+i1err:
+  src:
+    - i1_err_max
+    - i1_err_min
+  name: IPTAT error @ 0.5V output
+  typ: 0
+  min: -30
+  max: 30
+  scale: 1e9
+  digits: 3
+  unit: nA
+
+i2err:
+  src:
+    - i2_err_max
+    - i2_err_min
+  name: IPTAT error @ 0.8V output
+  typ: 0
+  min: -30
+  max: 30
+  scale: 1e9
+  digits: 3
+  unit: nA
+
+# offsets_range_25:
+#   src:
+#     - offsets_range_25
+#   name: IPTAT offset range @ 0.2-1.1V output & 25C
+#   typ: 0
+#   min: 0
+#   max: 20
+#   scale: 1e9
+#   digits: 3
+#   unit: nA

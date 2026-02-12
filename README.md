@@ -4,9 +4,12 @@
 [![DOCS](../../actions/workflows/docs.yaml/badge.svg)](../../actions/workflows/docs.yaml)
 
 # Who
-wulff
+Wulff
+
 Nick
+
 Quannham
+
 Raquel
 
 # Why
@@ -63,18 +66,18 @@ Using the **5F0** device with $\approx 2\mu\text{A}$ bias:
 * **Operating Window:** $0.5\mu\text{A} \to 3.19\mu\text{A}$ for $g_m/I_D$ values between $15 \to 10$.
 
 
-*** Start Up Circuit *** 
+***Start Up Circuit*** 
 We first use Razavi’s simple timing circuit to initially keep node Vp low. We use a NMOS, which draws current from Vp untill VDD stabilizes (Roughly 1us for PWRUP_1V8 to ramp up). 
 Turns out it is need some very large values for RB and CB so we replace RB with a long , narrow MOSFET operating in triode region and bias with a small overdrive voltage 
 (small width keeps the Resistance high).
 
 
-*** Stability*** 
+***Stability*** 
 Since we first have a very low Phase Margin (~ 15 ), we use a compensator to increase it.
 When PM = 55deg  ft = 22MHz, loopgain*f_t = 7.5dB = 2.37. 
 Therefore Cc = 4 times X1, so  we replace X1 with X4. Of course there is a trade of between the covering area and the phase margin
 
-*** Regulated Cascode****
+***Regulated Cascode***
 We also use a simple CS – CG pair for mirroring the current so the reference voltage is more precise 
 
 <explain short how you made this module>

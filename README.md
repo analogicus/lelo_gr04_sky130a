@@ -16,8 +16,6 @@ Raquel
 
 To generate a **PTAT (Proportional To Absolute Temperature)** current and a **CTAT (Complementary To Absolute Temperature)** voltage, we use a bandgap reference circuit.
 
-<explain why you made this module>
-
 # How
 
 ## Bandgap circuit
@@ -119,8 +117,6 @@ Therefore Cc >= 2.37 times X1, so we replace X1 with X4. This pushed the PM to $
 Following the example in Razavi's, we added a regulated cascode at the PMOS mirror outputs. However, simulation shows that the drain voltages of the PTAT PMOSes are too low, so `VCASCP` simply goes directly to GND. 
 
 <!-- We also use a simple CS – CG pair for mirroring the current so the reference voltage is more precise  -->
-
-<explain short how you made this module>
 
 
 # What

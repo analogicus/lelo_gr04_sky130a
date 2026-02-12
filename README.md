@@ -108,11 +108,11 @@ However, this led to large leakage current for some reason. So instead, we direc
 
 **Stability**
 
-Since we first have a very low Phase Margin (~ $25\text{\textdegree}$), we use the dominant pole compensation method to increase it.
+Since we first have a very low Phase Margin (~ $25\textdegree$), we use the dominant pole compensation method to increase it.
 
-When PM = $55\text{\textdegree}$: $f_t$ = 22MHz, loop gain = 7.5dB = 2.37. 
+When PM = $55\textdegree$: $f_t$ = 22MHz, loop gain = 7.5dB = 2.37. 
 
-Therefore Cc >= 2.37 times X1, so we replace X1 with X4. This pushed the PM to $60\text{\textdegree}$. Of course, there is a trade-off between the covering area and the phase margin. We can also add a resistor for lead compensation later.
+Therefore Cc >= 2.37 times X1, so we replace X1 with X4. This pushed the PM to $60\textdegree$. Of course, there is a trade-off between the covering area and the phase margin. We can also add a resistor for lead compensation later.
 
 **Regulated Cascode**
 

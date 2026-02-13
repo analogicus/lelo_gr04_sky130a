@@ -80,5 +80,21 @@ print i2_err_max
 print i2_err_min
 print i2_25
 
+* Get CTAT voltage
+let v_ctat_filtered = v(xdut.VY)[idx_start, idx_end]
+let a_ctat = (v_ctat_filtered[len - 1] - v_ctat_filtered[0])/trange
+let offset_ctat_25 = v_ctat_filtered[index_25]
+let v_ctat_ref = (temp_filtered - temp_filtered[index_25]) * a_ctat + offset_ctat_25
+let v_ctat_err = v_ctat_filtered - v_ctat_ref
+let v_ctat_err_max = maximum(v_ctat_err)
+let v_ctat_err_min = minimum(v_ctat_err)
+let v_ctat_25 = v_ctat_filtered[index_25]
+
+print a_ctat
+print offset_ctat_25
+print v_ctat_err_max
+print v_ctat_err_min
+print v_ctat_25
+
 echo "MEAS_END"
 .endc

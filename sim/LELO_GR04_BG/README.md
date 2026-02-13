@@ -82,6 +82,14 @@ Check temperature performance
 | | | |<a href='results/dc_Sch_typical.html'>Sch_typ</a>| | 4.845 |  | |
 | | | |<a href='results/dc_Sch_etc.html'>Sch_etc</a>|4.370 | 5.959 | <span style='color:red'>**12.541**</span> | |
 | | | |<a href='results/dc_Sch_mc.html'>Sch_3std</a>|2.859 | 4.677 | 6.495 | |
+|**VCTAT @ 25C**|**v\_ctat\_25** || **Spec**  | **650.000** | **700.000** | **750.000** | **mV** |
+| | | |<a href='results/dc_Sch_typical.html'>Sch_typ</a>| | 707.231 |  | |
+| | | |<a href='results/dc_Sch_etc.html'>Sch_etc</a>|706.303 | 707.319 | 708.331 | |
+| | | |<a href='results/dc_Sch_mc.html'>Sch_3std</a>|690.475 | 708.477 | 726.478 | |
+|**VCTAT temperature coefficient**|**a\_ctat** || **Spec**  | **-2.000** | **-1.800** | **-1.600** | **mV / K** |
+| | | |<a href='results/dc_Sch_typical.html'>Sch_typ</a>| | -1.801 |  | |
+| | | |<a href='results/dc_Sch_etc.html'>Sch_etc</a>|-1.797 | -1.760 | <span style='color:red'>**-0.893**</span> | |
+| | | |<a href='results/dc_Sch_mc.html'>Sch_3std</a>|-1.885 | -1.807 | -1.729 | |
 |**IPTAT error @ 0.5V output**|**i1\_err\_max** || **Spec**  | **-30.000** | **0.000** | **30.000** | **nA** |
 | | | |<a href='results/dc_Sch_typical.html'>Sch_typ</a>| | 5.126 |  | |
 | | | |<a href='results/dc_Sch_etc.html'>Sch_etc</a>|2.880 | 29.854 | <span style='color:red'>**318.231**</span> | |
@@ -98,4 +106,12 @@ Check temperature performance
 | | | |<a href='results/dc_Sch_typical.html'>Sch_typ</a>| | -24.258 |  | |
 | | | |<a href='results/dc_Sch_etc.html'>Sch_etc</a>|<span style='color:red'>**-848.604**</span> | <span style='color:red'>**-100.511**</span> | -23.593 | |
 | | | |<a href='results/dc_Sch_mc.html'>Sch_3std</a>|<span style='color:red'>**-99.653**</span> | <span style='color:red'>**-31.479**</span> | <span style='color:red'>**36.694**</span> | |
+|**VCTAT error**|**v\_ctat\_err\_max** || **Spec**  | **-9.000** | **0.000** | **9.000** | **mV** |
+| | | |<a href='results/dc_Sch_typical.html'>Sch_typ</a>| | 0.248 |  | |
+| | | |<a href='results/dc_Sch_etc.html'>Sch_etc</a>|0.182 | 0.383 | <span style='color:red'>**35.982**</span> | |
+| | | |<a href='results/dc_Sch_mc.html'>Sch_3std</a>|-0.858 | 0.417 | 1.691 | |
+|**VCTAT error**|**v\_ctat\_err\_min** || **Spec**  | **-9.000** | **0.000** | **9.000** | **mV** |
+| | | |<a href='results/dc_Sch_typical.html'>Sch_typ</a>| | -4.326 |  | |
+| | | |<a href='results/dc_Sch_etc.html'>Sch_etc</a>|<span style='color:red'>**-100.304**</span> | -8.002 | -4.272 | |
+| | | |<a href='results/dc_Sch_mc.html'>Sch_3std</a>|<span style='color:red'>**-9.276**</span> | -4.030 | 1.216 | |
 

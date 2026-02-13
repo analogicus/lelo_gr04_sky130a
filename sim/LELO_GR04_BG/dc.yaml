@@ -31,6 +31,28 @@ a_avg:
   digits: 3
   unit: nA / K
   
+v_ctat:
+  src:
+    - v_ctat_25
+  name: VCTAT @ 25C
+  typ: 700
+  min: 650
+  max: 750
+  scale: 1e3
+  digits: 3
+  unit: mV
+  
+a_ctat:
+  src:
+    - a_ctat
+  name: VCTAT temperature coefficient
+  typ: -1.8
+  min: -2
+  max: -1.6
+  scale: 1e3
+  digits: 3
+  unit: mV / K
+  
 i1err:
   src:
     - i1_err_max
@@ -54,6 +76,18 @@ i2err:
   scale: 1e9
   digits: 3
   unit: nA
+
+v_ctat_err:
+  src:
+    - v_ctat_err_max
+    - v_ctat_err_min
+  name: VCTAT error
+  typ: 0
+  min: -9
+  max: 9
+  scale: 1e3
+  digits: 3
+  unit: mV
 
 # offsets_range_25:
 #   src:

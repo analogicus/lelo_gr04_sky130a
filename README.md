@@ -106,11 +106,11 @@ However, this led to large leakage current for some reason. So instead, we direc
 
 **Stability**
 
-Since we first have a very low Phase Margin (~ $25\textdegree$), we use the dominant pole compensation method to increase it.
+Since we first have a very low Phase Margin (~ 25°), we use the dominant pole compensation method to increase it.
 
-When PM = $55\textdegree$: $f_t$ = 22MHz, loop gain = 7.5dB = 2.37. 
+When PM = 55°: $f_t$ = 22MHz, loop gain = 7.5dB = 2.37. 
 
-Therefore Cc >= 2.37 times X1, so we replace X1 with X4. This pushed the PM to $60\textdegree$. Of course, there is a trade-off between the covering area and the phase margin. We can also add a resistor for lead compensation later.
+Therefore Cc >= 2.37 times X1, so we replace X1 with X4. This pushed the PM to 60°. Of course, there is a trade-off between the covering area and the phase margin. We can also add a resistor for lead compensation later.
 
 **Regulated Cascode**
 
@@ -118,6 +118,11 @@ Following the example in Razavi's, we added a regulated cascode at the PMOS mirr
 
 <!-- We also use a simple CS – CG pair for mirroring the current so the reference voltage is more precise  -->
 
+### Result
+
+The simulated IPTAT is not so linear, but may work well enough in the 0°-100°C range. The VCTAT is slightly better, so perhaps a better output mirror structure could improve this IPTAT.
+
+![IPTAT and VCTAT](./assets/iptat_vctat.png)
 
 # What
 

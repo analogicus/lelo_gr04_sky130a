@@ -66,7 +66,7 @@ C {devices/lab_wire.sym} 470 -440 0 0 {name=p8 sig_type=std_logic lab=VX}
 C {JNW_TR_SKY130A/JNWTR_RPPO2.sym} 470 -540 1 0 {name=x1 }
 C {devices/ipin.sym} -60 -340 0 0 {name=p9 lab=PWRUP_N_1V8}
 C {devices/lab_pin.sym} 450 -500 0 0 {name=p10 sig_type=std_logic lab=VSS}
-C {JNW_ATR_SKY130A/JNWATR_PCH_12C1F2.sym} 430 -600 0 0 {name=x2 }
+C {JNW_ATR_SKY130A/JNWATR_PCH_12C5F0.sym} 430 -600 0 0 {name=x2 }
 C {devices/lab_wire.sym} 430 -600 0 0 {name=p11 sig_type=std_logic lab=PWRUP_N_1V8}
 C {JNW_ATR_SKY130A/JNWATR_NCH_2C1F2.sym} 430 -200 0 0 {name=x3 }
 C {devices/lab_wire.sym} 430 -200 0 0 {name=p12 sig_type=std_logic lab=PWRUP_N_1V8}

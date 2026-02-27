@@ -67,7 +67,7 @@ C {devices/lab_wire.sym} 760 -470 0 0 {name=p11 sig_type=std_logic lab=PWRUP_1V8
 C {devices/lab_wire.sym} 760 -410 0 0 {name=p12 sig_type=std_logic lab=PWRUP_N_1V8}
 C {devices/ipin.sym} 1200 -490 0 0 {name=p13 lab=LPI}
 C {devices/opin.sym} 1080 -490 0 0 {name=p14 lab=LPO}
-C {JNW_ATR_SKY130A/JNWATR_NCH_12C1F2.sym} 260 -160 0 0 {name=x8 }
+C {JNW_ATR_SKY130A/JNWATR_NCH_12C5F0.sym} 260 -160 0 0 {name=x8 }
 C {JNW_TR_SKY130A/JNWTR_CAPX1.sym} 550 -440 3 0 {name=x6[1:0]}
 C {devices/lab_wire.sym} 260 -160 0 0 {name=p15 sig_type=std_logic lab=PWRUP_1V8}
 C {devices/lab_wire.sym} 300 -460 0 0 {name=p16 sig_type=std_logic lab=LPI

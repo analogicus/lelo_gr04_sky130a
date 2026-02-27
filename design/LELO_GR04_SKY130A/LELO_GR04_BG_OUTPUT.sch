@@ -71,5 +71,5 @@ C {devices/lab_wire.sym} 1020 -400 0 0 {name=p14 sig_type=std_logic lab=IBP_1F7U
 C {JNW_TR_SKY130A/JNWTR_CAPX1.sym} 600 -550 0 0 {name=x4 }
 C {devices/lab_wire.sym} 800 -580 0 0 {name=p15 sig_type=std_logic lab=VP}
 C {devices/lab_wire.sym} 980 -580 0 0 {name=p16 sig_type=std_logic lab=VP}
-C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 680 -580 0 0 {name=x5 }
+C {JNW_ATR_SKY130A/JNWATR_PCH_12C1F2.sym} 680 -580 0 0 {name=x5 }
 C {devices/lab_wire.sym} 680 -580 0 0 {name=p17 sig_type=std_logic lab=PWRUP_1V8}

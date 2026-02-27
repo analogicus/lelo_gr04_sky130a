@@ -75,11 +75,11 @@ set color0=white
 set color1=black
 unset askquit
 
-optran 0 0 0 1n 1u 0
+optran 0 0 0 5n 5u 0
 op
 
 * -45 is gold standard
-dc TEMP -50 125 5
+dc TEMP -55 125 5
 write
 quit
 

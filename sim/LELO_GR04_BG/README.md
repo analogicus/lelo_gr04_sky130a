@@ -80,38 +80,38 @@ Check temperature performance
 | | | |<a href='results/dc_Sch_mc.html'>Sch_3std</a>|1.163 | 1.724 | 2.285 | |
 |**IPTAT temperature coefficient (avg)**|**a\_avg** || **Spec**  | **2.500** | **5.000** | **7.500** | **nA / K** |
 | | | |<a href='results/dc_Sch_typical.html'>Sch_typ</a>| | 4.859 |  | |
-| | | |<a href='results/dc_Sch_etc.html'>Sch_etc</a>|4.385 | 5.418 | <span style='color:red'>**10.987**</span> | |
-| | | |<a href='results/dc_Sch_mc.html'>Sch_3std</a>|2.943 | 4.695 | 6.447 | |
+| | | |<a href='results/dc_Sch_etc.html'>Sch_etc</a>|4.226 | 4.925 | 5.800 | |
+| | | |<a href='results/dc_Sch_mc.html'>Sch_3std</a>|2.946 | 4.696 | 6.446 | |
 |**VCTAT @ 25C**|**v\_ctat\_25** || **Spec**  | **650.000** | **700.000** | **750.000** | **mV** |
 | | | |<a href='results/dc_Sch_typical.html'>Sch_typ</a>| | 708.310 |  | |
 | | | |<a href='results/dc_Sch_etc.html'>Sch_etc</a>|707.450 | 708.382 | 709.272 | |
 | | | |<a href='results/dc_Sch_mc.html'>Sch_3std</a>|691.133 | 709.603 | 728.073 | |
 |**VCTAT temperature coefficient**|**a\_ctat** || **Spec**  | **-2.000** | **-1.800** | **-1.600** | **mV / K** |
 | | | |<a href='results/dc_Sch_typical.html'>Sch_typ</a>| | -1.791 |  | |
-| | | |<a href='results/dc_Sch_etc.html'>Sch_etc</a>|-1.789 | -1.782 | <span style='color:red'>**-1.413**</span> | |
+| | | |<a href='results/dc_Sch_etc.html'>Sch_etc</a>|-1.799 | -1.788 | -1.773 | |
 | | | |<a href='results/dc_Sch_mc.html'>Sch_3std</a>|-1.874 | -1.797 | -1.721 | |
 |**IPTAT error @ 0.5V output**|**i1\_err\_max** || **Spec**  | **-30.000** | **0.000** | **30.000** | **nA** |
-| | | |<a href='results/dc_Sch_typical.html'>Sch_typ</a>| | 5.333 |  | |
-| | | |<a href='results/dc_Sch_etc.html'>Sch_etc</a>|1.761 | 4.488 | <span style='color:red'>**297.109**</span> | |
-| | | |<a href='results/dc_Sch_mc.html'>Sch_3std</a>|<span style='color:red'>**-53.188**</span> | 16.445 | <span style='color:red'>**86.079**</span> | |
+| | | |<a href='results/dc_Sch_typical.html'>Sch_typ</a>| | 5.272 |  | |
+| | | |<a href='results/dc_Sch_etc.html'>Sch_etc</a>|2.829 | 4.274 | 6.455 | |
+| | | |<a href='results/dc_Sch_mc.html'>Sch_3std</a>|<span style='color:red'>**-52.956**</span> | 16.324 | <span style='color:red'>**85.604**</span> | |
 |**IPTAT error @ 0.5V output**|**i1\_err\_min** || **Spec**  | **-30.000** | **0.000** | **30.000** | **nA** |
-| | | |<a href='results/dc_Sch_typical.html'>Sch_typ</a>| | -23.096 |  | |
-| | | |<a href='results/dc_Sch_etc.html'>Sch_etc</a>|<span style='color:red'>**-681.288**</span> | <span style='color:red'>**-35.786**</span> | -23.699 | |
-| | | |<a href='results/dc_Sch_mc.html'>Sch_3std</a>|<span style='color:red'>**-96.461**</span> | <span style='color:red'>**-30.489**</span> | <span style='color:red'>**35.482**</span> | |
+| | | |<a href='results/dc_Sch_typical.html'>Sch_typ</a>| | -23.324 |  | |
+| | | |<a href='results/dc_Sch_etc.html'>Sch_etc</a>|<span style='color:red'>**-42.652**</span> | -27.320 | -22.823 | |
+| | | |<a href='results/dc_Sch_mc.html'>Sch_3std</a>|<span style='color:red'>**-96.916**</span> | <span style='color:red'>**-30.571**</span> | <span style='color:red'>**35.775**</span> | |
 |**IPTAT error @ 0.8V output**|**i2\_err\_max** || **Spec**  | **-30.000** | **0.000** | **30.000** | **nA** |
-| | | |<a href='results/dc_Sch_typical.html'>Sch_typ</a>| | 5.406 |  | |
-| | | |<a href='results/dc_Sch_etc.html'>Sch_etc</a>|1.920 | 4.582 | <span style='color:red'>**297.034**</span> | |
-| | | |<a href='results/dc_Sch_mc.html'>Sch_3std</a>|<span style='color:red'>**-50.055**</span> | 16.061 | <span style='color:red'>**82.177**</span> | |
+| | | |<a href='results/dc_Sch_typical.html'>Sch_typ</a>| | 5.377 |  | |
+| | | |<a href='results/dc_Sch_etc.html'>Sch_etc</a>|2.995 | 4.461 | 6.664 | |
+| | | |<a href='results/dc_Sch_mc.html'>Sch_3std</a>|<span style='color:red'>**-49.754**</span> | 15.951 | <span style='color:red'>**81.655**</span> | |
 |**IPTAT error @ 0.8V output**|**i2\_err\_min** || **Spec**  | **-30.000** | **0.000** | **30.000** | **nA** |
-| | | |<a href='results/dc_Sch_typical.html'>Sch_typ</a>| | -23.323 |  | |
-| | | |<a href='results/dc_Sch_etc.html'>Sch_etc</a>|<span style='color:red'>**-681.350**</span> | <span style='color:red'>**-36.284**</span> | -23.779 | |
-| | | |<a href='results/dc_Sch_mc.html'>Sch_3std</a>|<span style='color:red'>**-96.532**</span> | <span style='color:red'>**-30.839**</span> | <span style='color:red'>**34.854**</span> | |
+| | | |<a href='results/dc_Sch_typical.html'>Sch_typ</a>| | -23.589 |  | |
+| | | |<a href='results/dc_Sch_etc.html'>Sch_etc</a>|<span style='color:red'>**-42.756**</span> | -27.726 | -23.331 | |
+| | | |<a href='results/dc_Sch_mc.html'>Sch_3std</a>|<span style='color:red'>**-97.042**</span> | <span style='color:red'>**-30.958**</span> | <span style='color:red'>**35.125**</span> | |
 |**VCTAT error**|**v\_ctat\_err\_max** || **Spec**  | **-9.000** | **0.000** | **9.000** | **mV** |
 | | | |<a href='results/dc_Sch_typical.html'>Sch_typ</a>| | 0.248 |  | |
-| | | |<a href='results/dc_Sch_etc.html'>Sch_etc</a>|0.019 | 0.202 | <span style='color:red'>**16.454**</span> | |
-| | | |<a href='results/dc_Sch_mc.html'>Sch_3std</a>|-0.887 | 0.424 | 1.735 | |
+| | | |<a href='results/dc_Sch_etc.html'>Sch_etc</a>|0.061 | 0.228 | 0.270 | |
+| | | |<a href='results/dc_Sch_mc.html'>Sch_3std</a>|-0.885 | 0.423 | 1.731 | |
 |**VCTAT error**|**v\_ctat\_err\_min** || **Spec**  | **-9.000** | **0.000** | **9.000** | **mV** |
-| | | |<a href='results/dc_Sch_typical.html'>Sch_typ</a>| | -4.164 |  | |
-| | | |<a href='results/dc_Sch_etc.html'>Sch_etc</a>|<span style='color:red'>**-44.612**</span> | -4.759 | -4.163 | |
-| | | |<a href='results/dc_Sch_mc.html'>Sch_3std</a>|<span style='color:red'>**-9.035**</span> | -3.896 | 1.243 | |
+| | | |<a href='results/dc_Sch_typical.html'>Sch_typ</a>| | -4.167 |  | |
+| | | |<a href='results/dc_Sch_etc.html'>Sch_etc</a>|-5.106 | -4.397 | -3.980 | |
+| | | |<a href='results/dc_Sch_mc.html'>Sch_3std</a>|<span style='color:red'>**-9.040**</span> | -3.897 | 1.247 | |
 

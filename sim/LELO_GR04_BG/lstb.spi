@@ -74,12 +74,12 @@ op
 write {cicname}_OP.raw
 
 * Set voltage in probe to 1 first
-ac dec 50 1 1G
+ac dec 25 1 10T
 
 * Set current in probe to 1
 alter i.X999.Ii acmag=1
 alter v.X999.Vi acmag=0
-ac dec 50 1 1G
+ac dec 25 1 10T
 
 let lg_mag = db(tian_loop())
 let lg_phase = 180*cph(tian_loop())/pi

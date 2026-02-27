@@ -39,8 +39,11 @@ N 760 -600 760 -490 {lab=VDD_1V8}
 N 1200 -300 1260 -300 {lab=IBP_1F7U[3:0]}
 N 1200 -320 1260 -320 {lab=VCASCP}
 N 420 -220 420 -150 {lab=VSS_G}
-N 420 -250 420 -220 {lab=VSS_G}
-N 420 -340 420 -320 {lab=LPI}
+N 300 -460 300 -440 {lab=LPI}
+N 300 -370 300 -340 {lab=PWRUP_N_1V8}
+N 480 -440 490 -440 {lab=VX}
+N 560 -440 570 -440 {lab=LPI}
+N 570 -530 570 -440 {lab=LPI}
 C {cborder/border_xs.sym} 0 0 0 0 {
 user="wulff"
 company="wulff"}
@@ -52,7 +55,7 @@ C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 620 -530 0 0 {name=x3 }
 C {JNW_TR_SKY130A/JNWTR_RPPO4.sym} 660 -340 1 0 {name=x4}
 C {devices/lab_wire.sym} 480 -360 0 0 {name=p4 sig_type=std_logic lab=VX}
 C {devices/lab_wire.sym} 660 -360 0 0 {name=p5 sig_type=std_logic lab=VY}
-C {devices/lab_wire.sym} 560 -530 0 0 {name=p6 sig_type=std_logic lab=LPI
+C {devices/lab_wire.sym} 570 -530 0 0 {name=p6 sig_type=std_logic lab=LPI
 }
 C {devices/lab_wire.sym} 760 -430 0 0 {name=p7 sig_type=std_logic lab=VX}
 C {devices/lab_wire.sym} 760 -450 0 0 {name=p8 sig_type=std_logic lab=VY}
@@ -65,9 +68,9 @@ C {devices/lab_wire.sym} 760 -410 0 0 {name=p12 sig_type=std_logic lab=PWRUP_N_1
 C {devices/ipin.sym} 1200 -490 0 0 {name=p13 lab=LPI}
 C {devices/opin.sym} 1080 -490 0 0 {name=p14 lab=LPO}
 C {JNW_ATR_SKY130A/JNWATR_NCH_12C1F2.sym} 260 -160 0 0 {name=x8 }
-C {JNW_TR_SKY130A/JNWTR_CAPX4.sym} 570 -540 0 0 {name=x6}
+C {JNW_TR_SKY130A/JNWTR_CAPX1.sym} 550 -440 3 0 {name=x6[1:0]}
 C {devices/lab_wire.sym} 260 -160 0 0 {name=p15 sig_type=std_logic lab=PWRUP_1V8}
-C {devices/lab_wire.sym} 420 -340 0 0 {name=p16 sig_type=std_logic lab=LPI
+C {devices/lab_wire.sym} 300 -460 0 0 {name=p16 sig_type=std_logic lab=LPI
 }
 C {LELO_GR04_SKY130A/LELO_GR04_BG_OUTPUT.sym} 1050 -270 0 0 {name=x12}
 C {devices/lab_wire.sym} 900 -320 0 0 {name=p18 sig_type=std_logic lab=VDD_1V8}
@@ -79,5 +82,6 @@ C {devices/opin.sym} 1260 -300 0 0 {name=p24 lab=IBP_1F7U[3:0]}
 C {devices/lab_wire.sym} 1260 -320 0 0 {name=p25 sig_type=std_logic lab=VCASCP}
 C {devices/lab_wire.sym} 900 -280 0 0 {name=p26 sig_type=std_logic lab=VY}
 C {devices/lab_wire.sym} 640 -300 0 0 {name=p27 sig_type=std_logic lab=VSS}
-C {JNW_TR_SKY130A/JNWTR_CAPX4.sym} 420 -260 0 0 {name=x13}
+C {JNW_TR_SKY130A/JNWTR_CAPX1.sym} 300 -380 0 0 {name=x13}
 C {devices/lab_wire.sym} 420 -220 0 0 {name=p28 sig_type=std_logic lab=VSS_G}
+C {devices/lab_wire.sym} 300 -340 0 0 {name=p17 sig_type=std_logic lab=PWRUP_N_1V8}

@@ -17,21 +17,21 @@ Check transient operation
 | | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|<span style='color:red'>**-0.038**</span> | 0.960 | <span style='color:red'>**6.148**</span> | |
 | | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|0.914 | 0.943 | 0.973 | |
 |**Output current @ 0.2-1.1V**|**i0** || **Spec**  | **1.000** | **1.700** | **2.600** | **uA** |
-| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 1.761 |  | |
-| | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|1.006 | 1.701 | <span style='color:orange'>**2.622**</span> | |
-| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|1.313 | 1.820 | 2.326 | |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 1.721 |  | |
+| | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|1.186 | 1.737 | 2.545 | |
+| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|1.255 | 1.772 | 2.289 | |
 |**Output current @ 0.2-1.1V**|**i1** || **Spec**  | **1.000** | **1.700** | **2.600** | **uA** |
-| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 1.717 |  | |
-| | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|1.183 | 1.767 | 2.519 | |
-| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|1.195 | 1.756 | 2.318 | |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 1.721 |  | |
+| | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|1.186 | 1.737 | 2.545 | |
+| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|1.202 | 1.759 | 2.317 | |
 |**Output current @ 0.2-1.1V**|**i2** || **Spec**  | **1.000** | **1.700** | **2.600** | **uA** |
-| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 1.728 |  | |
-| | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|1.168 | 1.765 | 2.509 | |
-| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|1.221 | 1.766 | 2.311 | |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 1.721 |  | |
+| | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|1.186 | 1.737 | 2.544 | |
+| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|1.225 | 1.765 | 2.305 | |
 |**Output current @ 0.2-1.1V**|**i3** || **Spec**  | **1.000** | **1.700** | **2.600** | **uA** |
-| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 1.697 |  | |
-| | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|1.177 | 1.708 | 2.489 | |
-| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|1.177 | 1.723 | 2.269 | |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 1.715 |  | |
+| | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|1.185 | 1.729 | 2.527 | |
+| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|1.231 | 1.743 | 2.255 | |
 |**Bandgap resistor voltage**|**vrd** || **Spec**  | **30.000** | **52.000** | **80.000** | **mV** |
 | | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 54.776 |  | |
 | | | |<a href='results/tran_Sch_etc.html'>Sch_etc</a>|41.655 | 57.721 | 75.146 | |

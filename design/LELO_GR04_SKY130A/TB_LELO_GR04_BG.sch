@@ -20,7 +20,7 @@ N 510 -400 510 -380 {lab=VDD_1V8}
 N 220 -360 320 -360 {lab=PWRUP_1V8}
 N 320 -360 320 -340 {lab=PWRUP_1V8}
 N 550 -340 660 -340 {lab=PWRUP_INT}
-N 700 -500 760 -500 {lab=IBP_1F7U[3:0]}
+N 700 -500 760 -500 {lab=VCTAT}
 N 510 -300 760 -300 {lab=GND}
 N 760 -320 760 -300 {lab=GND}
 N 880 -320 880 -300 {lab=GND}
@@ -31,6 +31,7 @@ N 760 -400 760 -380 {lab=IBP_1F7U[0]}
 N 880 -400 880 -380 {lab=IBP_1F7U[1]}
 N 1000 -400 1000 -380 {lab=IBP_1F7U[2]}
 N 1120 -400 1120 -380 {lab=IBP_1F7U[3]}
+N 700 -480 760 -480 {lab=IBP_1F7U[3:0]}
 C {cborder/border_xs.sym} 0 0 0 0 {
 user="wulff"
 company="wulff"}
@@ -75,7 +76,7 @@ C {devices/lab_wire.sym} 400 -520 0 0 {name=p2 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_wire.sym} 400 -440 0 0 {name=p5 sig_type=std_logic lab=GND}
 C {devices/lab_wire.sym} 280 -500 0 0 {name=p10 sig_type=std_logic lab=LPI}
 C {devices/vsource.sym} 760 -350 0 0 {name=V3 value=0.3 savecurrent=false}
-C {devices/lab_wire.sym} 760 -500 0 0 {name=p11 sig_type=std_logic lab=IBP_1F7U[3:0]}
+C {devices/lab_wire.sym} 760 -480 0 0 {name=p11 sig_type=std_logic lab=IBP_1F7U[3:0]}
 C {devices/vsource.sym} 880 -350 0 0 {name=V4 value=0.7 savecurrent=false}
 C {devices/vsource.sym} 1000 -350 0 0 {name=V5 value=1.1 savecurrent=false}
 C {devices/vsource.sym} 1120 -350 0 0 {name=V6 value=1.5 savecurrent=false}
@@ -83,3 +84,4 @@ C {devices/lab_wire.sym} 760 -400 0 0 {name=p12 sig_type=std_logic lab=IBP_1F7U[
 C {devices/lab_wire.sym} 880 -400 0 0 {name=p13 sig_type=std_logic lab=IBP_1F7U[1]}
 C {devices/lab_wire.sym} 1000 -400 0 0 {name=p14 sig_type=std_logic lab=IBP_1F7U[2]}
 C {devices/lab_wire.sym} 1120 -400 0 0 {name=p15 sig_type=std_logic lab=IBP_1F7U[3]}
+C {devices/lab_wire.sym} 760 -500 0 0 {name=p16 sig_type=std_logic lab=VCTAT}

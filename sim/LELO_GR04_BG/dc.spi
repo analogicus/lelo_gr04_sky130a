@@ -53,7 +53,7 @@ BT1 vtemp 0 V=TEMPER
 
 .save v(LPI)
 .save i(VDD)
-.save v(xdut.VX)
+.save v(VX)
 .save v(xdut.VY)
 .save v(xdut.VD2)
 

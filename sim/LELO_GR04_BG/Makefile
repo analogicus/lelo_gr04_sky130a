@@ -4,7 +4,7 @@ all: typical etc mc summary
 
 
 
-TB=tran
+TB=dc
 VIEW=Sch
 #VIEW=Lay
 CELL=LELO_GR04_BG
@@ -15,9 +15,9 @@ include ../../tech/make/sim.make
 
 # Running all testbenches
 all:
-	make -j 3 typical etc mc TB=lstb
-	make -j 3 typical etc mc TB=tran
-	make -j 3 typical etc mc TB=dc
+	make -j 9 typical etc mc TB=lstb
+	make -j 9 typical etc mc TB=tran
+	make -j 9 typical etc mc TB=dc
 	make summary
 	make html
 

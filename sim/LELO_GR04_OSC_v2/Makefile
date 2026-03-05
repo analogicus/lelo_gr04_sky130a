@@ -1,6 +1,6 @@
 
 
-all: typical etc mc summary
+# all: typical etc mc summary
 
 
 
@@ -12,6 +12,14 @@ LIB =LELO_GR04_SKY130A
 OPT=
 
 include ../../tech/make/sim.make
+
+# Running all testbenches
+all:
+	# make -j 9 typical etc mc TB=lstb
+	make -j 9 typical etc mc TB=tran
+	# make -j 9 typical etc mc TB=dc
+	make summary
+	make html
 
 test:
 	${MAKE} typical OPT="Debug"
@@ -46,6 +54,8 @@ summary:
 slide:
 	pandoc -s  -t slidy README.md -o README.html
 
+html:
+	pandoc -s README.md -o README.html
 
 clean:
 	-rm -rf output_*

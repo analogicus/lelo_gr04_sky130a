@@ -54,14 +54,14 @@ idd:
   digits: 3
   unit: uA
 
-# iddq:
-#   src:
-#     - iddq_-45
-#     - iddq_125
-#   name: Leakage current
-#   typ: 50
-#   min: 0.0001
-#   max: 100
-#   scale: -1e9
-#   digits: 3
-#   unit: nA
+iddq:
+  src:
+    - iddq_-45
+    - iddq_125
+  name: Leakage current
+  typ: 50
+  min: 0.0001
+  max: 100
+  scale: -1e9
+  digits: 3
+  unit: nA

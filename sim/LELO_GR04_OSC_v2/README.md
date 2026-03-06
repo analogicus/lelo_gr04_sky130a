@@ -23,4 +23,10 @@ Check transient operation
 |**Active current**|**idd\_125** || **Spec**  | **10.000** | **40.000** | **70.000** | **uA** |
 | | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 47.049 |  | |
 | | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|35.061 | 47.777 | 64.382 | |
+|**Leakage current**|**iddq\_-45** || **Spec**  | **0.000** | **50.000** | **100.000** | **nA** |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 4.604 |  | |
+| | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|1.412 | 6.049 | 79.181 | |
+|**Leakage current**|**iddq\_125** || **Spec**  | **0.000** | **50.000** | **100.000** | **nA** |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | <span style='color:red'>**114.886**</span> |  | |
+| | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|41.962 | <span style='color:red'>**385.620**</span> | <span style='color:red'>**2178.437**</span> | |
 

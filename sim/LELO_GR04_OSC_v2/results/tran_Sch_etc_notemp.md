@@ -14,3 +14,7 @@ For details see <a href='tran_Sch_etc_notemp.html'>tran_Sch_etc_notemp.html</a>
 | | | ('Sch',)|9.978 uA | 14.640 uA | 20.464 uA |
 |Active current|idd\_125 | Spec | 10.000 uA | 40.000 uA | 70.000 uA |
 | | | ('Sch',)|35.061 uA | 47.777 uA | 64.382 uA |
+|Leakage current|iddq\_-45 | Spec | 0.000 nA | 50.000 nA | 100.000 nA |
+| | | ('Sch',)|1.412 nA | 6.049 nA | 79.181 nA |
+|Leakage current|iddq\_125 | Spec | 0.000 nA | 50.000 nA | 100.000 nA |
+| | | ('Sch',)|41.962 nA | 385.620 nA | 2178.437 nA |

@@ -17,7 +17,7 @@ set fend = .raw
 foreach vtemp {temperatures}
     load {cicname}_$vtemp$fend
     meas tran idd_$vtemp AVG i(vdd) from={t_start} to={t_end_meas}
-    meas tran iddq_$vtemp AVG i(vdd) from={t_end_meas} to={t_end}
+    meas tran iddq_$vtemp AVG i(vdd) from={t_end_meas + 2u} to={t_end}
 
 *     let len = length(v(vosc))
 *     let start_index = floor(len * (t_start / t_end))

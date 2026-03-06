@@ -3,6 +3,23 @@
 [![LVS](../../actions/workflows/lvs.yaml/badge.svg)](../../actions/workflows/lvs.yaml)
 [![DOCS](../../actions/workflows/docs.yaml/badge.svg)](../../actions/workflows/docs.yaml)
 
+## Table of Contents
+- [Who](#who)
+- [Why](#why)
+- [How](#how)
+  - [Bandgap circuit](#bandgap-circuit)
+    - [Mini Theory](#mini-theory)
+    - [Design Parameters and Values](#design-parameters-and-values)
+    - [MOSFET Configurations & Sizing](#mosfet-configurations--sizing)
+    - [Result](#result)
+  - [Oscillator](#oscillator)
+    - [Theory](#theory)
+    - [Implementation](#implementation)
+    - [Result](#result-1)
+- [What](#what)
+- [Signal interface](#signal-interface)
+- [Key parameters](#key-parameters)
+
 # Who
 Wulff
 
@@ -21,6 +38,10 @@ To generate a **PTAT (Proportional To Absolute Temperature)** current and a **CT
 ## Bandgap circuit
 
 ### Mini Theory
+
+The design is according to [Milestone 1](https://analogicus.com/aic2026/the_project#milestone-1-the-bandgap) of the project:
+
+<img src="./assets/l03_ptat.svg" alt="Bandgap" width="200"/>
 
 The two diodes carry the same current $I_D$, forced by the operational amplifier, so: 
 
@@ -123,6 +144,65 @@ Following the example in Razavi's, we added a regulated cascode at the PMOS mirr
 The simulated IPTAT is not so linear, but may work well enough in the 0°-100°C range. The VCTAT is slightly better, so perhaps a better output mirror structure could improve this IPTAT.
 
 ![IPTAT and VCTAT](./assets/iptat_vctat.png)
+
+## Oscillator
+
+### Theory
+
+The oscillator is simply based on [Milestone 2](https://analogicus.com/aic2026/the_project#milestone-2-the-oscillator):
+
+<img src="./assets/rcosc.svg" alt="Oscillator" width="500"/>
+
+where the capacitor is charged by a PTAT current up to a CTAT voltage, both of which are supplied by the bandgap. The inverters provide a slight delay for the comparator to fully discharge the capacitor, restarting the cycle.
+
+The change of voltage of the capacitor is given by:
+
+$$\frac{dV_{C}}{dt} = \frac{I_{ptat}}{C}$$
+
+Given constant $I_{ptat}$, the charging duration is:
+
+$$ T_{charge} = V_{ctat} \times C / I_{ptat}$$
+
+If assuming the discharge is instantaneous, the number of oscillation over a period T is:
+
+$$ n_{osc} = T / T_{charge} = \frac{T I_{ptat}}{CV_{ctat}}$$
+
+We want to run this oscillator over 30 us, the period of a 32768 Hz low-frequency oscillator. Choosing the capacitor to be 4x CAPX4, each composed of 4 CAPX1 that are 53.8 fF each, and using the following values for $I_{ptat}$ and $V_{ctat}$ (from typical bandgap simulation):
+
+| Quantity            |        Value |
+| :----           |  :----:       |
+| `IPTAT @ 25C` | 1.693 uA |
+| `IPTAT temperature coefficient` | 4.958 nA/K |
+| `VCTAT @ 25C` | 708.725 mV |
+| `VCTAT temperature coefficient` | -1.786 mV/K |
+
+We arrive at the following expected oscillation counts at different temperatures:
+
+| Temperature | Expected count |
+| :----           |  :----:       |
+| -45 C | 60 |
+| 25 C | 83 |
+| 125 C | 144 |
+
+### Implementation
+
+The oscillator currently uses a second comparator to compare capacitor voltage with half the $V_{ctat}$ voltage, since the D flip-flop is not tested yet. It can be implemented later to reduce current usage. 6 inverters are used to delay the comparator output.
+
+### Result
+
+The following are the plots of capacitor voltage, comparator output, and oscillator output at different temperature corners. Process and voltage are typical.
+
+<img src="./assets/osc_1.png" alt="Oscillator_Tl" width="500"/>
+<img src="./assets/osc_2.png" alt="Oscillator_Tt" width="500"/>
+<img src="./assets/osc_3.png" alt="Oscillator_Th" width="500"/>
+
+The plot of oscillation vs. temperature at typical process and voltage is below. 
+
+![Count typical](./sim/LELO_GR04_OSC_v2/results/output_tran/tran_SchGtKttTtVt_count.png)
+
+Plots of other corners can be found in [the same folder](./sim/LELO_GR04_OSC_v2/results/output_tran). The majority of them deviate from the expected curve. This is likely due to the non-zero delay of the comparator, and also the transient startup of the bandgap. 
+
+We note that, in the 0-75C temperature range, the same process corner produces somewhat similar curves at different voltage corners. This means that deviations in the curve can likely be addressed via calibration.
 
 # What
 

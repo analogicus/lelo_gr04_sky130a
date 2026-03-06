@@ -1,0 +1,21 @@
+#<name>:
+#  src:
+#    - <paramters>
+#  typ: <typical spec value>
+#  name: <long name>
+#  min: <minimum spec value>
+#  max: <maximum spec value>
+#  scale: <scale, multiply result by scale>
+#  digits: <significant digits>
+#  unit: Unit
+
+count:
+  src:
+    - count
+  name: Oscillation count (30us)
+  typ: 85
+  min: 50
+  max: 169
+  scale: 1
+  digits: 1
+  unit: pulses

@@ -1,0 +1,30 @@
+* Measure LELO_GR04_OSC_v2
+.control
+
+* Set T_END, T_END_MEAS & T_START
+let t_end = 35u
+let t_end_meas = 31u
+let t_start = 1u
+let threshold = 1.8 / 2
+
+load {cicname}.raw
+
+echo "MEAS_START"
+
+let len = length(v(vosc))
+let start_index = floor(len * (t_start / t_end))
+let stop_index = floor(len * (t_end_meas / t_end))
+
+let index = start_index + 1
+let count = 0
+while index < stop_index
+    if (v(vosc)[index] < threshold) and (v(vosc)[index - 1] > threshold)
+        let count = count + 1
+    end
+    let index = index + 1
+end
+
+print count
+
+echo "MEAS_END"
+.endc

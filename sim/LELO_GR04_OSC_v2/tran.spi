@@ -1,0 +1,78 @@
+*TB_SUN_TR_SKY130NM/TB_NCM
+*----------------------------------------------------------------
+* Include
+*----------------------------------------------------------------
+#ifdef Lay
+.include ../../../work/lpe/LELO_GR04_OSC_v2_lpe.spi
+* Include also BG
+* .include ../../../work/lpe/LELO_GR04_BG_lpe.spi
+#else
+.include ../../../work/xsch/LELO_GR04_OSC_v2.spice
+* Include also BG
+.include ../../../work/xsch/LELO_GR04_BG.spice
+#endif
+
+*-----------------------------------------------------------------
+* OPTIONS
+*-----------------------------------------------------------------
+.option TNOM=27 GMIN=1e-15 reltol=1e-3
+
+*-----------------------------------------------------------------
+* PARAMETERS
+*-----------------------------------------------------------------
+.param TRF = 10p
+
+.param AVDD = {vdda}
+
+*-----------------------------------------------------------------
+* FORCE
+*-----------------------------------------------------------------
+VSS  VSS  0     dc 0
+VDD  VDD_1V8  VSS  pwl 0 0 10n {AVDD}
+
+VPWR  PWRUP_1V8  VSS  pwl 0 0 1u 0 1.01u {AVDD} 31u {AVDD} 31.01u 0
+VPWRN  PWRUP_N_1V8  VSS  pwl 0 {AVDD} 1u {AVDD} 1.01u {0} 31u 0 31.01u {AVDD}
+
+* Bandgap element, from ../LELO_GR04_BG/xdut.spi
+XBG VDD_1V8 LPO LPI VX PWRUP_N_1V8 IBP_1F7U<3> IBP_1F7U<2> IBP_1F7U<1> IBP_1F7U<0> PWRUP_1V8 VSS  LELO_GR04_BG
+VLP LPI LPO dc 0
+VXC VX VC dc 0
+
+*-----------------------------------------------------------------
+* DUT
+*-----------------------------------------------------------------
+.include ../xdut.spi
+
+*----------------------------------------------------------------
+* PROBE
+*----------------------------------------------------------------
+#ifdef Debug
+.save all
+.option savecurrents=all
+#endif
+
+.save v(VOSC)
+.save i(VDD)
+.save v(xdut.cmpo)
+.save v(IBP_1F7U<0>)
+
+*----------------------------------------------------------------
+* NGSPICE control
+*----------------------------------------------------------------
+.control
+set num_threads=8
+set color0=white
+set color1=black
+unset askquit
+
+optran 0 0 0 1n 1u 0
+
+
+tran 3n 35u
+write
+quit
+
+
+.endc
+
+.end

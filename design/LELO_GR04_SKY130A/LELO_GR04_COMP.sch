@@ -87,6 +87,16 @@ N -330 -150 200 -150 {lab=VO}
 N -330 -90 -330 100 {lab=VSS}
 N -330 -120 -310 -120 {lab=VSS}
 N -310 -120 -310 100 {lab=VSS}
+N -80 -410 -50 -410 {lab=VDD_1V8}
+N -80 -470 -80 -410 {lab=VDD_1V8}
+N 430 90 430 100 {lab=VSS}
+N 430 60 460 60 {lab=VSS}
+N 460 60 460 100 {lab=VSS}
+N 430 20 430 30 {lab=IBP_1F7U}
+N -40 60 390 60 {lab=PWRUP_N_1V8}
+N -40 -80 -40 60 {lab=PWRUP_N_1V8}
+N -420 -80 -40 -80 {lab=PWRUP_N_1V8}
+N -420 -120 -420 -80 {lab=PWRUP_N_1V8}
 C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} 20 20 0 0 {name=x1 }
 C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} -120 20 2 0 {name=x2 }
 C {JNW_ATR_SKY130A/JNWATR_PCH_2C1F2.sym} 100 -230 0 1 {name=x3[1:0]
@@ -114,3 +124,4 @@ C {devices/ipin.sym} -380 -400 0 0 {name=p7 lab=PWRUP_1V8
 }
 C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} -370 -120 0 0 {name=x11 }
 C {devices/ipin.sym} 340 -80 0 0 {name=p8 lab=IBP_1F7U}
+C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} 390 60 0 0 {name=x12 }

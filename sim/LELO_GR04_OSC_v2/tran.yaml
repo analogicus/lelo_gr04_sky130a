@@ -9,13 +9,59 @@
 #  digits: <significant digits>
 #  unit: Unit
 
-count:
+count_-45:
   src:
-    - count
-  name: Oscillation count (30us)
-  typ: 85
-  min: 50
-  max: 169
+    - count_-45
+  name: Oscillation count @ -45C (30us)
+  typ: 60
+  min: 45
+  max: 75
   scale: 1
-  digits: 1
+  digits: 0
   unit: pulses
+
+count_25:
+  src:
+    - count_25
+  name: Oscillation count @ 25C (30us)
+  typ: 83
+  min: 68
+  max: 98
+  scale: 1
+  digits: 0
+  unit: pulses
+
+count_125:
+  src:
+    - count_125
+  name: Oscillation count @ 125C (30us)
+  typ: 144
+  min: 129
+  max: 159
+  scale: 1
+  digits: 0
+  unit: pulses
+
+idd:
+  src:
+    - idd_-45
+    - idd_125
+  name: Active current
+  typ: 40
+  min: 10
+  max: 70
+  scale: -1e6
+  digits: 3
+  unit: uA
+
+# iddq:
+#   src:
+#     - iddq_-45
+#     - iddq_125
+#   name: Leakage current
+#   typ: 50
+#   min: 0.0001
+#   max: 100
+#   scale: -1e9
+#   digits: 3
+#   unit: nA

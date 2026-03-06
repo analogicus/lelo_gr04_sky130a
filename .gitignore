@@ -1,7 +1,6 @@
 *.run
 *.ext
 __pycache__
-output_*/
 *.tcl
 *.log
 work/

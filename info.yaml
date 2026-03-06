@@ -19,3 +19,5 @@ doc:
       - LELO_GR04_BG_BJT
       - LELO_GR04_BG_OTA_PMOS
       - LELO_GR04_BG_OUTPUT
+      - LELO_GR04_COMP
+      - LELO_GR04_OSC_v2

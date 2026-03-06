@@ -1,6 +1,6 @@
 
 
-all: typical etc mc summary
+# all: typical etc mc summary
 
 
 

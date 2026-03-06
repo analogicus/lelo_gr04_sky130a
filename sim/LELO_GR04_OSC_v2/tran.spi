@@ -30,8 +30,8 @@
 VSS  VSS  0     dc 0
 VDD  VDD_1V8  VSS  pwl 0 0 10n {AVDD}
 
-VPWR  PWRUP_1V8  VSS  pwl 0 0 1u 0 1.01u {AVDD} 31u {AVDD} 31.01u 0
-VPWRN  PWRUP_N_1V8  VSS  pwl 0 {AVDD} 1u {AVDD} 1.01u {0} 31u 0 31.01u {AVDD}
+VPWR  PWRUP_1V8  VSS  pwl 0 0 {t_start} 0 {{t_start}+1n} {AVDD} {t_end_meas} {AVDD} {{t_end_meas}+1n} 0
+VPWRN  PWRUP_N_1V8  VSS  pwl 0 {AVDD} {t_start} {AVDD} {{t_start}+1n} 0 {t_end_meas} 0 {{t_end_meas}+1n} {AVDD}
 
 * Bandgap element, from ../LELO_GR04_BG/xdut.spi
 XBG VDD_1V8 LPO LPI VX PWRUP_N_1V8 IBP_1F7U<3> IBP_1F7U<2> IBP_1F7U<1> IBP_1F7U<0> PWRUP_1V8 VSS  LELO_GR04_BG
@@ -68,7 +68,13 @@ unset askquit
 optran 0 0 0 1n 1u 0
 
 
-tran 3n 35u
+* tran 1n {t_end}
+set fend = .raw
+foreach vtemp {temperatures}
+  option temp=$vtemp
+  tran 1n {t_end}
+  write {cicname}_$vtemp$fend
+end
 write
 quit
 

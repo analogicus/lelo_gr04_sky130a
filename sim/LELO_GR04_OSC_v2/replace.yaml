@@ -4,5 +4,5 @@ t_end_meas: 31u
 t_start: 1u
 t_iddq: 0.9u
 param_vdd: 1.8
-temperatures: -45 -15 25 55 85 105 125
+temperatures: -45 -25 -5 15 25 45 65 85 105 125
 

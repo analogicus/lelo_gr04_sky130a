@@ -149,7 +149,7 @@ The simulated IPTAT is not so linear, but may work well enough in the 0°-100°C
 
 ### Theory
 
-The oscillator is simply based on [Milestone 2](https://analogicus.com/aic2026/the_project#milestone-2-the-oscillator):
+The oscillator is based on [Milestone 2](https://analogicus.com/aic2026/the_project#milestone-2-the-oscillator):
 
 <img src="./assets/rcosc.svg" alt="Oscillator" width="500"/>
 
@@ -196,13 +196,11 @@ The following are the plots of capacitor voltage, comparator output, and oscilla
 <img src="./assets/osc_2.png" alt="Oscillator_Tt" width="500"/>
 <img src="./assets/osc_3.png" alt="Oscillator_Th" width="500"/>
 
-The plot of oscillation vs. temperature at typical process and voltage is below. 
+The plot of oscillations vs. temperature at typical process and voltage is below. The scaled curve is the expected curve scaled (calibrated) to the measurement at 25C. The temperature error predicted by this curve is in the second plot.
 
 ![Count typical](./sim/LELO_GR04_OSC_v2/results/output_tran/tran_SchGtKttTtVt_count.png)
 
-Plots of other corners can be found in [the same folder](./sim/LELO_GR04_OSC_v2/results/output_tran). The majority of them deviate from the expected curve. This is likely due to the non-zero delay of the comparator, and also the transient startup of the bandgap. 
-
-We note that, in the 0-75C temperature range, the same process corner produces somewhat similar curves at different voltage corners. This means that deviations in the curve can likely be addressed via calibration.
+Plots of other corners can be found in [the same folder](./sim/LELO_GR04_OSC_v2/results/output_tran). The majority of them deviate from the expected curve, but the calbiration helps address this. Likely sources of errors are the non-zero delay of the comparator, and the transient startup of the bandgap. 
 
 # What
 

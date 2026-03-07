@@ -51,16 +51,42 @@ def main(name):
   expected_counts = duration / cap * \
     (iptat_25 + (np.asarray(temps) - 25) * iptat_slope) / \
     (vctat_25 + (np.asarray(temps) - 25) * vctat_slope)
+  
+  # Find closest value to 25
+  index_25 = np.argmin(np.abs(np.asarray(temps) - 25))
+  scale = osc_counts[index_25] / expected_counts[index_25]
+  scaled_counts = expected_counts * scale
+
+  # Error calculation (calibrated at 25C)
+  predicted_temps = []
+  for count in osc_counts:
+    tmp = count * cap / duration / scale
+    tmp2 = tmp * vctat_25 - iptat_25
+    tmp3 = -tmp * vctat_slope + iptat_slope
+    predicted_temp = tmp2 / tmp3 + 25
+    predicted_temps.append(predicted_temp)
 
   # Plot results
   plt.figure()
-  plt.plot(temps, osc_counts, ".-", temps, expected_counts, ".-")
-  plt.suptitle("Oscillations vs. temperature")
-  plt.title(f"({name})")
+
+  # Oscillation over temps
+  plt.subplot(2, 1, 1)
+  plt.plot(temps, osc_counts, ".-")
+  plt.plot(temps, expected_counts, ".-")
+  plt.plot(temps, scaled_counts, ".--")
+  plt.title(f"Oscillations and temperature error\n({name})")
   plt.ylabel("Oscillations per 30us")
-  plt.xlabel("Temperature (C)")
-  plt.legend(["Measured", "Expected"])
+  plt.legend(["Measured", "Expected", "Expected - scaled"])
   plt.grid(True)
+
+  # Error
+  plt.subplot(2, 1, 2)
+  plt.plot(temps, np.asarray(predicted_temps) - np.asarray(temps), ".-")
+  plt.ylabel("Temperature error (C)")
+  plt.xlabel("Temperature (C)")
+  plt.ylim([-10, 10])
+  plt.grid(True)
+
   # plt.show()
   plt.savefig(os.path.dirname(__file__) + "/results/" + name + "_count.png")
 

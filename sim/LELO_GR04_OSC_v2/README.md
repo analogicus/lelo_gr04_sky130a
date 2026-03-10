@@ -8,25 +8,31 @@ Check transient operation
 
 |**Name**|**Parameter**|**Description**| |**Min**|**Typ**|**Max**| Unit|
 |:---|:---|:---|---:|:---:|:---:|:---:| ---:|
-|**Oscillation count @ -45C (30us)**|**count\_-45** || **Spec**  | **45** | **60** | **75** | **pulses** |
-| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 54 |  | |
-| | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|<span style='color:red'>**34**</span> | 53 | 73 | |
-|**Oscillation count @ 25C (30us)**|**count\_25** || **Spec**  | **68** | **83** | **98** | **pulses** |
-| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 81 |  | |
-| | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|<span style='color:red'>**61**</span> | 81 | <span style='color:red'>**110**</span> | |
-|**Oscillation count @ 125C (30us)**|**count\_125** || **Spec**  | **129** | **144** | **159** | **pulses** |
-| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 137 |  | |
-| | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|<span style='color:red'>**97**</span> | 135 | <span style='color:red'>**185**</span> | |
 |**Active current**|**idd\_-45** || **Spec**  | **10.000** | **40.000** | **70.000** | **uA** |
-| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 14.369 |  | |
-| | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|<span style='color:orange'>**9.978**</span> | 14.640 | 20.464 | |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 13.687 |  | |
+| | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|<span style='color:red'>**4.182**</span> | 13.390 | 20.239 | |
 |**Active current**|**idd\_125** || **Spec**  | **10.000** | **40.000** | **70.000** | **uA** |
-| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 47.049 |  | |
-| | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|35.061 | 47.777 | 64.382 | |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 46.895 |  | |
+| | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|34.826 | 47.657 | 64.084 | |
 |**Leakage current**|**iddq\_-45** || **Spec**  | **0.000** | **50.000** | **100.000** | **nA** |
-| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 4.604 |  | |
-| | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|1.412 | 6.049 | 79.181 | |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 6.773 |  | |
+| | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|2.898 | 8.626 | <span style='color:red'>**126.694**</span> | |
 |**Leakage current**|**iddq\_125** || **Spec**  | **0.000** | **50.000** | **100.000** | **nA** |
-| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | <span style='color:red'>**114.886**</span> |  | |
-| | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|41.962 | <span style='color:red'>**385.620**</span> | <span style='color:red'>**2178.437**</span> | |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | <span style='color:red'>**139.431**</span> |  | |
+| | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|91.414 | <span style='color:red'>**434.212**</span> | <span style='color:red'>**2189.534**</span> | |
+|**Oscillation frequency @ -45C**|**fosc\_-45** || **Spec**  | **1.406** | **1.875** | **2.344** | **MHz** |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 2.057 |  | |
+| | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|1.420 | 2.025 | <span style='color:red'>**2.681**</span> | |
+|**Oscillation frequency @ 25C**|**fosc\_25** || **Spec**  | **2.081** | **2.775** | **3.469** | **MHz** |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 2.905 |  | |
+| | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|2.267 | 2.911 | <span style='color:red'>**3.868**</span> | |
+|**Oscillation frequency @ 125C**|**fosc\_125** || **Spec**  | **3.598** | **4.797** | **5.996** | **MHz** |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 4.750 |  | |
+| | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|3.668 | 4.742 | <span style='color:red'>**6.384**</span> | |
+|**Temperature error (calibrated @ 25C)**|**t\_err\_max** || **Spec**  | **-10.00** | **0.00** | **10.00** | **C** |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 8.02 |  | |
+| | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|2.61 | 4.28 | <span style='color:red'>**16.64**</span> | |
+|**Temperature error (calibrated @ 25C)**|**t\_err\_min** || **Spec**  | **-10.00** | **0.00** | **10.00** | **C** |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | -9.92 |  | |
+| | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|<span style='color:red'>**-49.94**</span> | <span style='color:red'>**-10.61**</span> | -6.88 | |
 

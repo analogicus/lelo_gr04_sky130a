@@ -72,7 +72,7 @@ optran 0 0 0 1n 1u 0
 set fend = .raw
 foreach vtemp {temperatures}
   option temp=$vtemp
-  tran 1n {t_end}
+  tran 100p {t_end}
   write {cicname}_$vtemp$fend
 end
 write

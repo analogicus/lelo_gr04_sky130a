@@ -163,11 +163,11 @@ Given constant $I_{ptat}$, the charging duration is:
 
 $$ T_{charge} = V_{ctat} \times C / I_{ptat}$$
 
-If assuming the discharge is instantaneous, the number of oscillation over a period T is:
+If assuming the discharge is instantaneous, the oscillation frequency is:
 
-$$ n_{osc} = T / T_{charge} = \frac{T I_{ptat}}{CV_{ctat}}$$
+$$ f_{osc} = I_{ptat} / (CV_{ctat}) $$
 
-We want to run this oscillator over 30 us, the period of a 32768 Hz low-frequency oscillator. Choosing the capacitor to be 4x CAPX4, each composed of 4 CAPX1 that are 53.8 fF each, and using the following values for $I_{ptat}$ and $V_{ctat}$ (from typical bandgap simulation):
+Choosing the capacitor to be 4x CAPX4, each composed of 4 CAPX1 that are 53.8 fF each, and using the following values for $I_{ptat}$ and $V_{ctat}$ (from typical bandgap simulation):
 
 | Quantity            |        Value |
 | :----           |  :----:       |
@@ -176,13 +176,13 @@ We want to run this oscillator over 30 us, the period of a 32768 Hz low-frequenc
 | `VCTAT @ 25C` | 708.725 mV |
 | `VCTAT temperature coefficient` | -1.786 mV/K |
 
-We arrive at the following expected oscillation counts at different temperatures:
+We arrive at the following expected oscillation frequencies at different temperatures:
 
-| Temperature | Expected count |
+| Temperature | Expected frequency |
 | :----           |  :----:       |
-| -45 C | 60 |
-| 25 C | 83 |
-| 125 C | 144 |
+| -45 C | 1.875 MHz |
+| 25 C | 2.775 MHz |
+| 125 C | 4.797 MHz |
 
 ### Implementation
 
@@ -196,7 +196,7 @@ The following are the plots of capacitor voltage, comparator output, and oscilla
 <img src="./assets/osc_2.png" alt="Oscillator_Tt" width="500"/>
 <img src="./assets/osc_3.png" alt="Oscillator_Th" width="500"/>
 
-The plot of oscillations vs. temperature at typical process and voltage is below. The scaled curve is the expected curve scaled (calibrated) to the measurement at 25C. The temperature error predicted by this curve is in the second plot.
+The plot of oscillation frequency vs. temperature at typical process and voltage is below. The scaled curve is the expected curve scaled (calibrated) to the measurement at 25C. The temperature error predicted by this curve is in the second plot.
 
 ![Count typical](./sim/LELO_GR04_OSC_v2/results/output_tran/tran_SchGtKttTtVt_count.png)
 

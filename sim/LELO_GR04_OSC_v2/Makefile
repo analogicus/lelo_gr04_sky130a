@@ -15,7 +15,7 @@ include ../../tech/make/sim.make
 
 # Running all testbenches
 all:
-	make -j 9 typical etc_notemp TB=tran
+	make -j 9 typical etc_notemp mc TB=tran
 	make summary
 	make html
 

@@ -28,6 +28,9 @@ def main(name):
   # Open raw files
   osc_freqs = []
   for t in temps:
+    if not os.path.exists(name + f"_{t}.raw"):
+      return
+
     raw = RawRead(name + f"_{t}.raw")
 
     # Get oscillation traces

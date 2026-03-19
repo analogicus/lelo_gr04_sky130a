@@ -19,6 +19,17 @@ i:
   scale: 1e6
   digits: 3
   unit: uA
+
+a1:
+  src:
+    - a1
+  name: IPTAT temperature coefficient @ 0.5V output
+  typ: 5
+  min: 2.5
+  max: 7.5
+  scale: 1e9
+  digits: 3
+  unit: nA / K
   
 a_avg:
   src:

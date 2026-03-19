@@ -38,6 +38,11 @@ let a1 = (i1_filtered[len - 1] - i1_filtered[0])/trange
 let a2 = (i2_filtered[len - 1] - i2_filtered[0])/trange
 let a3 = (i3_filtered[len - 1] - i3_filtered[0])/trange
 
+print a0
+print a1
+print a2
+print a3
+
 * Get index & offset at 25C
 let index_25 = floor((25 - temp_start) / sweep_step + 0.5) - 1
 print temp_filtered[index_25]

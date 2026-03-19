@@ -29,11 +29,11 @@ company="wulff"}
 C {devices/gnd.sym} -930 290 0 0 {name=l3 lab=GND}
 C {devices/vsource.sym} -1190 200 0 0 {name=V1 value="pwl 0 0 1u 1.8" savecurrent=false}
 C {devices/vsource.sym} -1050 200 0 0 {name=V3 value=
-"pwl 0 0 1.9u 0 2u 1.8" savecurrent=false}
+"pwl 0 0 1.9u 0 2u 1.8 3.9u 1.8 4u 0 5.9u 0 6u 1.8" savecurrent=false}
 C {devices/lab_pin.sym} -1190 130 0 0 {name=p18 sig_type=std_logic lab=VDD_1V8
 }
 C {devices/lab_pin.sym} -1050 130 0 0 {name=p19 sig_type=std_logic lab=PWRUP_1V8}
-C {devices/code_shown.sym} -1800 210 0 0 {name=s1 only_toplevel=false value="
+C {devices/code_shown.sym} -1820 170 0 0 {name=s1 only_toplevel=false value="
 .lib "../../../tech/ngspice/temperature.spi" Tl
 .lib "../../../tech/ngspice/corners.spi" Kss
 .lib "../../../tech/ngspice/supply.spi" Vl
@@ -47,7 +47,7 @@ optran 0 0 0 10n 1u 0
 op
 write TB_OSCILLATOR.raw
 
-tran 5n 20u 0
+tran 100p 5u 0
 write TB_OSCILLATOR_TRAN.raw
 
 meas tran i_avg AVG i(v1)
@@ -67,8 +67,8 @@ C {devices/gnd.sym} -460 -220 0 0 {name=l7 lab=GND}
 C {devices/lab_wire.sym} -130 -280 0 0 {name=p23 sig_type=std_logic lab=VX}
 C {devices/lab_wire.sym} -70 -260 0 0 {name=p24 sig_type=std_logic lab=IBP_1F7U[3:0]}
 C {devices/gnd.sym} -460 -40 0 0 {name=l4 lab=GND}
-C {devices/lab_wire.sym} -460 -60 0 0 {name=p28 sig_type=std_logic lab=IBP_1F7U[2:0]}
-C {devices/lab_wire.sym} -460 -80 0 0 {name=p29 sig_type=std_logic lab=PWRUP_N_INT}
+C {devices/lab_wire.sym} -460 -80 0 0 {name=p28 sig_type=std_logic lab=IBP_1F7U[2:0]}
+C {devices/lab_wire.sym} -460 -60 0 0 {name=p29 sig_type=std_logic lab=PWRUP_N_INT}
 C {devices/lab_wire.sym} -460 -120 0 0 {name=p30 sig_type=std_logic lab=PWRUP_INT}
 C {devices/lab_wire.sym} -460 -100 0 0 {name=p31 sig_type=std_logic lab=VX}
 C {devices/lab_wire.sym} -460 -140 0 0 {name=p32 sig_type=std_logic lab=VDD_1V8}

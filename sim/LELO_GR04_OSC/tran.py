@@ -15,7 +15,7 @@ VCTAT_25 = 708.725e-3
 VCTAT_SLOPE = -1.786e-3
 IPTAT_25 = 1.693e-6
 IPTAT_SLOPE = 4.958e-9
-CAPACITANCE = 53.8e-15 * 4 * 4
+CAPACITANCE = 53.8e-15 * 4 * 8
 
 # Get oscillation frequency from raw file
 def get_freq(name, temp, t_start, t_end_meas, threshold):

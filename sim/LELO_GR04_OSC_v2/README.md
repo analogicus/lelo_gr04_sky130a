@@ -25,23 +25,23 @@ Check transient operation
 | | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|32.195 | 66.901 | <span style='color:red'>**142.895**</span> | |
 | | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|29.172 | 42.730 | 56.288 | |
 |**Oscillation frequency @ -45C**|**fosc\_-45** || **Spec**  | **1.406** | **1.875** | **2.344** | **MHz** |
-| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 2.031 |  | |
-| | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|<span style='color:red'>**1.246**</span> | 2.007 | <span style='color:red'>**2.630**</span> | |
-| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|<span style='color:red'>**1.233**</span> | 2.034 | <span style='color:red'>**2.836**</span> | |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 1.777 |  | |
+| | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|<span style='color:red'>**0.830**</span> | 1.753 | <span style='color:orange'>**2.411**</span> | |
+| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|<span style='color:red'>**0.974**</span> | 1.789 | <span style='color:red'>**2.605**</span> | |
 |**Oscillation frequency @ 25C**|**fosc\_25** || **Spec**  | **2.081** | **2.775** | **3.469** | **MHz** |
-| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 2.859 |  | |
-| | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|2.234 | 2.860 | <span style='color:red'>**3.782**</span> | |
-| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|<span style='color:orange'>**2.020**</span> | 2.855 | <span style='color:red'>**3.690**</span> | |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 2.639 |  | |
+| | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|<span style='color:orange'>**2.011**</span> | 2.640 | <span style='color:orange'>**3.572**</span> | |
+| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|<span style='color:red'>**1.791**</span> | 2.635 | <span style='color:orange'>**3.480**</span> | |
 |**Oscillation frequency @ 125C**|**fosc\_125** || **Spec**  | **3.598** | **4.797** | **5.996** | **MHz** |
-| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 4.621 |  | |
-| | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|<span style='color:orange'>**3.584**</span> | 4.621 | <span style='color:orange'>**6.159**</span> | |
-| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|<span style='color:orange'>**3.561**</span> | 4.608 | 5.656 | |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 4.411 |  | |
+| | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|<span style='color:red'>**3.373**</span> | 4.411 | 5.954 | |
+| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|<span style='color:red'>**3.346**</span> | 4.398 | 5.450 | |
 |**Temperature error (calibrated @ 25C)**|**t\_err\_max** || **Spec**  | **-10.00** | **0.00** | **10.00** | **C** |
-| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 0.22 |  | |
-| | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|-0.00 | 0.35 | 1.45 | |
-| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|-9.03 | 4.78 | <span style='color:red'>**18.59**</span> | |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 0.13 |  | |
+| | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|-2.32 | 0.09 | 2.29 | |
+| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|-8.64 | 4.49 | <span style='color:red'>**17.62**</span> | |
 |**Temperature error (calibrated @ 25C)**|**t\_err\_min** || **Spec**  | **-10.00** | **0.00** | **10.00** | **C** |
-| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | -2.64 |  | |
-| | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|<span style='color:red'>**-82.12**</span> | -6.85 | -3.98 | |
-| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|<span style='color:red'>**-22.98**</span> | -8.18 | 6.62 | |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | -4.47 |  | |
+| | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|<span style='color:red'>**-114.95**</span> | -6.35 | -1.67 | |
+| | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|<span style='color:red'>**-26.44**</span> | -9.68 | 7.08 | |
 

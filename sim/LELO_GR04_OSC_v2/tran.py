@@ -50,7 +50,7 @@ def get_freq(name, temp, t_start, t_end_meas, threshold):
         if (times[crosses[0][i]] >= t_end_meas or i == len(crosses[0]) - 1) and is_in:
           is_in = False
           last_index = crosses[0][i]
-          count = i - start + 1
+          count = i - start
 
     elapsed_time = times[last_index] - times[first_index]
     

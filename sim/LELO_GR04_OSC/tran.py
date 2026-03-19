@@ -15,7 +15,7 @@ VCTAT_25 = 708.725e-3
 VCTAT_SLOPE = -1.786e-3
 IPTAT_25 = 1.693e-6
 IPTAT_SLOPE = 4.958e-9
-CAPACITANCE = 53.8e-15 * 4 * 8
+CAPACITANCE = 53.8e-15 * 4 * 4
 
 # Get oscillation frequency from raw file
 def get_freq(name, temp, t_start, t_end_meas, threshold):
@@ -50,7 +50,7 @@ def get_freq(name, temp, t_start, t_end_meas, threshold):
         if (times[crosses[0][i]] >= t_end_meas or i == len(crosses[0]) - 1) and is_in:
           is_in = False
           last_index = crosses[0][i]
-          count = i - start + 1
+          count = i - start
 
     elapsed_time = times[last_index] - times[first_index]
     
@@ -103,7 +103,7 @@ def main(name):
   if "KttTtVt" in name:
     popt, pcov = curve_fit(
       lambda x, a, b: #, c, d: 
-        1 / cap * (a + (x - 25) * b) / (vctat_25 + (x - 25) * vctat_slope), # / (c + (x - 25) * d),
+        1 / (cap * 2) * (a + (x - 25) * b) / (vctat_25 + (x - 25) * vctat_slope), # / (c + (x - 25) * d),
       np.asarray(temps), np.asarray(osc_freqs),
       p0=[iptat_25, iptat_slope]) #, vctat_25, vctat_slope])
     
@@ -135,7 +135,7 @@ def main(name):
         # vctat_25 = VCTAT_25
         # vctat_slope = VCTAT_SLOPE
 
-  expected_freqs = 1 / cap * \
+  expected_freqs = 1 / (cap * 2) * \
     (iptat_25 + (np.asarray(temps) - 25) * iptat_slope) / \
     (vctat_25 + (np.asarray(temps) - 25) * vctat_slope)
   
@@ -174,7 +174,7 @@ def main(name):
   # Error calculation (calibrated at 25C)
   predicted_temps = []
   for freq in osc_freqs:
-    tmp = freq * cap / scale
+    tmp = freq * (cap * 2) / scale
     tmp2 = tmp * vctat_25 - iptat_25
     tmp3 = -tmp * vctat_slope + iptat_slope
     predicted_temp = tmp2 / tmp3 + 25

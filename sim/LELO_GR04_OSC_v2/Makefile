@@ -38,7 +38,7 @@ etc: netlist
 	cicsim run --replace replace.yaml --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs" "Th,Tl" "Vl,Vh"
 
 etc_notemp: netlist
-	cicsim run --replace replace.yaml --name ${VIEW}_etc_notemp ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs" Tt "Vl,Vh"
+	cicsim run --replace replace.yaml --name ${VIEW}_etc_notemp ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs" Tt "Vl,Vt,Vh"
 
 mc: netlist
 	cicsim run --replace replace.yaml --name ${VIEW}_mc --count 30 ${TB} ${OPT} ${VIEW} Gt "Kttmm" "Tt" "Vt"

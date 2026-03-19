@@ -6,6 +6,16 @@ import numpy as np
 from spicelib import RawRead
 import matplotlib.pyplot as plt
 import os
+from scipy.optimize import curve_fit
+
+# Default values from Bandgap typical testbench.
+# IPTAT values will not be used if oscillator
+# typical run exists, they will be fitted from there
+VCTAT_25 = 708.725e-3
+VCTAT_SLOPE = -1.786e-3
+IPTAT_25 = 1.693e-6
+IPTAT_SLOPE = 4.958e-9
+CAPACITANCE = 53.8e-15 * 4 * 4
 
 def main(name):
   # Delete next line if you want to use python post processing
@@ -57,21 +67,90 @@ def main(name):
     osc_freqs.append(float(frequency))
 
   # Create reference curve
-  vctat_25 = 708.725e-3
-  vctat_slope = -1.786e-3
-  iptat_25 = 1.693e-6
-  iptat_slope = 4.958e-9
-  cap = 53.8e-15 * 4 * 4
-  # duration = (t_end_meas - t_start)
+  # Default values from bandgap typical testbench
+  iptat_25 = IPTAT_25
+  iptat_slope = IPTAT_SLOPE
+  vctat_25 = VCTAT_25
+  vctat_slope = VCTAT_SLOPE
+  cap = CAPACITANCE
+  
+  # If name indicates typical run: use curve_fit to fit the expected function
+  if "KttTtVt" in name:
+    popt, pcov = curve_fit(
+      lambda x, a, b: #, c, d: 
+        1 / cap * (a + (x - 25) * b) / (vctat_25 + (x - 25) * vctat_slope), # / (c + (x - 25) * d),
+      np.asarray(temps), np.asarray(osc_freqs),
+      p0=[iptat_25, iptat_slope]) #, vctat_25, vctat_slope])
+    
+    iptat_25, iptat_slope = popt #, vctat_25, vctat_slope
+    cal = {
+      "iptat_25": float(iptat_25),
+      "iptat_slope": float(iptat_slope),
+      # "vctat_25": float(vctat_25),
+      # "vctat_slope": float(vctat_slope)
+    }
+    with open("calibration_typical.yaml","w") as fo:
+      yaml.dump(cal, fo)
+
+  # Otherwise: check if calibration file from typical exists
+  else:
+    if (os.path.isfile("calibration_typical.yaml")):
+      with open("calibration_typical.yaml") as fi:
+        cal = yaml.safe_load(fi)
+
+      try:
+        iptat_25 = cal["iptat_25"]
+        iptat_slope = cal["iptat_slope"]
+        # vctat_25 = cal["vctat_25"]
+        # vctat_slope = cal["vctat_slope"]
+      except:
+        print(f"INFO: Could not find typical calibration file")
+        iptat_25 = IPTAT_25
+        iptat_slope = IPTAT_SLOPE
+        # vctat_25 = VCTAT_25
+        # vctat_slope = VCTAT_SLOPE
 
   expected_freqs = 1 / cap * \
     (iptat_25 + (np.asarray(temps) - 25) * iptat_slope) / \
     (vctat_25 + (np.asarray(temps) - 25) * vctat_slope)
   
-  # Find closest value to 25
-  index_25 = np.argmin(np.abs(np.asarray(temps) - 25))
-  scale = osc_freqs[index_25] / expected_freqs[index_25]
-  scaled_freqs = expected_freqs * scale
+  # Check if etc: calibrate at Vt corner
+  calibrate_at_Vt = False
+  if any(proc in name for proc in ["Kss", "Ksf", "Kfs", "Kff"]) and "Vt" not in name:
+    name_Vt = name.replace("Vh", "Vt").replace("Vl", "Vt")
+
+    try:
+      # Open raw files at Vt corner (same as before)
+      osc_freqs_Vt = []
+      for t in temps:
+        if not os.path.exists(name_Vt + f"_{t}.raw"):
+          raise Exception
+
+        raw = RawRead(name_Vt + f"_{t}.raw")
+        vosc = raw.get_trace('v(vosc)')
+        times = raw.get_axis()
+        diffs = np.diff(np.sign(vosc.get_wave() - param_vdd / 2))
+        crosses = np.nonzero(diffs > 0)
+        elapsed_time = times[crosses[0][-1]] - times[crosses[0][0]]
+        count = np.size(crosses)
+        period = elapsed_time / count
+        frequency = 1 / period
+        osc_freqs_Vt.append(float(frequency))
+
+      # Find closest value to 25
+      index_25 = np.argmin(np.abs(np.asarray(temps) - 25))
+      scale = osc_freqs_Vt[index_25] / expected_freqs[index_25]
+      scaled_freqs = expected_freqs * scale
+      calibrate_at_Vt = True
+    
+    except:
+      print(f"INFO: Could not find typical voltage corner")
+
+  if not calibrate_at_Vt:
+    # Find closest value to 25
+    index_25 = np.argmin(np.abs(np.asarray(temps) - 25))
+    scale = osc_freqs[index_25] / expected_freqs[index_25]
+    scaled_freqs = expected_freqs * scale
 
   # Error calculation (calibrated at 25C)
   predicted_temps = []

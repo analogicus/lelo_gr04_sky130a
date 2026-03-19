@@ -15,7 +15,7 @@ include ../../tech/make/sim.make
 
 # Running all testbenches
 all:
-	make -j 9 typical etc_notemp TB=tran
+	make -j 9 typical etc_notemp mc TB=tran
 	make summary
 	make html
 
@@ -38,7 +38,7 @@ etc: netlist
 	cicsim run --replace replace.yaml --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs" "Th,Tl" "Vl,Vh"
 
 etc_notemp: netlist
-	cicsim run --replace replace.yaml --name ${VIEW}_etc_notemp ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs" Tt "Vl,Vh"
+	cicsim run --replace replace.yaml --name ${VIEW}_etc_notemp ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs" Tt "Vl,Vt,Vh"
 
 mc: netlist
 	cicsim run --replace replace.yaml --name ${VIEW}_mc --count 30 ${TB} ${OPT} ${VIEW} Gt "Kttmm" "Tt" "Vt"

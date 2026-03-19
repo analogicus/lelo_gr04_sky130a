@@ -1,0 +1,2 @@
+*Automatic generated instance fron ../../tech/scripts/genxdut LELO_GR04_OSC
+XDUT VOSC VDD_1V8 PWRUP_INT VC IBP_1F7U<2> IBP_1F7U<1> IBP_1F7U<0> PWRUP_N_1V8 Vss  LELO_GR04_OSC

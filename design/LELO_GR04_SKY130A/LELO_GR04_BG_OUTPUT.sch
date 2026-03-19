@@ -37,8 +37,6 @@ N 1080 -520 1080 -460 {lab=#net1}
 N 1020 -520 1080 -520 {lab=#net1}
 N 100 -640 900 -640 {lab=VDD_1V8}
 N 560 -520 600 -520 {lab=VCASCP}
-N 600 -540 600 -520 {lab=VCASCP}
-N 600 -640 600 -610 {lab=VDD_1V8}
 N 600 -520 780 -520 {lab=VCASCP}
 N 780 -520 780 -460 {lab=VCASCP}
 N 780 -460 800 -460 {lab=VCASCP}
@@ -68,7 +66,6 @@ C {devices/lab_wire.sym} 800 -460 0 0 {name=p11 sig_type=std_logic lab=VCASCP}
 C {devices/lab_wire.sym} 980 -460 0 0 {name=p12 sig_type=std_logic lab=VCASCP}
 C {devices/lab_wire.sym} 840 -400 0 0 {name=p13 sig_type=std_logic lab=IBP_1F7U[0]}
 C {devices/lab_wire.sym} 1020 -400 0 0 {name=p14 sig_type=std_logic lab=IBP_1F7U[3:1]}
-C {JNW_TR_SKY130A/JNWTR_CAPX1.sym} 600 -550 0 0 {name=x4 }
 C {devices/lab_wire.sym} 800 -580 0 0 {name=p15 sig_type=std_logic lab=VP}
 C {devices/lab_wire.sym} 980 -580 0 0 {name=p16 sig_type=std_logic lab=VP}
 C {JNW_ATR_SKY130A/JNWATR_PCH_12C1F2.sym} 680 -580 0 0 {name=x5 }

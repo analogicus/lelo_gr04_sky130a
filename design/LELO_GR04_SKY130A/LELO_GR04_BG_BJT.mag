@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1774020163
+timestamp 1774021176
 << psubdiff >>
 rect 3 4363 63 4397
 rect 4337 4363 4397 4397
@@ -44,6 +44,7 @@ rect 4337 3 4397 37
 << metal1 >>
 rect 600 3400 3800 3800
 rect 600 1000 1000 3400
+rect 1860 1860 2540 2540
 rect 3400 1000 3800 3400
 rect 600 600 3800 1000
 use sky130_fd_pr__rf_pnp_05v5_W3p40L3p40  sky130_fd_pr__rf_pnp_05v5_W3p40L3p40_0 $PDKPATH/libs.ref/sky130_fd_pr/mag
@@ -52,10 +53,10 @@ timestamp 1767376183
 transform 1 0 120 0 1 120
 box 0 0 1340 1340
 << labels >>
-flabel space 140 37 4260 381 0 FreeSans 1600 0 0 0 VSS
-port 0 nsew
-flabel space 1895 2160 2505 2226 0 FreeSans 1600 0 0 0 ID1
+flabel metal1 1895 2160 2505 2226 0 FreeSans 1600 0 0 0 ID1
 port 1 nsew
-flabel space 550 1895 1016 2505 0 FreeSans 1600 0 0 0 ID2
-port 2 nsew
+flabel metal1 600 600 1000 3800 0 FreeSans 1600 0 0 0 ID2
+port 3 nsew
+flabel locali 140 37 4260 380 0 FreeSans 1600 0 0 0 VSS
+port 6 nsew
 << end >>

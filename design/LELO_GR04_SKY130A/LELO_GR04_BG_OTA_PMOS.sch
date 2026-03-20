@@ -53,7 +53,6 @@ user="wulff"
 company="wulff"}
 C {devices/ipin.sym} 100 -100 0 0 {name=p2 lab=VSS}
 C {devices/ipin.sym} 100 -660 0 0 {name=p1 lab=VDD_1V8}
-C {devices/ipin.sym} -60 -400 0 0 {name=p3 lab=PWRUP_1V8}
 C {devices/ipin.sym} 240 -380 0 0 {name=p4 lab=VIN_P}
 C {devices/ipin.sym} 720 -380 0 1 {name=p5 lab=VIN_N}
 C {JNW_ATR_SKY130A/JNWATR_PCH_8C5F0.sym} 300 -380 0 0 {name=xC1[3:0]}

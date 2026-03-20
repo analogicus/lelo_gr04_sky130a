@@ -44,6 +44,7 @@ N 300 -370 300 -340 {lab=PWRUP_N_1V8}
 N 480 -440 490 -440 {lab=VX}
 N 560 -440 570 -440 {lab=LPI}
 N 570 -530 570 -440 {lab=LPI}
+N 760 -410 760 -390 {lab=VSS}
 C {cborder/border_xs.sym} 0 0 0 0 {
 user="wulff"
 company="wulff"}
@@ -57,14 +58,13 @@ C {devices/lab_wire.sym} 480 -360 0 0 {name=p4 sig_type=std_logic lab=VX}
 C {devices/lab_wire.sym} 660 -360 0 0 {name=p5 sig_type=std_logic lab=VY}
 C {devices/lab_wire.sym} 570 -530 0 0 {name=p6 sig_type=std_logic lab=LPI
 }
-C {devices/lab_wire.sym} 760 -430 0 0 {name=p7 sig_type=std_logic lab=VX}
+C {devices/lab_wire.sym} 760 -470 0 0 {name=p7 sig_type=std_logic lab=VX}
 C {devices/lab_wire.sym} 760 -450 0 0 {name=p8 sig_type=std_logic lab=VY}
-C {LELO_GR04_SKY130A/LELO_GR04_BG_OTA_PMOS.sym} 910 -440 0 0 {name=x5}
+C {LELO_GR04_SKY130A/LELO_GR04_BG_OTA_PMOS.sym} 910 -450 0 0 {name=x5}
 C {devices/lab_wire.sym} 660 -240 0 0 {name=p9 sig_type=std_logic lab=VD2}
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 520 -530 0 1 {name=x2 }
 C {devices/ipin.sym} -20 -360 0 0 {name=p10 lab=PWRUP_N_1V8}
-C {devices/lab_wire.sym} 760 -470 0 0 {name=p11 sig_type=std_logic lab=PWRUP_1V8}
-C {devices/lab_wire.sym} 760 -410 0 0 {name=p12 sig_type=std_logic lab=PWRUP_N_1V8}
+C {devices/lab_wire.sym} 760 -430 0 0 {name=p12 sig_type=std_logic lab=PWRUP_N_1V8}
 C {devices/ipin.sym} 1200 -490 0 0 {name=p13 lab=LPI}
 C {devices/opin.sym} 1080 -490 0 0 {name=p14 lab=LPO}
 C {JNW_ATR_SKY130A/JNWATR_NCH_12C5F0.sym} 260 -160 0 0 {name=x8 }

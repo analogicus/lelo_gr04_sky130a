@@ -14,6 +14,15 @@ simulations:
       - name: Sch_3std
         src: results/tran_Sch_mc
         method: 3std
+      - name: Lay_typ
+        src: results/tran_Lay_typical
+        method: typical
+      - name: Lay_etc
+        src: results/tran_Lay_etc
+        method: minmax
+      - name: Lay_3std
+        src: results/tran_Lay_mc
+        method: 3std
 
    lstb:
     name: Loop stability analysis
@@ -29,6 +38,15 @@ simulations:
       - name: Sch_3std
         src: results/lstb_Sch_mc
         method: 3std
+      - name: Lay_typ
+        src: results/lstb_Lay_typical
+        method: typical
+      - name: Lay_etc
+        src: results/lstb_Lay_etc
+        method: minmax
+      - name: Lay_3std
+        src: results/lstb_Lay_mc
+        method: 3std
 
    dc:
     name: DC
@@ -43,4 +61,13 @@ simulations:
         method: minmax
       - name: Sch_3std
         src: results/dc_Sch_mc
+        method: 3std
+      - name: Lay_typ
+        src: results/dc_Lay_typical
+        method: typical
+      - name: Lay_etc
+        src: results/dc_Lay_etc
+        method: minmax
+      - name: Lay_3std
+        src: results/dc_Lay_mc
         method: 3std

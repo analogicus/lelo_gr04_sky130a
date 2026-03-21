@@ -1,0 +1,64 @@
+magic
+tech sky130A
+timestamp 1774126755
+<< locali >>
+rect -500 2389 200 2500
+rect -500 2311 -249 2389
+rect -171 2311 200 2389
+rect -500 2300 200 2311
+rect -456 1354 -336 2300
+rect -456 -300 -336 -56
+rect -500 -305 200 -300
+rect -500 -395 -261 -305
+rect -171 -395 200 -305
+rect -500 -500 200 -395
+<< viali >>
+rect -249 2311 -171 2389
+rect -261 -395 -171 -305
+<< metal1 >>
+rect -252 2389 -168 2395
+rect -252 2311 -249 2389
+rect -171 2311 -168 2389
+rect -252 1210 -168 2311
+rect -328 284 -296 1016
+rect -264 -305 -168 148
+rect -136 -16 -40 1248
+rect -264 -395 -261 -305
+rect -171 -395 -168 -305
+rect -264 -401 -168 -395
+use JNWATR_NCH_2CTAPBOT  JNWATR_NCH_2CTAPBOT_0 JNW_ATR_SKY130A
+timestamp 1740610800
+transform 1 0 -408 0 1 -236
+box -92 -64 604 304
+use JNWATR_NCH_2CTAPTOP  JNWATR_NCH_2CTAPTOP_0 JNW_ATR_SKY130A
+timestamp 1740610800
+transform 1 0 -408 0 1 344
+box -92 -64 604 304
+use JNWATR_PCH_2CTAPBOT  JNWATR_PCH_2CTAPBOT_0 JNW_ATR_SKY130A
+timestamp 1740610800
+transform 1 0 -408 0 1 714
+box -92 -64 604 304
+use JNWATR_PCH_2CTAPTOP  JNWATR_PCH_2CTAPTOP_0 JNW_ATR_SKY130A
+timestamp 1740610800
+transform 1 0 -408 0 1 1294
+box -92 -64 604 304
+use JNWATR_NCH_2C5F0  xA ../JNW_ATR_SKY130A
+timestamp 1740610800
+transform 1 0 -408 0 1 -36
+box -92 -64 604 464
+use JNWATR_PCH_2C1F2  xB ../JNW_ATR_SKY130A
+timestamp 1740610800
+transform 1 0 -408 0 1 914
+box -92 -64 604 464
+<< labels >>
+flabel locali -500 -500 200 -300 0 FreeSans 800 0 0 0 VSS
+port 2 nsew
+flabel locali -500 2300 200 2500 0 FreeSans 800 0 0 0 VDD_1V8
+port 4 nsew
+flabel metal1 -328 284 -296 1016 0 FreeSans 800 0 0 0 VIN
+port 9 nsew
+flabel metal1 -136 -16 -40 1248 0 FreeSans 800 0 0 0 VOUT
+port 11 nsew
+<< properties >>
+string FIXED_BBOX 0 0 1024 400
+<< end >>

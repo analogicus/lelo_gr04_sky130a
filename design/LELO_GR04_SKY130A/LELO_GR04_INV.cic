@@ -1,0 +1,236 @@
+{
+    "cells": [
+        {
+            "class": "LayoutCell",
+            "x1": 0,
+            "y1": 0,
+            "x2": 102400.0,
+            "y2": 40000.0,
+            "layer": "",
+            "net": "",
+            "name": "LELO_GR04_INV",
+            "has_pr": false,
+            "ckt": {
+                "class": "",
+                "name": "LELO_GR04_INV",
+                "nodes": [
+                    "VDD_1V8",
+                    "VIN",
+                    "VOUT",
+                    "VSS"
+                ],
+                "properties": {},
+                "devices": [],
+                "instances": [
+                    {
+                        "class": "",
+                        "name": "xA",
+                        "nodes": [
+                            "VOUT",
+                            "VIN",
+                            "VSS",
+                            "VSS"
+                        ],
+                        "properties": {},
+                        "subcktName": "JNWATR_NCH_2C5F0",
+                        "groupName": "xA",
+                        "deviceName": "subckt",
+                        "groupTag": null
+                    },
+                    {
+                        "class": "",
+                        "name": "xB",
+                        "nodes": [
+                            "VOUT",
+                            "VIN",
+                            "VDD_1V8",
+                            "VDD_1V8"
+                        ],
+                        "properties": {},
+                        "subcktName": "JNWATR_PCH_2C1F2",
+                        "groupName": "xB",
+                        "deviceName": "subckt",
+                        "groupTag": null
+                    }
+                ]
+            },
+            "children": [
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": 0,
+                    "x2": 51200.0,
+                    "y2": 40000.0,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "JNWATR_NCH_2C5F0",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": 2000.0,
+                            "x2": 36800.0,
+                            "y2": 6000.0,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VOUT",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 8000.0,
+                            "y1": 18000.0,
+                            "x2": 11200.0,
+                            "y2": 22000.0,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VIN",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 14400.0,
+                            "y1": 30000.0,
+                            "x2": 24000.0,
+                            "y2": 34000.0,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VSS",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -4800.0,
+                            "y1": 18000.0,
+                            "x2": 4800.0,
+                            "y2": 22000.0,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VSS",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "xA",
+                    "angle": "",
+                    "cell": "JNWATR_NCH_2C5F0",
+                    "libpath": "JNW_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 51200.0,
+                    "y1": 0,
+                    "x2": 102400.0,
+                    "y2": 40000.0,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "JNWATR_PCH_2C1F2",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 78400.0,
+                            "y1": 2000.0,
+                            "x2": 88000.0,
+                            "y2": 6000.0,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VOUT",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 59200.0,
+                            "y1": 18000.0,
+                            "x2": 62400.0,
+                            "y2": 22000.0,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VIN",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 65600.0,
+                            "y1": 30000.0,
+                            "x2": 75200.0,
+                            "y2": 34000.0,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 46400.0,
+                            "y1": 18000.0,
+                            "x2": 56000.0,
+                            "y2": 22000.0,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "xB",
+                    "angle": "",
+                    "cell": "JNWATR_PCH_2C1F2",
+                    "libpath": "JNW_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Port",
+                    "x1": 65600.0,
+                    "y1": 30000.0,
+                    "x2": 75200.0,
+                    "y2": 34000.0,
+                    "layer": "M2",
+                    "net": "",
+                    "name": "VDD_1V8",
+                    "spicePort": true
+                },
+                {
+                    "class": "Port",
+                    "x1": 8000.0,
+                    "y1": 18000.0,
+                    "x2": 11200.0,
+                    "y2": 22000.0,
+                    "layer": "M2",
+                    "net": "",
+                    "name": "VIN",
+                    "spicePort": true
+                },
+                {
+                    "class": "Port",
+                    "x1": 27200.0,
+                    "y1": 2000.0,
+                    "x2": 36800.0,
+                    "y2": 6000.0,
+                    "layer": "M2",
+                    "net": "",
+                    "name": "VOUT",
+                    "spicePort": true
+                },
+                {
+                    "class": "Port",
+                    "x1": 14400.0,
+                    "y1": 30000.0,
+                    "x2": 24000.0,
+                    "y2": 34000.0,
+                    "layer": "M2",
+                    "net": "",
+                    "name": "VSS",
+                    "spicePort": true
+                }
+            ],
+            "useHalfHeight": false,
+            "alternateGroup": false,
+            "noPowerRoute": false
+        }
+    ]
+}

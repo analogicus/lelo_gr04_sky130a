@@ -34,7 +34,7 @@ VPWR  PWRUP_INT  VSS  pwl 0 0 {t_start} 0 {{t_start}+1n} {AVDD} {t_end_meas} {AV
 VPWRN  PWRUP_N_1V8  VSS  pwl 0 {AVDD} {t_start} {AVDD} {{t_start}+1n} 0 {t_end_meas} 0 {{t_end_meas}+1n} {AVDD}
 
 * Bandgap element, from ../LELO_GR04_BG/xdut.spi
-XBG VDD_1V8 LPO LPI VX PWRUP_N_1V8 IBP_1F7U<3> IBP_1F7U<2> IBP_1F7U<1> IBP_1F7U<0> PWRUP_INT VSS  LELO_GR04_BG
+XBG VDD_1V8 LPO LPI VX PWRUP_N_1V8 IBP_1F7U<3> IBP_1F7U<2> IBP_1F7U<1> IBP_1F7U<0> VSS  LELO_GR04_BG
 VLP LPI LPO dc 0
 VXC VX VC dc 0
 

@@ -15,7 +15,7 @@ C {devices/ipin.sym} 100 -600 0 0 {name=p1 lab=VDD_1V8}
 C {devices/ipin.sym} 100 -100 0 0 {name=p2 lab=VSS}
 C {devices/ipin.sym} 100 -300 0 0 {name=p3 lab=PWRUP_1V8}
 C {devices/opin.sym} 910 -330 0 0 {name=p29 lab=OSC_TEMP_1V8}
-C {LELO_GR04_SKY130A/LELO_GR04_BG.sym} 550 -520 0 0 {name=x1}
+C {LELO_GR04_SKY130A/LELO_GR04_BG.sym} 550 -530 0 0 {name=x1}
 C {LELO_GR04_SKY130A/LELO_GR04_OSC_v2.sym} 550 -280 0 0 {name=x2}
 C {LELO_GR04_SKY130A/LELO_GR04_INV.sym} 200 -420 0 0 {name=x3}
 C {devices/lab_wire.sym} 200 -460 0 0 {name=p4 sig_type=std_logic lab=VDD_1V8
@@ -30,7 +30,7 @@ C {devices/lab_wire.sym} 200 -380 0 0 {name=p7 sig_type=std_logic lab=VSS
 C {devices/lab_wire.sym} 400 -230 0 0 {name=p8 sig_type=std_logic lab=VSS
 
 }
-C {devices/lab_wire.sym} 400 -480 0 0 {name=p9 sig_type=std_logic lab=VSS
+C {devices/lab_wire.sym} 400 -500 0 0 {name=p9 sig_type=std_logic lab=VSS
 
 }
 C {devices/lab_wire.sym} 700 -560 0 1 {name=p10 sig_type=std_logic lab=LPI
@@ -44,8 +44,6 @@ C {devices/lab_wire.sym} 400 -520 0 0 {name=p13 sig_type=std_logic lab=PWRUP_N_1
 C {devices/lab_wire.sym} 400 -250 0 0 {name=p14 sig_type=std_logic lab=PWRUP_N_1V8
 }
 C {devices/lab_wire.sym} 400 -310 0 0 {name=p15 sig_type=std_logic lab=PWRUP_1V8
-}
-C {devices/lab_wire.sym} 400 -500 0 0 {name=p16 sig_type=std_logic lab=PWRUP_1V8
 }
 C {devices/lab_wire.sym} 700 -540 0 1 {name=p17 sig_type=std_logic lab=VCTAT
 

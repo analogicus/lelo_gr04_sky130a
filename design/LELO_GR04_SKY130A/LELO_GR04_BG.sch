@@ -56,7 +56,6 @@ user="wulff"
 company="wulff"}
 C {devices/ipin.sym} 100 -600 0 0 {name=p1 lab=VDD_1V8}
 C {devices/ipin.sym} 100 -100 0 0 {name=p2 lab=VSS}
-C {devices/ipin.sym} -20 -300 0 0 {name=p3 lab=PWRUP_1V8}
 C {LELO_GR04_SKY130A/LELO_GR04_BG_BJT.sym} 570 -170 0 0 {name=xB}
 C {JNW_ATR_SKY130A/JNWATR_PCH_4C5F0.sym} 620 -530 0 0 {name=xH2 }
 C {JNW_TR_SKY130A/JNWTR_RPPO4.sym} 660 -340 1 0 {name=xC}

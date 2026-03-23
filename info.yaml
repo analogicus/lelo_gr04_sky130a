@@ -14,7 +14,7 @@ doc:
   # Make docs
   libraries:
     LELO_GR04_SKY130A:
-      # - LELO_GR04
+      - LELO_GR04
       - LELO_GR04_BG
       - LELO_GR04_BG_BJT
       - LELO_GR04_BG_OTA_PMOS

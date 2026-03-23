@@ -59,11 +59,10 @@ C {JNW_TR_SKY130A/JNWTR_IVX2_CV.sym} -800 190 0 0 {name=x6 }
 C {devices/lab_wire.sym} -800 190 0 0 {name=p20 sig_type=std_logic lab=PWRUP_N_INT}
 C {devices/lab_wire.sym} -910 130 0 0 {name=p21 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_wire.sym} -610 190 0 0 {name=p22 sig_type=std_logic lab=PWRUP_INT}
-C {LELO_GR04_SKY130A/LELO_GR04_BG.sym} -310 -260 0 0 {name=x7}
+C {LELO_GR04_SKY130A/LELO_GR04_BG.sym} -310 -270 0 0 {name=x7}
 C {devices/lab_wire.sym} -460 -300 0 0 {name=p25 sig_type=std_logic lab=VDD_1V8}
-C {devices/lab_wire.sym} -460 -240 0 0 {name=p26 sig_type=std_logic lab=PWRUP_INT}
 C {devices/lab_wire.sym} -460 -260 0 0 {name=p27 sig_type=std_logic lab=PWRUP_N_INT}
-C {devices/gnd.sym} -460 -220 0 0 {name=l7 lab=GND}
+C {devices/gnd.sym} -460 -240 0 0 {name=l7 lab=GND}
 C {devices/lab_wire.sym} -130 -280 0 0 {name=p23 sig_type=std_logic lab=VX}
 C {devices/lab_wire.sym} -70 -260 0 0 {name=p24 sig_type=std_logic lab=IBP_1F7U[3:0]}
 C {devices/gnd.sym} -460 -40 0 0 {name=l4 lab=GND}

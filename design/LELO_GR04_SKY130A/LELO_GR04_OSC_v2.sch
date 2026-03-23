@@ -41,14 +41,14 @@ N 1090 160 1170 160 {lab=VOSC}
 N -250 -60 490 -60 {lab=VC}
 N -250 -80 480 -80 {lab=PWRUP_1V8}
 N 930 160 1090 160 {lab=VOSC}
-C {JNW_ATR_SKY130A/JNWATR_NCH_12C1F2.sym} 140 10 0 1 {name=x3}
-C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} -310 10 0 0 {name=x2 }
-C {JNW_TR_SKY130A/JNWTR_CAPX4.sym} -80 50 0 0 {name=x3[3:0] }
+C {JNW_ATR_SKY130A/JNWATR_NCH_12C1F2.sym} 140 10 0 1 {name=xC}
+C {JNW_ATR_SKY130A/JNWATR_NCH_12C1F2.sym} -310 10 0 0 {name=xA}
+C {JNW_TR_SKY130A/JNWTR_CAPX4.sym} -80 50 0 0 {name=xB[3:0] }
 C {devices/ipin.sym} -110 100 0 0 {name=p1 lab=Vss
 }
 C {devices/ipin.sym} -340 10 0 0 {name=p3 lab=PWRUP_N_1V8
 }
-C {LELO_GR04_SKY130A/LELO_GR04_COMP.sym} 700 -40 0 0 {name=x4}
+C {LELO_GR04_SKY130A/LELO_GR04_COMP.sym} 700 -40 0 0 {name=xE}
 C {devices/ipin.sym} -250 -60 0 0 {name=p4 lab=VC
 }
 C {devices/ipin.sym} -250 -100 0 0 {name=p5 lab=VDD_1V8}
@@ -58,23 +58,23 @@ C {devices/ipin.sym} -250 -80 0 0 {name=p8 lab=PWRUP_1V8
 C {devices/lab_pin.sym} 180 0 0 1 {name=p2 sig_type=std_logic lab=CMPO}
 C {devices/lab_pin.sym} 520 -20 0 0 {name=p7 sig_type=std_logic lab=PWRUP_N_1V8}
 C {devices/ipin.sym} -250 -40 0 0 {name=p10 lab=IBP_1F7U[2:0]}
-C {LELO_GR04_SKY130A/LELO_GR04_INV.sym} 1060 -100 0 0 {name=x1[4:0] }
+C {LELO_GR04_SKY130A/LELO_GR04_INV.sym} 1060 -100 0 0 {name=xG[4:0] }
 C {devices/lab_wire.sym} 1020 -100 0 0 {name=p16 sig_type=std_logic lab=VINV[4:0]}
 C {devices/lab_wire.sym} 1170 -140 0 0 {name=p17 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_wire.sym} 1100 -100 0 1 {name=p18 sig_type=std_logic lab=VINV[5:1]}
-C {LELO_GR04_SKY130A/LELO_GR04_INV.sym} 1280 -100 0 0 {name=x5}
+C {LELO_GR04_SKY130A/LELO_GR04_INV.sym} 1280 -100 0 0 {name=xH}
 C {devices/lab_wire.sym} 1240 -100 0 0 {name=p11 sig_type=std_logic lab=VINV[5]}
 C {devices/lab_wire.sym} 1170 -60 0 0 {name=p12 sig_type=std_logic lab=Vss}
 C {devices/lab_wire.sym} 850 -100 0 1 {name=p13 sig_type=std_logic lab=VINV[0]}
-C {LELO_GR04_SKY130A/LELO_GR04_COMP.sym} 700 220 0 0 {name=x1}
+C {LELO_GR04_SKY130A/LELO_GR04_COMP.sym} 700 220 0 0 {name=xF}
 C {devices/lab_wire.sym} 550 240 0 0 {name=p21 sig_type=std_logic lab=PWRUP_N_1V8}
 C {devices/lab_wire.sym} 550 180 0 0 {name=p22 sig_type=std_logic lab=PWRUP_1V8}
 C {devices/lab_wire.sym} 550 160 0 0 {name=p23 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_wire.sym} 550 200 0 0 {name=p24 sig_type=std_logic lab=VHALF}
 C {devices/lab_wire.sym} 550 260 0 0 {name=p29 sig_type=std_logic lab=IBP_1F7U[2]}
 C {devices/lab_wire.sym} 550 220 0 0 {name=p30 sig_type=std_logic lab=IBP_1F7U[0]}
-C {JNW_TR_SKY130A/JNWTR_CAPX1.sym} 270 270 0 0 {name=x8 }
-C {JNW_TR_SKY130A/JNWTR_CAPX1.sym} 270 200 0 0 {name=x7}
+C {JNW_TR_SKY130A/JNWTR_CAPX1.sym} 270 270 0 0 {name=xD1 }
+C {JNW_TR_SKY130A/JNWTR_CAPX1.sym} 270 200 0 0 {name=xD2}
 C {devices/lab_wire.sym} 270 140 0 0 {name=p31 sig_type=std_logic lab=VC}
 C {devices/lab_wire.sym} 270 210 0 0 {name=p32 sig_type=std_logic lab=VHALF}
 C {devices/lab_wire.sym} 270 280 0 0 {name=p14 sig_type=std_logic lab=Vss}

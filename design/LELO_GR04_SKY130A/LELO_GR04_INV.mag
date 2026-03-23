@@ -1,0 +1,53 @@
+magic
+tech sky130A
+timestamp 1774204339
+<< locali >>
+rect 130 400 560 450
+rect 830 350 1260 400
+rect 830 130 1260 180
+rect 130 80 560 130
+<< metal1 >>
+rect 362 444 458 447
+rect 236 132 332 408
+rect 362 345 458 348
+rect 154 116 186 119
+rect 851 84 854 116
+rect 886 84 904 116
+rect 936 102 1032 398
+rect 1064 348 1122 444
+rect 1218 348 1221 444
+rect 154 81 186 84
+<< via1 >>
+rect 362 348 458 444
+rect 154 84 186 116
+rect 854 84 886 116
+rect 1122 348 1218 444
+<< metal2 >>
+rect 1122 444 1218 447
+rect 359 348 362 444
+rect 458 348 1122 444
+rect 1122 345 1218 348
+rect 854 116 886 119
+rect 151 84 154 116
+rect 186 84 854 116
+rect 854 81 886 84
+use JNWATR_NCH_2C5F0  xA ../JNW_ATR_SKY130A
+timestamp 1740610800
+transform 1 0 92 0 1 64
+box -92 -64 604 464
+use JNWATR_PCH_2C1F2  xB ../JNW_ATR_SKY130A
+timestamp 1740610800
+transform 1 0 792 0 1 64
+box -92 -64 604 464
+<< labels >>
+flabel metal1 236 132 332 408 0 FreeSans 800 0 0 0 VSS
+port 0 nsew
+flabel metal1 936 102 1032 398 0 FreeSans 800 0 0 0 VDD_1V8
+port 1 nsew
+flabel metal2 458 348 1122 444 0 FreeSans 800 0 0 0 VOUT
+port 2 nsew
+flabel metal2 186 84 854 116 0 FreeSans 800 0 0 0 VIN
+port 4 nsew
+<< properties >>
+string FIXED_BBOX 0 0 1024 400
+<< end >>

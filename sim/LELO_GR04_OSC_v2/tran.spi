@@ -5,7 +5,7 @@
 #ifdef Lay
 .include ../../../work/lpe/LELO_GR04_OSC_v2_lpe.spi
 * Include also BG
-* .include ../../../work/lpe/LELO_GR04_BG_lpe.spi
+.include ../../../work/lpe/LELO_GR04_BG_lpe.spi
 #else
 .include ../../../work/xsch/LELO_GR04_OSC_v2.spice
 * Include also BG
@@ -34,7 +34,7 @@ VPWR  PWRUP_1V8  VSS  pwl 0 0 {t_start} 0 {{t_start}+1n} {AVDD} {t_end_meas} {AV
 VPWRN  PWRUP_N_1V8  VSS  pwl 0 {AVDD} {t_start} {AVDD} {{t_start}+1n} 0 {t_end_meas} 0 {{t_end_meas}+1n} {AVDD}
 
 * Bandgap element, from ../LELO_GR04_BG/xdut.spi
-XBG VDD_1V8 LPO LPI VX PWRUP_N_1V8 IBP_1F7U<3> IBP_1F7U<2> IBP_1F7U<1> IBP_1F7U<0> PWRUP_1V8 VSS  LELO_GR04_BG
+XBG VDD_1V8 LPO LPI VX PWRUP_N_1V8 IBP_1F7U<3> IBP_1F7U<2> IBP_1F7U<1> IBP_1F7U<0> VSS  LELO_GR04_BG
 VLP LPI LPO dc 0
 VXC VX VC dc 0
 
@@ -72,7 +72,7 @@ optran 0 0 0 1n 1u 0
 set fend = .raw
 foreach vtemp {temperatures}
   option temp=$vtemp
-  tran 100p {t_end}
+  tran 200p {t_end}
   write {cicname}_$vtemp$fend
 end
 write

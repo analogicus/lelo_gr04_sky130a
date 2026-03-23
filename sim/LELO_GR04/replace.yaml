@@ -1,0 +1,8 @@
+# According to LELO_TEMP: arguments to simulation
+t_end: 12u
+t_end_meas: 10u
+t_start: 1u
+t_iddq: 0.9u
+param_vdd: 1.8
+temperatures: -45 -15 25 60 95 125
+

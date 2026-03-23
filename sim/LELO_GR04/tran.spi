@@ -1,0 +1,77 @@
+*TB_SUN_TR_SKY130NM/TB_NCM
+*----------------------------------------------------------------
+* Include
+*----------------------------------------------------------------
+#ifdef Lay
+.include ../../../work/lpe/LELO_GR04_lpe.spi
+#else
+.include ../../../work/xsch/LELO_GR04.spice
+#endif
+
+*-----------------------------------------------------------------
+* OPTIONS
+*-----------------------------------------------------------------
+.option TNOM=27 GMIN=1e-15 reltol=1e-3
+
+*-----------------------------------------------------------------
+* PARAMETERS
+*-----------------------------------------------------------------
+.param TRF = 10p
+
+.param AVDD = {vdda}
+
+*-----------------------------------------------------------------
+* FORCE
+*-----------------------------------------------------------------
+VSS  VSS  0     dc 0
+VDD  VDD_1V8  VSS  pwl 0 0 10n {AVDD}
+
+VPWR  PWRUP_1V8  VSS  pwl 0 0 {t_start} 0 {{t_start}+1n} {AVDD} {t_end_meas} {AVDD} {{t_end_meas}+1n} 0
+
+*-----------------------------------------------------------------
+* DUT
+*-----------------------------------------------------------------
+.include ../xdut.spi
+
+*----------------------------------------------------------------
+* PROBE
+*----------------------------------------------------------------
+#ifdef Debug
+.save all
+.option savecurrents=all
+#endif
+
+.save v(OSC_TEMP_1V8)
+.save i(VDD)
+.save v(xdut.xC.cmpo)
+.save v(xdut.VCTAT)
+.save v(xdut.LPI)
+.save v(xdut.IBP_1F7U<0>)
+
+
+*----------------------------------------------------------------
+* NGSPICE control
+*----------------------------------------------------------------
+.control
+set num_threads=8
+set color0=white
+set color1=black
+unset askquit
+
+optran 0 0 0 1n 1u 0
+
+
+* tran 1n {t_end}
+set fend = .raw
+foreach vtemp {temperatures}
+  option temp=$vtemp
+  tran 200p {t_end}
+  write {cicname}_$vtemp$fend
+end
+write
+quit
+
+
+.endc
+
+.end

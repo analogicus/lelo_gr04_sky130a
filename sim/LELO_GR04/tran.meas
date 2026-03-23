@@ -1,0 +1,23 @@
+* Measure LELO_GR04
+.control
+
+* Set T_END, T_END_MEAS & T_START
+let t_end = {t_end}
+let t_end_meas = {t_end_meas}
+let t_start = {t_start}
+let threshold = {param_vdd} / 2
+
+* load {cicname}.raw
+
+echo "MEAS_START"
+
+set fend = .raw
+* Get all active & leakage currents
+foreach vtemp {temperatures}
+    load {cicname}_$vtemp$fend
+    meas tran idd_$vtemp AVG i(vdd) from={t_start} to={t_end_meas}
+    meas tran iddq_$vtemp AVG i(vdd) from={t_end_meas + 1u} to={t_end}
+end
+
+echo "MEAS_END"
+.endc

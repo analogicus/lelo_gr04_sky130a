@@ -1,0 +1,25 @@
+description: TB_NCM
+simulations:
+   tran:
+    name: Transient analysis
+    description: |
+      Check transient operation
+    data:
+      - name: Sch_typ
+        src: results/tran_Sch_typical
+        method: typical
+      - name: Sch_etc_notemp
+        src: results/tran_Sch_etc_notemp
+        method: minmax
+      - name: Sch_3std
+        src: results/tran_Sch_mc
+        method: 3std
+      - name: Lay_typ
+        src: results/tran_Lay_typical
+        method: typical
+      - name: Lay_etc_notemp
+        src: results/tran_Lay_etc_notemp
+        method: minmax
+      - name: Lay_3std
+        src: results/tran_Lay_mc
+        method: 3std

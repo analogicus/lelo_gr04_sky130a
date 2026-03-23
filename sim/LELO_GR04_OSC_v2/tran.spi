@@ -5,7 +5,7 @@
 #ifdef Lay
 .include ../../../work/lpe/LELO_GR04_OSC_v2_lpe.spi
 * Include also BG
-* .include ../../../work/lpe/LELO_GR04_BG_lpe.spi
+.include ../../../work/lpe/LELO_GR04_BG_lpe.spi
 #else
 .include ../../../work/xsch/LELO_GR04_OSC_v2.spice
 * Include also BG

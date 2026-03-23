@@ -14,3 +14,13 @@ simulations:
       - name: Sch_3std
         src: results/tran_Sch_mc
         method: 3std
+      - name: Lay_typ
+        src: results/tran_Lay_typical
+        method: typical
+      - name: Lay_etc_notemp
+        src: results/tran_Lay_etc_notemp
+        method: minmax
+      - name: Lay_3std
+        src: results/tran_Lay_mc
+        method: 3std
+        

@@ -7,7 +7,7 @@ module tb_osc_measure;
     reg rst;
     reg start;
     wire pwrupOsc;
-    wire [15:0] count_value;
+    wire [7:0] count_value;
 
     // Instantiate your module (Connect the wires)
     osc_measure uut (

@@ -4,7 +4,7 @@ module osc_measure(
     input start,
     input rst,
     output reg pwrupOsc,
-    output reg [15:0] count_value
+    output reg [7:0] count_value
 );
 
     // Standard Verilog State Parameters
@@ -15,20 +15,20 @@ module osc_measure(
 
     reg [1:0] state;
     reg [3:0] ref_counter;
-    reg [15:0] osc_counter;
+    reg [9:0] osc_counter;
 
     // FSM Logic (Synchronous to 32k clock)
     always @(posedge clk32k or posedge rst) begin
         if (rst) begin
             state <= IDLE;
             pwrupOsc <= 0;
-            ref_counter <= 0;
+            // ref_counter <= 0;
             count_value <= 0;
         end
         else begin
             case(state)
                 IDLE: begin
-                    ref_counter <= 0;
+                    // ref_counter <= 0;
                     pwrupOsc <= 0;
                     if(start)
                         state <= PWRUP;
@@ -36,9 +36,9 @@ module osc_measure(
 
                 PWRUP: begin
                     pwrupOsc <= 1;
-                    ref_counter <= ref_counter + 1;
-                    if(ref_counter == 4'd2)
-                        state <= PWRDWN;
+                    // ref_counter <= ref_counter + 1;
+                    // if(ref_counter == 4'd2)
+                    state <= PWRDWN;
                 end
 
                 PWRDWN: begin
@@ -47,7 +47,7 @@ module osc_measure(
                 end
 
                 CAPTURE: begin
-                    count_value <= osc_counter;
+                    count_value <= osc_counter[9:2];
                     state <= IDLE;
                 end
                 

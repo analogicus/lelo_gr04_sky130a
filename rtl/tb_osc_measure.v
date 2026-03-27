@@ -31,9 +31,17 @@ module tb_osc_measure;
         rst = 1; start = 0;
         #100000;
         rst = 0;
-        #100000;
+        #30000;
         start = 1;
-        #40000;
+        #30000;
+        start = 0;
+        #30000;
+        start = 1;
+        #30000;
+        start = 0;
+        #80000;
+        start = 1;
+        #30000;
         start = 0;
 
         #1000000; // Wait for simulation to run

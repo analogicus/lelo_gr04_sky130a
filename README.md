@@ -16,6 +16,9 @@
     - [Theory](#theory)
     - [Implementation](#implementation)
     - [Result](#result-1)
+  - [Digital counter](#digital-counter)
+    - [Theory](#theory-1)
+    - [Testbench](#testbench)
 - [What](#what)
 - [Signal interface](#signal-interface)
 - [Key parameters](#key-parameters)
@@ -184,6 +187,8 @@ We arrive at the following expected oscillation frequencies at different tempera
 | 25 C | 2.775 MHz |
 | 125 C | 4.797 MHz |
 
+The actual oscillation frequencies can change, depending on layout parasitics and process corners.
+
 ### Implementation
 
 The oscillator currently uses a second comparator to compare capacitor voltage with half the $V_{ctat}$ voltage, since the D flip-flop is not tested yet. It can be implemented later to reduce current usage. 6 inverters are used to delay the comparator output.
@@ -193,7 +198,9 @@ The oscillator currently uses a second comparator to compare capacitor voltage w
 The following are the plots of capacitor voltage, comparator output, and oscillator output at different temperature corners. Process and voltage are typical.
 
 <img src="./assets/osc_1.png" alt="Oscillator_Tl" width="500"/>
+
 <img src="./assets/osc_2.png" alt="Oscillator_Tt" width="500"/>
+
 <img src="./assets/osc_3.png" alt="Oscillator_Th" width="500"/>
 
 The plot of oscillation frequency vs. temperature at typical process and voltage is below. The scaled curve is the expected curve scaled (calibrated) to the measurement at 25C. The temperature error predicted by this curve is in the second plot.
@@ -201,6 +208,22 @@ The plot of oscillation frequency vs. temperature at typical process and voltage
 ![Count typical](./sim/LELO_GR04/results/output_tran/tran_SchGtKttTtVt_count.png)
 
 Plots of other corners can be found in [the same folder](./sim/LELO_GR04/results/output_tran). The majority of them deviate from the expected curve, but the calbiration helps address this. Likely sources of errors are the non-zero delay of the comparator, and the transient startup of the bandgap. 
+
+## Digital counter
+
+### Theory
+
+The digital counter is simple and implemented as the state machine shown below. When a `start` signal is received, the analog part is enabled via `pwrupOsc` for one 32kHz cycle. In this time, `osc_counter[8:0]` is incremented using the `OSC_TEMP_1V8` signal from analog. 9 bits are used here to accommodate a maximum oscillation frequency of ~16MHz. After the 32kHz finishes, the 8 MSBs are sent to output (`count_value[7:0]`).
+
+![FSM](./assets/state_machine.png)
+
+From simulations, the actual frequency of the oscillator can reach up to 8MHz due to variations.
+
+### Testbench
+
+To test the digital, a 10MHz clock (`osc_clk`) is generated parallel to the 32kHz clock (`clk32k`). The counter should record ~312 cycles, which is what we see on the `osc_measure[8:0]` signal (`0x138`). It's binary representation is `1_0011_1000`, and the 8 MSBs are `1001_1100` (`0x9C`). This is the output at `count_value[7:0]`. 
+
+![Testbench](./assets/testbench.png)
 
 # What
 

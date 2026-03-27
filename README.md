@@ -198,7 +198,9 @@ The oscillator currently uses a second comparator to compare capacitor voltage w
 The following are the plots of capacitor voltage, comparator output, and oscillator output at different temperature corners. Process and voltage are typical.
 
 <img src="./assets/osc_1.png" alt="Oscillator_Tl" width="500"/>
+
 <img src="./assets/osc_2.png" alt="Oscillator_Tt" width="500"/>
+
 <img src="./assets/osc_3.png" alt="Oscillator_Th" width="500"/>
 
 The plot of oscillation frequency vs. temperature at typical process and voltage is below. The scaled curve is the expected curve scaled (calibrated) to the measurement at 25C. The temperature error predicted by this curve is in the second plot.
@@ -211,13 +213,15 @@ Plots of other corners can be found in [the same folder](./sim/LELO_GR04_OSC_v2/
 
 ### Theory
 
-The digital counter is simple and implemented as the state machine shown below. When a `start` signal is received, the analog part is enabled via `pwrupOsc` for one 32kHz cycle. In this time, `osc_counter[9:0]` is incremented using the `OSC_TEMP_1V8` signal from analog. 10-bit is used here to accommodate the maximum oscillation frequency of ~33MHz. After the 32kHz finishes, the 8 MSBs are sent to output (`count_value[7:0]`).
+The digital counter is simple and implemented as the state machine shown below. When a `start` signal is received, the analog part is enabled via `pwrupOsc` for one 32kHz cycle. In this time, `osc_counter[8:0]` is incremented using the `OSC_TEMP_1V8` signal from analog. 9 bits are used here to accommodate a maximum oscillation frequency of ~16MHz. After the 32kHz finishes, the 8 MSBs are sent to output (`count_value[7:0]`).
 
 ![FSM](./assets/state_machine.png)
 
+From simulations, the actual frequency of the oscillator can reach up to 8MHz due to variations.
+
 ### Testbench
 
-To test the digital, a 10MHz clock is generated parallel to the 32kHz clock. The counter should record ~312 cycles, which is what we see here on the `osc_measure[9:0]` signal (313). It's binary representation is `01_0011_1001`, and the 8 MSBs are `0100_1110`. This is the output at `count_value[7:0]`. 
+To test the digital, a 10MHz clock (`osc_clk`) is generated parallel to the 32kHz clock (`clk32k`). The counter should record ~312 cycles, which is what we see on the `osc_measure[8:0]` signal (`0x138`). It's binary representation is `1_0011_1000`, and the 8 MSBs are `1001_1100` (`0x9C`). This is the output at `count_value[7:0]`. 
 
 ![Testbench](./assets/testbench.png)
 

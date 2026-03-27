@@ -14,21 +14,18 @@ module osc_measure(
     parameter CAPTURE = 2'b11;
 
     reg [1:0] state;
-    reg [3:0] ref_counter;
-    reg [9:0] osc_counter;
+    reg [8:0] osc_counter;
 
     // FSM Logic (Synchronous to 32k clock)
     always @(posedge clk32k or posedge rst) begin
         if (rst) begin
             state <= IDLE;
             pwrupOsc <= 0;
-            // ref_counter <= 0;
             count_value <= 0;
         end
         else begin
             case(state)
                 IDLE: begin
-                    // ref_counter <= 0;
                     pwrupOsc <= 0;
                     if(start)
                         state <= PWRUP;
@@ -36,8 +33,6 @@ module osc_measure(
 
                 PWRUP: begin
                     pwrupOsc <= 1;
-                    // ref_counter <= ref_counter + 1;
-                    // if(ref_counter == 4'd2)
                     state <= PWRDWN;
                 end
 
@@ -47,7 +42,7 @@ module osc_measure(
                 end
 
                 CAPTURE: begin
-                    count_value <= osc_counter[9:2];
+                    count_value <= osc_counter[8:1];
                     state <= IDLE;
                 end
                 
@@ -65,7 +60,7 @@ module osc_measure(
             // Clear counter in IDLE, increment in PWRUP
             if (state == IDLE)
                 osc_counter <= 0;
-            else if (state == PWRUP)
+            else if (state == PWRDWN)
                 osc_counter <= osc_counter + 1;
         end
     end

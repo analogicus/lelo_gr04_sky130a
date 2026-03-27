@@ -12,8 +12,36 @@
 PREFIX=
 LIB=LELO_GR04_SKY130A
 CELL=LELO_GR04
+TT_CELL=tt_um_lelo_gr04_analogicus
+VERILOG_FILE=../rtl/osc_measure.pnl.v
 
 #- Provide cells you want to check for the lvsall drcall commands
 CELLS = LELO_GR04
 
 include ../tech/make/core.make
+
+define TCL_FOR_NETGEN
+	set layout [readnet spice lvs/${TT_CELL}.spi]
+	set source [readnet spice xsch/${TT_CELL}.spice]
+	readnet spice $$env(PDK_ROOT)/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice $$source
+	readnet verilog ${VERILOG_FILE} $$source
+	lvs "$$layout ${TT_CELL}" "$$source ${TT_CELL}" $$env(PDK_ROOT)/sky130A/libs.tech/netgen/sky130A_setup.tcl lvs/${TT_CELL}_lvs.log > lvs/${TT_CELL}_netgen_lvs.log
+endef
+export TCL_FOR_NETGEN
+
+# Analog + digital LVS
+# https://web.open-source-silicon.dev/t/16936037/hi-we-are-working-on-mixed-signal-design-we-have-a-digital-m
+# https://github.com/ajcci/sky130_ajc_ip__overvoltage/tree/main?tab=readme-ov-file#layout-vs-schematic-lvs
+# https://xschem.sourceforge.io/stefan/xschem_man/tutorial_use_existing_subckt.html
+# http://repo.hu/projects/xschem/xschem_man/tutorial_busses.html
+
+lvs_custom:
+	test -d lvs || mkdir lvs
+# Create schematic netlist + digital placeholder
+	make xsch CELL=${TT_CELL}
+# Create layout extracted netlist
+	cat ../tech/magic/lvs.tcl|perl -pe 's#{PATH}#../design/${LIB}#ig;s#{CELL}#${TT_CELL}#ig;' > lvs/${TT_CELL}_spi.tcl
+	magic -noconsole -dnull lvs/${TT_CELL}_spi.tcl > lvs/${TT_CELL}_spi.log 2>&1
+# Run netgen
+	echo "$$TCL_FOR_NETGEN" > netgen.tcl
+	netgen -batch source netgen.tcl

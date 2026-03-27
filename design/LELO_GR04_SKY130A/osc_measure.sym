@@ -1,0 +1,38 @@
+v {xschem version=3.4.7 file_version=1.2}
+G {}
+K {type=primitive
+format="@name @pinlist osc_measure"
+template="name=x1"}
+V {}
+S {}
+E {}
+L 4 -130 -60 130 -60 {}
+L 4 -130 60 130 60 {}
+L 4 -130 -60 -130 60 {}
+L 4 130 -60 130 60 {}
+L 7 130 -50 150 -50 {}
+L 7 130 -30 150 -30 {}
+L 7 130 -10 150 -10 {}
+L 7 130 10 150 10 {}
+L 7 130 30 150 30 {}
+L 7 130 50 150 50 {}
+L 7 0 -80 0 -60 {}
+L 7 0 60 0 80 {}
+B 5 147.5 -52.5 152.5 -47.5 {name=clk dir=inout }
+B 5 147.5 -12.5 152.5 -7.5 {name=osc_clk dir=inout }
+B 5 147.5 7.5 152.5 12.5 {name=pwrupOsc dir=inout }
+B 5 147.5 27.5 152.5 32.5 {name=rst dir=inout }
+B 5 147.5 47.5 152.5 52.5 {name=start dir=inout }
+B 5 -2.5 -82.5 2.5 -77.5 {name=VPWR dir=inout }
+B 5 -2.5 77.5 2.5 82.5 {name=VGND dir=inout }
+B 5 147.5 -32.5 152.5 -27.5 {name=count_value[7:0] dir=inout }
+T {@symname} 0 -6 0 0 0.3 0.3 {hcenter=true}
+T {@name} 135 -72 0 0 0.2 0.2 {}
+T {clk} 125 -54 0 1 0.2 0.2 {}
+T {count_value[7:0]} 125 -34 0 1 0.2 0.2 {}
+T {osc_clk} 125 -14 0 1 0.2 0.2 {}
+T {pwrupOsc} 125 6 0 1 0.2 0.2 {}
+T {rst} 125 26 0 1 0.2 0.2 {}
+T {start} 125 46 0 1 0.2 0.2 {}
+T {VPWR} 15 -54 0 1 0.2 0.2 {}
+T {VGND} 15 46 0 1 0.2 0.2 {}

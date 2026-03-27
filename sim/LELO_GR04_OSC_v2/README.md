@@ -1,5 +1,7 @@
 TB_NCM
 
+This testbench is deprecated in favor of the top-level `LELO_GR04` tests.
+
 #### Transient analysis (tran)
 
 Check transient operation

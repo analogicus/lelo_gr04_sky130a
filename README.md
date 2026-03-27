@@ -198,9 +198,9 @@ The following are the plots of capacitor voltage, comparator output, and oscilla
 
 The plot of oscillation frequency vs. temperature at typical process and voltage is below. The scaled curve is the expected curve scaled (calibrated) to the measurement at 25C. The temperature error predicted by this curve is in the second plot.
 
-![Count typical](./sim/LELO_GR04_OSC_v2/results/output_tran/tran_SchGtKttTtVt_count.png)
+![Count typical](./sim/LELO_GR04/results/output_tran/tran_SchGtKttTtVt_count.png)
 
-Plots of other corners can be found in [the same folder](./sim/LELO_GR04_OSC_v2/results/output_tran). The majority of them deviate from the expected curve, but the calbiration helps address this. Likely sources of errors are the non-zero delay of the comparator, and the transient startup of the bandgap. 
+Plots of other corners can be found in [the same folder](./sim/LELO_GR04/results/output_tran). The majority of them deviate from the expected curve, but the calbiration helps address this. Likely sources of errors are the non-zero delay of the comparator, and the transient startup of the bandgap. 
 
 # What
 

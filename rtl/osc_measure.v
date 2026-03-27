@@ -1,5 +1,5 @@
 module osc_measure(
-    input clk32k,
+    input clk,
     input osc_clk,
     input start,
     input rst,
@@ -17,7 +17,7 @@ module osc_measure(
     reg [8:0] osc_counter;
 
     // FSM Logic (Synchronous to 32k clock)
-    always @(posedge clk32k or posedge rst) begin
+    always @(posedge clk or posedge rst) begin
         if (rst) begin
             state <= IDLE;
             pwrupOsc <= 0;

@@ -21,7 +21,7 @@ CELLS = LELO_GR04
 # include ../tech/make/core.make
 # Add missing PNP to GDS by overriding Makefile
 # https://www.gnu.org/software/make/manual/html_node/Overriding-Makefiles.html
-.PHONY: gds force
+.PHONY: gds force lvs_tt
 gds:
 	test -d ${PDK_ROOT}/sky130A/libs.ref/sky130_fd_pr/gds || mkdir ${PDK_ROOT}/sky130A/libs.ref/sky130_fd_pr/gds
 	test -f ${PDK_ROOT}/sky130A/libs.ref/sky130_fd_pr/gds/sky130_fd_pr.gds || cp ../design/${LIB}/sky130_fd_pr.gds ${PDK_ROOT}/sky130A/libs.ref/sky130_fd_pr/gds/
@@ -46,7 +46,7 @@ export TCL_FOR_NETGEN
 # https://xschem.sourceforge.io/stefan/xschem_man/tutorial_use_existing_subckt.html
 # http://repo.hu/projects/xschem/xschem_man/tutorial_busses.html
 
-lvs_custom:
+lvs_tt:
 	test -d lvs || mkdir lvs
 # Create schematic netlist + digital placeholder
 	make xsch CELL=${TT_CELL}

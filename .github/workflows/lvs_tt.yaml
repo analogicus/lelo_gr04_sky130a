@@ -1,0 +1,57 @@
+# Simple action to do LVS for entire TT block
+# Steps from https://github.com/analogicus/jnw-actions
+# Other resources:
+#   https://docs.github.com/en/actions/tutorials/create-an-example-workflow
+#   https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax
+name: LVS_TT
+description: 'Simple action to do LVS for entire TT block'
+branding:
+  color: white
+  icon: user-check
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - 'design/**.mag'
+      - 'design/**.sch'
+      - 'design/**.sym'
+      - 'info.yaml'
+      - 'config.yaml'
+  workflow_dispatch:
+
+concurrency:
+  group: "lvs"
+  cancel-in-progress: true
+
+jobs:
+  lvs-tt:
+    runs-on: ubuntu-latest
+    container:
+      image: wulffern/aicex:26.04_0.1.7
+      options: --user root
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Checkout dependencies
+        shell: bash
+        run: |
+          python3 -m pip install cicconf
+          cicconf --rundir ../ --config config.yaml clone --https
+      - name: Run LVS
+        shell: bash
+        run: |
+          export PDK_ROOT=/opt/pdk/share/pdk
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+          echo "/opt/eda/bin" >> $GITHUB_PATH
+          cd work
+          make lvs_tt
+          echo -e "\n\n# LVS (TinyTapeout block)\n\n" >> $GITHUB_STEP_SUMMARY
+          echo -e "\`\`\`bash\n" >> $GITHUB_STEP_SUMMARY
+          cat lvs/tt_um_lelo_gr04_analogicus_lvs.log >> $GITHUB_STEP_SUMMARY
+          echo -e "\`\`\`\n" >> $GITHUB_STEP_SUMMARY
+      - name: Archive LVS
+        uses: actions/upload-artifact@v4
+        with:
+          name: lvs_tt
+          path: |
+            work/lvs/tt_um_lelo_gr04_analogicus_lvs.log

@@ -27,6 +27,31 @@ jobs:
       image: wulffern/aicex:26.04_0.1.7
       options: --user root
     steps:
+      - name: Install PDK
+        shell: bash
+        run: |
+          export PDK_ROOT=/opt/pdk/share/pdk
+          cd $HOME
+          git clone https://github.com/RTimothyEdwards/open_pdks.git
+          cd open_pdks
+          ./configure --prefix=/opt/pdk --enable-sky130-pdk --with-sky130-variants=A \
+            --enable-primitive-sky130 --enable-sc-hd-sky130 \
+            --disable-io-sky130 --disable-sc-hs-sky130 --disable-sc-ms-sky130 --disable-sc-ls-sky130 \
+            --disable-sc-lp-sky130 --disable-sc-hdll-sky130 --disable-sc-hvl-sky130 --disable-alpha-sky130 \
+            --disable-xschem-sky130 \
+            --disable-gf180mcu-pdk --disable-primitive-gf180mcu \
+            --disable-verification-gf180mcu --disable-klayout-gf180mcu --disable-io-gf180mcu \
+            --disable-sc-7t5v0-gf180mcu --disable-sc-9t5v0-gf180mcu --disable-sram-gf180mcu \
+            --disable-alpha-gf180mcu --disable-osu-sc-gf180mcu --disable-avalon-sc-gf180mcu \
+            --disable-ocd-io-gf180mcu --disable-ocd-sram-gf180mcu
+
+          # These are needed for a step in make
+          #  --disable-klayout-sky130 --disable-precheck-sky130
+
+          make
+          sudo make install
+          cd $HOME
+
       - name: Checkout
         uses: actions/checkout@v4
       - name: Checkout dependencies

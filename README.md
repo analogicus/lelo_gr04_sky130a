@@ -3,6 +3,7 @@
 [![LVS](../../actions/workflows/lvs.yaml/badge.svg)](../../actions/workflows/lvs.yaml)
 [![DOCS](../../actions/workflows/docs.yaml/badge.svg)](../../actions/workflows/docs.yaml)
 [![LVS_TT](../../actions/workflows/lvs_tt.yaml/badge.svg)](../../actions/workflows/lvs_tt.yaml)
+[![GDS_TT](../../actions/workflows/gds_tt.yaml/badge.svg)](../../actions/workflows/gds_tt.yaml)
 
 ## Table of Contents
 - [Who](#who)

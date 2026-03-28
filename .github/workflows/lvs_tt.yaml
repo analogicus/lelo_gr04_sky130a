@@ -5,9 +5,6 @@
 #   https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax
 name: LVS_TT
 description: 'Simple action to do LVS for entire TT block'
-branding:
-  color: white
-  icon: user-check
 on:
   push:
     branches: ["main"]

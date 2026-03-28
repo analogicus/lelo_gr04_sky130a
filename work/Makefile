@@ -18,7 +18,18 @@ VERILOG_FILE=../rtl/osc_measure.pnl.v
 #- Provide cells you want to check for the lvsall drcall commands
 CELLS = LELO_GR04
 
-include ../tech/make/core.make
+# include ../tech/make/core.make
+# Add missing PNP to GDS by overriding Makefile
+# https://www.gnu.org/software/make/manual/html_node/Overriding-Makefiles.html
+.PHONY: gds force
+gds:
+	test -d ${PDK_ROOT}/sky130A/libs.ref/sky130_fd_pr/gds || mkdir ${PDK_ROOT}/sky130A/libs.ref/sky130_fd_pr/gds
+	test -f ${PDK_ROOT}/sky130A/libs.ref/sky130_fd_pr/gds/sky130_fd_pr.gds || cp ../design/${LIB}/sky130_fd_pr.gds ${PDK_ROOT}/sky130A/libs.ref/sky130_fd_pr/gds/
+	@$(MAKE) -f ../tech/make/core.make PREFIX=${PREFIX} LIB=${LIB} CELL=${CELL} gds
+
+%: force
+	@$(MAKE) -f ../tech/make/core.make PREFIX=${PREFIX} LIB=${LIB} CELL=${CELL} $@
+force: ;
 
 define TCL_FOR_NETGEN
 	set layout [readnet spice lvs/${TT_CELL}.spi]

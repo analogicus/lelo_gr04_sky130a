@@ -2,25 +2,25 @@
 
 module tb_osc_measure;
     // Signals for our "virtual lab"
-    reg clk32k = 0;
+    reg clk = 0;
     reg osc_clk = 0;
-    reg rst;
+    reg rst_n;
     reg start;
     wire pwrupOsc;
     wire [7:0] count_value;
 
     // Instantiate your module (Connect the wires)
     osc_measure uut (
-        .clk32k(clk32k),
+        .clk(clk),
         .osc_clk(osc_clk),
         .start(start),
-        .rst(rst),
+        .rst_n(rst_n),
         .pwrupOsc(pwrupOsc),
         .count_value(count_value)
     );
 
     // Generate Clocks
-    always #15625 clk32k = ~clk32k; // ~32kHz clock
+    always #15625 clk = ~clk; // ~32kHz clock
     always #50 osc_clk = ~osc_clk;   // Much faster "Oscillator" clock (10MHz)
 
     initial begin
@@ -28,9 +28,9 @@ module tb_osc_measure;
         $dumpvars(0, tb_osc_measure);
 
         // Stimulus (The test sequence)
-        rst = 1; start = 0;
+        rst_n = 0; start = 0;
         #100000;
-        rst = 0;
+        rst_n = 1;
         #30000;
         start = 1;
         #30000;
@@ -39,7 +39,11 @@ module tb_osc_measure;
         start = 1;
         #30000;
         start = 0;
-        #80000;
+        #30000;
+        rst_n = 0;
+        #20000;
+        rst_n = 1;
+        #60000;
         start = 1;
         #30000;
         start = 0;

@@ -205,15 +205,15 @@ The following are the plots of capacitor voltage, comparator output, and oscilla
 
 The plot of oscillation frequency vs. temperature at typical process and voltage is below. The scaled curve is the expected curve scaled (calibrated) to the measurement at 25C. The temperature error predicted by this curve is in the second plot.
 
-![Count typical](./sim/LELO_GR04_OSC_v2/results/output_tran/tran_SchGtKttTtVt_count.png)
+![Count typical](./sim/LELO_GR04/results/output_tran/tran_SchGtKttTtVt_count.png)
 
-Plots of other corners can be found in [the same folder](./sim/LELO_GR04_OSC_v2/results/output_tran). The majority of them deviate from the expected curve, but the calbiration helps address this. Likely sources of errors are the non-zero delay of the comparator, and the transient startup of the bandgap. 
+Plots of other corners can be found in [the same folder](./sim/LELO_GR04/results/output_tran). The majority of them deviate from the expected curve, but the calbiration helps address this. Likely sources of errors are the non-zero delay of the comparator, and the transient startup of the bandgap. 
 
 ## Digital counter
 
 ### Theory
 
-The digital counter is simple and implemented as the state machine shown below. When a `start` signal is received, the analog part is enabled via `pwrupOsc` for one 32kHz cycle. In this time, `osc_counter[8:0]` is incremented using the `OSC_TEMP_1V8` signal from analog. 9 bits are used here to accommodate a maximum oscillation frequency of ~16MHz. After the 32kHz finishes, the 8 MSBs are sent to output (`count_value[7:0]`).
+The digital counter is simple and implemented as the state machine shown below. The reset is asynchronous and active low. When a `start` signal is received, the analog part is enabled via `pwrupOsc` for one 32kHz cycle. In this time, `osc_counter[8:0]` is incremented using the `OSC_TEMP_1V8` signal from analog. 9 bits are used here to accommodate a maximum oscillation frequency of ~16MHz. After the 32kHz finishes, the 8 MSBs are sent to output (`count_value[7:0]`).
 
 ![FSM](./assets/state_machine.png)
 
@@ -221,7 +221,7 @@ From simulations, the actual frequency of the oscillator can reach up to 8MHz du
 
 ### Testbench
 
-To test the digital, a 10MHz clock (`osc_clk`) is generated parallel to the 32kHz clock (`clk32k`). The counter should record ~312 cycles, which is what we see on the `osc_measure[8:0]` signal (`0x138`). It's binary representation is `1_0011_1000`, and the 8 MSBs are `1001_1100` (`0x9C`). This is the output at `count_value[7:0]`. 
+To test the digital, a 10MHz clock (`osc_clk`) is generated parallel to the 32kHz clock (`clk`). The counter should record ~312 cycles, which is what we see on the `osc_measure[8:0]` signal (`0x138` - `0x139`). It's binary representation is `1_0011_1000`, and the 8 MSBs are `1001_1100` (`0x9C`). This is the output at `count_value[7:0]`. A reset is done mid-simulation to show its functionality.
 
 ![Testbench](./assets/testbench.png)
 

@@ -39,6 +39,18 @@ define TCL_FOR_NETGEN
 	lvs "$$layout ${TT_CELL}" "$$source ${TT_CELL}" $$env(PDK_ROOT)/sky130A/libs.tech/netgen/sky130A_setup.tcl lvs/${TT_CELL}_lvs.log > lvs/${TT_CELL}_netgen_lvs.log
 endef
 export TCL_FOR_NETGEN
+define TCL_FOR_MAGIC
+	set SUB 0
+	set OPATH lvs/ext
+	load ../design/${LIB}/${TT_CELL}.mag
+
+	extract path $${OPATH}
+	extract all
+	ext2spice lvs
+	ext2spice -p $${OPATH} -o lvs/${TT_CELL}.spi
+	quit
+endef
+export TCL_FOR_MAGIC
 
 # Analog + digital LVS
 # https://web.open-source-silicon.dev/t/16936037/hi-we-are-working-on-mixed-signal-design-we-have-a-digital-m
@@ -51,7 +63,7 @@ lvs_tt:
 # Create schematic netlist + digital placeholder
 	make xsch CELL=${TT_CELL}
 # Create layout extracted netlist
-	cat ../tech/magic/lvs.tcl|perl -pe 's#{PATH}#../design/${LIB}#ig;s#{CELL}#${TT_CELL}#ig;' > lvs/${TT_CELL}_spi.tcl
+	echo "$$TCL_FOR_MAGIC" > lvs/${TT_CELL}_spi.tcl
 	magic -noconsole -dnull lvs/${TT_CELL}_spi.tcl > lvs/${TT_CELL}_spi.log 2>&1
 # Run netgen
 	echo "$$TCL_FOR_NETGEN" > netgen.tcl

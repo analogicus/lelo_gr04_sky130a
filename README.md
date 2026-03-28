@@ -2,6 +2,7 @@
 [![DRC](../../actions/workflows/drc.yaml/badge.svg)](../../actions/workflows/drc.yaml)
 [![LVS](../../actions/workflows/lvs.yaml/badge.svg)](../../actions/workflows/lvs.yaml)
 [![DOCS](../../actions/workflows/docs.yaml/badge.svg)](../../actions/workflows/docs.yaml)
+[![LVS_TT](../../actions/workflows/lvs_tt.yaml/badge.svg)](../../actions/workflows/lvs_tt.yaml)
 
 ## Table of Contents
 - [Who](#who)

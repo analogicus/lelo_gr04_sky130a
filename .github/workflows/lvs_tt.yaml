@@ -69,9 +69,6 @@ jobs:
           make lvs_tt
           echo -e "\n\n# LVS (TinyTapeout block)\n\n" >> $GITHUB_STEP_SUMMARY
           echo -e "\`\`\`bash\n" >> $GITHUB_STEP_SUMMARY
-          echo -e "\n\n### Layout SPICE extraction log" >> $GITHUB_STEP_SUMMARY
-          cat lvs/tt_um_lelo_gr04_analogicus_spi.log >> $GITHUB_STEP_SUMMARY
-          echo -e "\n\n### LVS log" >> $GITHUB_STEP_SUMMARY
           cat lvs/tt_um_lelo_gr04_analogicus_lvs.log >> $GITHUB_STEP_SUMMARY
           echo -e "\`\`\`\n" >> $GITHUB_STEP_SUMMARY
       - name: Archive LVS
@@ -79,4 +76,5 @@ jobs:
         with:
           name: lvs_tt
           path: |
+            work/lvs/tt_um_lelo_gr04_analogicus_spi.log
             work/lvs/tt_um_lelo_gr04_analogicus_lvs.log

@@ -17,7 +17,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: "lvs"
+  group: "lvs-tt"
   cancel-in-progress: true
 
 jobs:

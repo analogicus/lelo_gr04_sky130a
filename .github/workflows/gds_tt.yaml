@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: "gds"
+  group: "gds-tt"
   cancel-in-progress: true
 
 jobs:

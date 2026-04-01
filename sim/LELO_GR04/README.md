@@ -72,14 +72,14 @@ Check transient operation
 | | | |<a href='results/tran_Lay_etc_notemp.html'>Lay_etc_notemp</a>|<span style='color:red'>**-98.17**</span> | -8.15 | -4.02 | |
 | | | |<a href='results/tran_Lay_mc.html'>Lay_3std</a>|<span style='color:red'>**-42.22**</span> | <span style='color:red'>**-13.59**</span> | <span style='color:red'>**15.04**</span> | |
 |**Temperature error 0-70C (calibrated @ 25C)**|**t\_err\_com\_max** || **Spec**  | **-10.00** | **0.00** | **10.00** | **C** |
-| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 1.06 |  | |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | 0.14 |  | |
 | | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|-1.83 | 0.08 | 1.90 | |
 | | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|-3.51 | 2.08 | 7.67 | |
 | | | |<a href='results/tran_Lay_typical.html'>Lay_typ</a>| | 0.17 |  | |
 | | | |<a href='results/tran_Lay_etc_notemp.html'>Lay_etc_notemp</a>|-1.84 | 0.03 | 2.08 | |
 | | | |<a href='results/tran_Lay_mc.html'>Lay_3std</a>|-5.30 | 1.81 | 8.93 | |
 |**Temperature error 0-70C (calibrated @ 25C)**|**t\_err\_com\_min** || **Spec**  | **-10.00** | **0.00** | **10.00** | **C** |
-| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | -0.37 |  | |
+| | | |<a href='results/tran_Sch_typical.html'>Sch_typ</a>| | -1.06 |  | |
 | | | |<a href='results/tran_Sch_etc_notemp.html'>Sch_etc_notemp</a>|-5.09 | -1.16 | 0.72 | |
 | | | |<a href='results/tran_Sch_mc.html'>Sch_3std</a>|-7.90 | -3.24 | 1.41 | |
 | | | |<a href='results/tran_Lay_typical.html'>Lay_typ</a>| | -1.62 |  | |

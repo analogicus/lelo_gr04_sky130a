@@ -22,3 +22,7 @@ For details see <a href='tran_Sch_typical.html'>tran_Sch_typical.html</a>
 | | | ('Sch',)|0.14 C | 0.14 C | 0.14 C |
 |Temperature error (calibrated @ 25C)|t\_err\_min | Spec | -10.00 C |  | 10.00 C |
 | | | ('Sch',)|-4.17 C | -4.17 C | -4.17 C |
+|Temperature error between 0-70C (calibrated @ 25C)|t\_err\_com\_max | Spec | -10.00 C |  | 10.00 C |
+| | | ('Sch',)|1.06 C | 1.06 C | 1.06 C |
+|Temperature error between 0-70C (calibrated @ 25C)|t\_err\_com\_min | Spec | -10.00 C |  | 10.00 C |
+| | | ('Sch',)|-0.37 C | -0.37 C | -0.37 C |

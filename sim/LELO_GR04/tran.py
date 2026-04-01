@@ -186,6 +186,39 @@ def main(name):
   obj["t_err_max"] = float(np.max(error_temps))
   obj["t_err_min"] = float(np.min(error_temps))
 
+  # Calculate commercial errors (0-70C) by interpolating errors
+  temps_corners = [0, 70]
+  t_err_coms = []
+  for temp in temps_corners:
+    # Find indices closest to 0-70
+    index = np.argmin(np.abs(np.asarray(temps) - temp))
+    if np.abs(temps[index] - temp) < 0.5:
+      t_err_coms.append(error_temps[index])
+
+    # If not exact: use interpolation
+    else:
+      if temps[index] > temp:
+        index_front = index - 1
+        index_back = index
+      else:
+        index_front = index
+        index_back = index + 1
+
+      temp_range = temps[index_back] - temps[index_front]
+      t_err_coms.append(
+        error_temps[index_front] * (temps[index_back] - temp) / temp_range +
+        error_temps[index_back] * (temp - temps[index_front]) / temp_range
+      )
+
+  # Get other errors between 0-70
+  for i in range(len(temps)):
+    if temps[i] >= 0 and temps[i] <= 70:
+      t_err_coms.append(error_temps[i])
+  
+  # Output commercial errors
+  obj["t_err_com_max"] = float(np.max(t_err_coms))
+  obj["t_err_com_min"] = float(np.min(t_err_coms))
+
   # Plot results
   plt.figure()
 

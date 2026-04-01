@@ -22,3 +22,7 @@ For details see <a href='tran_Sch_etc_notemp.html'>tran_Sch_etc_notemp.html</a>
 | | | ('Sch',)|-1.83 C | 0.08 C | 3.61 C |
 |Temperature error (calibrated @ 25C)|t\_err\_min | Spec | -10.00 C |  | 10.00 C |
 | | | ('Sch',)|-62.49 C | -5.59 C | -2.15 C |
+|Temperature error between 0-70C (calibrated @ 25C)|t\_err\_com\_max | Spec | -10.00 C |  | 10.00 C |
+| | | ('Sch',)|-1.83 C | 0.08 C | 1.90 C |
+|Temperature error between 0-70C (calibrated @ 25C)|t\_err\_com\_min | Spec | -10.00 C |  | 10.00 C |
+| | | ('Sch',)|-5.09 C | -1.16 C | 0.72 C |

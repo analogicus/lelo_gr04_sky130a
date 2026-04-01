@@ -77,3 +77,15 @@ t_err:
   scale: 1
   digits: 2
   unit: C
+
+t_err_com:
+  src:
+    - t_err_com_max
+    - t_err_com_min
+  name: Temperature error 0-70C (calibrated @ 25C)
+  typ: 0
+  min: -10
+  max: 10
+  scale: 1
+  digits: 2
+  unit: C

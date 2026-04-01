@@ -22,3 +22,7 @@ For details see <a href='tran_Lay_etc_notemp.html'>tran_Lay_etc_notemp.html</a>
 | | | ('Lay',)|-1.84 C | 0.03 C | 2.08 C |
 |Temperature error (calibrated @ 25C)|t\_err\_min | Spec | -10.00 C |  | 10.00 C |
 | | | ('Lay',)|-98.17 C | -8.15 C | -4.02 C |
+|Temperature error between 0-70C (calibrated @ 25C)|t\_err\_com\_max | Spec | -10.00 C |  | 10.00 C |
+| | | ('Lay',)|-1.84 C | 0.03 C | 2.08 C |
+|Temperature error between 0-70C (calibrated @ 25C)|t\_err\_com\_min | Spec | -10.00 C |  | 10.00 C |
+| | | ('Lay',)|-8.85 C | -1.81 C | 0.40 C |

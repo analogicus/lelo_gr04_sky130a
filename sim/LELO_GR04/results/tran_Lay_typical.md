@@ -22,3 +22,7 @@ For details see <a href='tran_Lay_typical.html'>tran_Lay_typical.html</a>
 | | | ('Lay',)|0.17 C | 0.17 C | 0.17 C |
 |Temperature error (calibrated @ 25C)|t\_err\_min | Spec | -10.00 C |  | 10.00 C |
 | | | ('Lay',)|-6.51 C | -6.51 C | -6.51 C |
+|Temperature error between 0-70C (calibrated @ 25C)|t\_err\_com\_max | Spec | -10.00 C |  | 10.00 C |
+| | | ('Lay',)|0.17 C | 0.17 C | 0.17 C |
+|Temperature error between 0-70C (calibrated @ 25C)|t\_err\_com\_min | Spec | -10.00 C |  | 10.00 C |
+| | | ('Lay',)|-1.62 C | -1.62 C | -1.62 C |

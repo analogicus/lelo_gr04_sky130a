@@ -55,8 +55,8 @@ meas tran i_avg AVG i(v1)
 
 .endc
 "}
-C {JNW_TR_SKY130A/JNWTR_IVX2_CV.sym} -950 190 0 0 {name=x5 }
-C {JNW_TR_SKY130A/JNWTR_IVX2_CV.sym} -800 190 0 0 {name=x6 }
+C {LELO_GR04_SKY130A/LELO_GR04_INV.sym} -910 190 0 0 {name=x5 }
+C {LELO_GR04_SKY130A/LELO_GR04_INV.sym} -760 190 0 0 {name=x6 }
 C {devices/lab_wire.sym} -800 190 0 0 {name=p20 sig_type=std_logic lab=PWRUP_N_INT}
 C {devices/lab_wire.sym} -910 130 0 0 {name=p21 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_wire.sym} -610 190 0 0 {name=p22 sig_type=std_logic lab=PWRUP_INT}

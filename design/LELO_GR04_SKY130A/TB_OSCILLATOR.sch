@@ -36,8 +36,8 @@ C {devices/lab_pin.sym} -1190 130 0 0 {name=p18 sig_type=std_logic lab=VDD_1V8
 C {devices/lab_pin.sym} -1050 130 0 0 {name=p19 sig_type=std_logic lab=PWRUP_1V8}
 C {devices/code_shown.sym} -1820 170 0 0 {name=s1 only_toplevel=false value="
 .lib "../../../tech/ngspice/temperature.spi" Th
-.lib "../../../tech/ngspice/corners.spi" Ksf
-.lib "../../../tech/ngspice/supply.spi" Vl
+.lib "../../../tech/ngspice/corners.spi" Ktt
+.lib "../../../tech/ngspice/supply.spi" Vt
 .include ../../../../cpdk/ngspice/ideal_circuits.spi
 
 .option savecurrents
@@ -48,7 +48,7 @@ optran 0 0 0 10n 1u 0
 op
 write TB_OSCILLATOR.raw
 
-tran 5n 15u 0
+tran 500p 5u 0
 write TB_OSCILLATOR_TRAN.raw
 
 meas tran i_avg AVG i(v1)
@@ -61,7 +61,7 @@ C {devices/lab_wire.sym} -800 190 0 0 {name=p20 sig_type=std_logic lab=PWRUP_N_I
 C {devices/lab_wire.sym} -910 130 0 0 {name=p21 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_wire.sym} -610 190 0 0 {name=p22 sig_type=std_logic lab=PWRUP_INT}
 C {LELO_GR04_SKY130A/LELO_GR04_BG.sym} -830 -240 0 0 {name=x7}
-C {devices/lab_wire.sym} -980 -270 0 0 {name=p25 sig_type=std_logic lab=VDD_1V8}
+C {devices/lab_wire.sym} -980 -330 0 0 {name=p25 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_wire.sym} -980 -230 0 0 {name=p27 sig_type=std_logic lab=PWRUP_N_INT}
 C {devices/gnd.sym} -980 -210 0 0 {name=l7 lab=GND}
 C {devices/lab_wire.sym} -650 -250 0 0 {name=p23 sig_type=std_logic lab=VX}
@@ -71,6 +71,8 @@ C {devices/lab_wire.sym} -980 -50 0 0 {name=p28 sig_type=std_logic lab=IBP_1F7U[
 C {devices/lab_wire.sym} -980 -30 0 0 {name=p29 sig_type=std_logic lab=PWRUP_N_INT}
 C {devices/lab_wire.sym} -980 -90 0 0 {name=p30 sig_type=std_logic lab=PWRUP_INT}
 C {devices/lab_wire.sym} -980 -70 0 0 {name=p31 sig_type=std_logic lab=VX}
-C {devices/lab_wire.sym} -980 -110 0 0 {name=p32 sig_type=std_logic lab=VDD_1V8}
+C {devices/lab_wire.sym} -980 -170 0 0 {name=p32 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_wire.sym} -610 -110 0 0 {name=p33 sig_type=std_logic lab=VOSC}
 C {LELO_GR04_SKY130A/LELO_GR04_OSC.sym} -830 -60 0 0 {name=x1}
+C {devices/vsource.sym} -980 -300 0 0 {name=V2 value=0 savecurrent=false}
+C {devices/vsource.sym} -980 -140 0 0 {name=V4 value=0 savecurrent=false}

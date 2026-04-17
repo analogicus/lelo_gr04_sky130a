@@ -116,10 +116,7 @@ C {JNW_TR_SKY130A/JNWTR_CAPX4.sym} -80 50 0 0 {name=x10[3:0]}
 C {devices/lab_wire.sym} -80 -40 0 0 {name=p14 sig_type=std_logic lab=IBP_1F7U[0]}
 C {JNW_ATR_SKY130A/JNWATR_NCH_12C1F2.sym} 140 10 0 1 {name=x5 }
 C {devices/lab_wire.sym} 480 60 0 0 {name=p13 sig_type=std_logic lab=IBP_1F7U[1]}
-C {JNW_TR_SKY130A/JNWTR_NDX1_CV.sym} 1230 -540 0 0 {name=x6 }
-C {JNW_TR_SKY130A/JNWTR_NDX1_CV.sym} 1230 -330 0 0 {name=x7 }
-C {JNW_TR_SKY130A/JNWTR_NDX1_CV.sym} 1050 -550 0 0 {name=x8 }
-C {JNW_TR_SKY130A/JNWTR_NDX1_CV.sym} 1050 -320 0 0 {name=x9 }
+C {LELO_GR04_SKY130A/LELO_GR04_NAND2.sym} 1050 -550 0 0 {name=x8 }
 C {devices/lab_wire.sym} 1270 -590 3 1 {name=p15 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_wire.sym} 1090 -600 3 1 {name=p19 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_wire.sym} 1090 -370 3 1 {name=p21 sig_type=std_logic lab=VDD_1V8}
@@ -131,10 +128,6 @@ C {devices/opin.sym} 1980 -530 0 0 {name=p33 lab=VOSC}
 C {devices/lab_wire.sym} 810 -240 2 1 {name=p34 sig_type=std_logic lab=VINV[2]}
 C {devices/lab_wire.sym} 1120 -70 0 1 {name=p6 sig_type=std_logic lab=VINV[5:1]}
 C {devices/lab_wire.sym} 1260 -70 0 0 {name=p11 sig_type=std_logic lab=VINV[5]}
-C {JNW_TR_SKY130A/JNWTR_NDX1_CV.sym} 1810 -520 0 0 {name=x3 }
-C {JNW_TR_SKY130A/JNWTR_NDX1_CV.sym} 1810 -310 0 0 {name=x10 }
-C {JNW_TR_SKY130A/JNWTR_NDX1_CV.sym} 1630 -530 0 0 {name=x11 }
-C {JNW_TR_SKY130A/JNWTR_NDX1_CV.sym} 1630 -300 0 0 {name=x12 }
 C {devices/lab_wire.sym} 1850 -570 3 1 {name=p23 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_wire.sym} 1670 -580 3 1 {name=p24 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_wire.sym} 1670 -350 3 1 {name=p31 sig_type=std_logic lab=VDD_1V8}
@@ -159,3 +152,10 @@ C {devices/lab_wire.sym} 1460 -200 1 1 {name=p46 sig_type=std_logic lab=Vss}
 C {devices/lab_pin.sym} 1190 -240 1 1 {name=p26 sig_type=std_logic lab=meta}
 C {devices/lab_pin.sym} 1940 -320 0 1 {name=p32 sig_type=std_logic lab=Q_BAR}
 C {devices/lab_pin.sym} 880 -570 0 0 {name=p47 sig_type=std_logic lab=Q_BAR}
+C {LELO_GR04_SKY130A/LELO_GR04_NAND2.sym} 1050 -320 0 0 {name=x3 }
+C {LELO_GR04_SKY130A/LELO_GR04_NAND2.sym} 1230 -540 0 0 {name=x6 }
+C {LELO_GR04_SKY130A/LELO_GR04_NAND2.sym} 1230 -330 0 0 {name=x7 }
+C {LELO_GR04_SKY130A/LELO_GR04_NAND2.sym} 1630 -530 0 0 {name=x9 }
+C {LELO_GR04_SKY130A/LELO_GR04_NAND2.sym} 1630 -300 0 0 {name=x10 }
+C {LELO_GR04_SKY130A/LELO_GR04_NAND2.sym} 1810 -520 0 0 {name=x11 }
+C {LELO_GR04_SKY130A/LELO_GR04_NAND2.sym} 1810 -310 0 0 {name=x12 }

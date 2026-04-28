@@ -6,10 +6,14 @@ For details see <a href='tran_Lay_typical.html'>tran_Lay_typical.html</a>
 |:---|:---|:---:|:---:|:---:|:---:|
 |Active current|idd\_-45 | Spec | 10.000 uA | 40.000 uA | 70.000 uA |
 | | | ('Lay',)|14.579 uA | 14.579 uA | 14.579 uA |
+|Active current|idd\_25 | Spec | 10.000 uA | 40.000 uA | 70.000 uA |
+| | | ('Lay',)|23.460 uA | 23.460 uA | 23.460 uA |
 |Active current|idd\_125 | Spec | 10.000 uA | 40.000 uA | 70.000 uA |
 | | | ('Lay',)|37.853 uA | 37.853 uA | 37.853 uA |
 |Leakage current|iddq\_-45 | Spec | 0.000 nA | 50.000 nA | 100.000 nA |
 | | | ('Lay',)|1.743 nA | 1.743 nA | 1.743 nA |
+|Leakage current|iddq\_25 | Spec | 0.000 nA | 50.000 nA | 100.000 nA |
+| | | ('Lay',)|3.424 nA | 3.424 nA | 3.424 nA |
 |Leakage current|iddq\_125 | Spec | 0.000 nA | 50.000 nA | 100.000 nA |
 | | | ('Lay',)|15.454 nA | 15.454 nA | 15.454 nA |
 |Oscillation frequency @ -45C|fosc\_-45 | Spec | 1.406 MHz | 1.875 MHz | 2.344 MHz |
@@ -22,7 +26,7 @@ For details see <a href='tran_Lay_typical.html'>tran_Lay_typical.html</a>
 | | | ('Lay',)|0.17 C | 0.17 C | 0.17 C |
 |Temperature error (calibrated @ 25C)|t\_err\_min | Spec | -10.00 C |  | 10.00 C |
 | | | ('Lay',)|-6.51 C | -6.51 C | -6.51 C |
-|Temperature error between 0-70C (calibrated @ 25C)|t\_err\_com\_max | Spec | -10.00 C |  | 10.00 C |
+|Temperature error 0-70C (calibrated @ 25C)|t\_err\_com\_max | Spec | -10.00 C |  | 10.00 C |
 | | | ('Lay',)|0.17 C | 0.17 C | 0.17 C |
-|Temperature error between 0-70C (calibrated @ 25C)|t\_err\_com\_min | Spec | -10.00 C |  | 10.00 C |
+|Temperature error 0-70C (calibrated @ 25C)|t\_err\_com\_min | Spec | -10.00 C |  | 10.00 C |
 | | | ('Lay',)|-1.62 C | -1.62 C | -1.62 C |

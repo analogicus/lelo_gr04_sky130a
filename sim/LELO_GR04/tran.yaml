@@ -12,6 +12,7 @@
 idd:
   src:
     - idd_-45
+    - idd_25
     - idd_125
   name: Active current
   typ: 40
@@ -24,6 +25,7 @@ idd:
 iddq:
   src:
     - iddq_-45
+    - iddq_25
     - iddq_125
   name: Leakage current
   typ: 50

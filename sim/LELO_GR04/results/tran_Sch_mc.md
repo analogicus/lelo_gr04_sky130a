@@ -6,10 +6,14 @@ For details see <a href='tran_Sch_mc.html'>tran_Sch_mc.html</a>
 |:---|:---|:---:|:---:|:---:|:---:|
 |Active current|idd\_-45 | Spec | 10.000 uA | 40.000 uA | 70.000 uA |
 | | | ('Sch',)|11.161 uA | 14.571 uA | 19.204 uA |
+|Active current|idd\_25 | Spec | 10.000 uA | 40.000 uA | 70.000 uA |
+| | | ('Sch',)|19.099 uA | 23.059 uA | 26.562 uA |
 |Active current|idd\_125 | Spec | 10.000 uA | 40.000 uA | 70.000 uA |
 | | | ('Sch',)|33.057 uA | 37.002 uA | 40.532 uA |
 |Leakage current|iddq\_-45 | Spec | 0.000 nA | 50.000 nA | 100.000 nA |
 | | | ('Sch',)|0.873 nA | 1.190 nA | 1.357 nA |
+|Leakage current|iddq\_25 | Spec | 0.000 nA | 50.000 nA | 100.000 nA |
+| | | ('Sch',)|1.466 nA | 1.876 nA | 2.188 nA |
 |Leakage current|iddq\_125 | Spec | 0.000 nA | 50.000 nA | 100.000 nA |
 | | | ('Sch',)|10.274 nA | 10.456 nA | 10.702 nA |
 |Oscillation frequency @ -45C|fosc\_-45 | Spec | 1.406 MHz | 1.875 MHz | 2.344 MHz |
@@ -22,7 +26,7 @@ For details see <a href='tran_Sch_mc.html'>tran_Sch_mc.html</a>
 | | | ('Sch',)|-0.00 C | 3.09 C | 17.68 C |
 |Temperature error (calibrated @ 25C)|t\_err\_min | Spec | -10.00 C |  | 10.00 C |
 | | | ('Sch',)|-22.37 C | -8.31 C | -2.08 C |
-|Temperature error between 0-70C (calibrated @ 25C)|t\_err\_com\_max | Spec | -10.00 C |  | 10.00 C |
+|Temperature error 0-70C (calibrated @ 25C)|t\_err\_com\_max | Spec | -10.00 C |  | 10.00 C |
 | | | ('Sch',)|-0.00 C | 1.41 C | 8.27 C |
-|Temperature error between 0-70C (calibrated @ 25C)|t\_err\_com\_min | Spec | -10.00 C |  | 10.00 C |
+|Temperature error 0-70C (calibrated @ 25C)|t\_err\_com\_min | Spec | -10.00 C |  | 10.00 C |
 | | | ('Sch',)|-6.36 C | -3.30 C | -1.09 C |

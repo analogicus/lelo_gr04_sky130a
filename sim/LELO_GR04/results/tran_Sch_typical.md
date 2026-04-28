@@ -6,10 +6,14 @@ For details see <a href='tran_Sch_typical.html'>tran_Sch_typical.html</a>
 |:---|:---|:---:|:---:|:---:|:---:|
 |Active current|idd\_-45 | Spec | 10.000 uA | 40.000 uA | 70.000 uA |
 | | | ('Sch',)|14.550 uA | 14.550 uA | 14.550 uA |
+|Active current|idd\_25 | Spec | 10.000 uA | 40.000 uA | 70.000 uA |
+| | | ('Sch',)|23.083 uA | 23.083 uA | 23.083 uA |
 |Active current|idd\_125 | Spec | 10.000 uA | 40.000 uA | 70.000 uA |
 | | | ('Sch',)|36.946 uA | 36.946 uA | 36.946 uA |
 |Leakage current|iddq\_-45 | Spec | 0.000 nA | 50.000 nA | 100.000 nA |
 | | | ('Sch',)|1.314 nA | 1.314 nA | 1.314 nA |
+|Leakage current|iddq\_25 | Spec | 0.000 nA | 50.000 nA | 100.000 nA |
+| | | ('Sch',)|1.913 nA | 1.913 nA | 1.913 nA |
 |Leakage current|iddq\_125 | Spec | 0.000 nA | 50.000 nA | 100.000 nA |
 | | | ('Sch',)|10.349 nA | 10.349 nA | 10.349 nA |
 |Oscillation frequency @ -45C|fosc\_-45 | Spec | 1.406 MHz | 1.875 MHz | 2.344 MHz |
